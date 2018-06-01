@@ -6,7 +6,7 @@
     padding: 20px 0 20px 0; }
   .watchlist-portlet .wtch-header {
     height: 70px;
-    border-top: 2px solid #1c9d92;
+    border-top: 2px solid;
     padding: 21px 0 0 15px;
     font-size: 18px;
     font-family: "HelveticaNeue",Arial;
@@ -220,16 +220,6 @@
   color: #fff; }
 
 @media (min-width: 1024px) {
-  .watchlist-portlet .grid-row:hover,
-  .watchlist-portlet .grid-row:hover .ico-style {
-    color: #fff; }
-  .watchlist-portlet .grid-row:hover {
-    background-color: #1C9D92;
-    color: #fff; }
-  .watchlist-portlet .grid-row:hover td.shipmentRef, .watchlist-portlet .grid-row:hover td.estimatedDeliveryDate, .watchlist-portlet .grid-row:hover td.milestone {
-    color: #fff; }
-  .watchlist-portlet .grid-row:hover div.name {
-    color: #fff; }
   .watchlist-portlet tr.grid-header td.cell-mile,
   .watchlist-portlet td.milestone {
     min-width: 160px; }
@@ -513,9 +503,9 @@
     line-height: 100%;
     min-height: 45px; }
   .watchlist-portlet tr.grid-row {
-    border: 2px solid #1c9d92;
+    border: 2px solid;
     margin-bottom: 10px;
-    border-bottom: 10px solid #1c9d92;
+    border-bottom: 10px solid;
     display: block;
     width: 94%;
     margin-left: auto;
@@ -555,9 +545,9 @@
     display: block;
     visibility: visible; }
   .watchlist-portlet tr.grid-row {
-    border: 2px solid #1c9d92;
+    border: 2px solid;
     margin-bottom: 10px;
-    border-bottom: 10px solid #1c9d92;
+    border-bottom: 10px solid;
     display: block; }
   .watchlist-portlet tr.grid-row:after {
     display: block;

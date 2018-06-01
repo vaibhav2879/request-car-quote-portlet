@@ -37,7 +37,7 @@ i.ikon.rate-enquiry-ikon {
 	padding-right: 2px;
 }
 .del-color {
-	color: #1c9d92 !important;
+	color: #0c4473 !important;
 }
 .track-shipment-dashboard {
     /* margin-top: 18px; */
@@ -70,7 +70,7 @@ i.ikon.rate-enquiry-ikon {
 .track-shipment-dashboard i.tablet-search-button-icon {
     min-height: 55px;
     min-width: 55px;
-    background: #1c9d92;
+    background: #0c4473;
     padding: 11px;
     position: absolute;
     top: 0;
@@ -109,7 +109,7 @@ i.ikon.rate-enquiry-ikon {
     display: inline-block;
     float: right;
     margin-top: 20px;
-    color: #1c9d92;
+    color: #0c4473;
     font-size: 12px;
     text-transform: uppercase;
     cursor: pointer
@@ -140,7 +140,7 @@ i.ikon.rate-enquiry-ikon {
 }
 .track-shipment-dashboard .shipment-live-updates .shipment-created-details>div,
 .track-shipment-dashboard .shipment-live-updates .pickups-confirmed-details>div {
-    border-top: 5px solid #1c9d92;
+    border-top: 5px solid #0c4473;
     display: inline-block;
     margin-right: 13px;
 }
@@ -211,7 +211,7 @@ i.ikon.rate-enquiry-ikon {
 .track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul a {
     text-decoration: none;
     text-transform: uppercase;
-    background-color: #1c9d92;
+    background-color: #0c4473;
     color: #ffffff;
     font-size: 18px;
     min-height: 60px;
@@ -307,7 +307,7 @@ li#draftshipmentLi.active > i,
 li#draftshipmentLi:hover > i,
 li#savedsearchLi.active > i,
 li#savedsearchLi:hover > i {
-    color: #1c9d92 !important;
+    color: #0c4473 !important;
 }
 li#watchList > i{
     font-size: 25px;
@@ -438,7 +438,7 @@ li#pickupLi > i{
 }
 .track-shipment-dashboard #dashboard-features-info .tab-content .manifest-table-search-filter .ico-search,
 .track-shipment-dashboard #dashboard-features-info .tab-content .pickup-table-search-filter .ico-search{
-    background-color: #1c9d92;
+    background-color: #0c4473;
     color: #FFF;
     font-size: 22px;
     padding: 6px 10px;
@@ -469,7 +469,7 @@ li#pickupLi > i{
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
-    color: #1c9d92;
+    color: #0c4473;
     cursor: pointer
 }
 .track-shipment-dashboard #dashboard-features-info .tab-content .download-link,
@@ -508,7 +508,7 @@ li#pickupLi > i{
 }
 .track-shipment-dashboard #dashboard-features-info .tab-content table tr:hover td {
 /* .track-shipment-dashboard #dashboard-features-info .tab-content table tr:hover td i{ */
-    background-color: #1c9d92;
+    background-color: #0c4473;
     color: #FFF
 }
 .track-shipment-dashboard #dashboard-features-info .tab-content table tr:hover td i{
@@ -588,7 +588,7 @@ li#pickupLi > i{
 .track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-token .token-items:active,
 .track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-token .token-items:focus,
 .track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-token .token-items.active {
-    background-color: #1c9d92;
+    background-color: #0c4473;
     color: #fff
 }
 .track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-token .share-link {
@@ -618,13 +618,13 @@ li#pickupLi > i{
 }*/
 .savedSrchEditbtn{
     background: #FFF !important;
-  border: solid 1px #1c9d92 !important;
-  color: #1c9d92 !important;
+  border: solid 1px #0c4473 !important;
+  color: #0c4473 !important;
   margin-left: 0px !important;
   transition: all 0.5s ease-out;
 }
 .savedSrchEditbtn:hover{
-  background: #1c9d92 !important;
+  background: #0c4473 !important;
   color: #FFF !important;
 }
 .track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-options button.edit-search {
@@ -689,7 +689,7 @@ background-color: #606060;
     text-transform: uppercase;
     font-size: 10px;
     font-weight: 600;
-    color: #1c9d92;
+    color: #0c4473;
     cursor: pointer;
     line-height: 20px;
     float: right
@@ -712,7 +712,7 @@ background-color: #606060;
     color: #fff
 }
 .track-shipment-dashboard #advacnce-search-results table tr:hover td {
-    background-color: #1c9d92;
+    background-color: #0c4473;
     color: #FFF
 }
 .track-shipment-dashboard #advacnce-search-results table th {
@@ -888,7 +888,7 @@ background-color: #606060;
 }
 
 .mani-popup-wrap .mani-popup-main header p {
-  color: #1c9d92;
+  color: #0c4473;
   font-size: 14px;
   line-height: 22px;
 }
@@ -978,7 +978,7 @@ margin-right: 3px;
 }
 
 .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .finalize-manifest-head {
-	background: #1c9d92;
+	background: #0c4473;
 	color: #fff;
 	padding: 8px 15px 8px;
 	font-weight: 600;
@@ -1247,7 +1247,7 @@ margin-right: 3px;
 	-moz-transition: all 0.3s ease-in-out 0s;
 	-webkit-transition: all 0.3s ease-in-out 0s;
 	transition: all 0.3s ease-in-out 0s;
-	background-color: #1c9d92;
+	background-color: #0c4473;
 }
 
 .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list>li .printing-state-ind:hover h3 {
@@ -1300,7 +1300,7 @@ margin-right: 3px;
   -moz-transition: all 0.3s ease-in-out 0s;
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
-  background-color: #1c9d92;
+  background-color: #0c4473;
 }
 
 .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list-single>li .printing-state-ind:hover h3 {
@@ -1338,7 +1338,7 @@ margin-right: 3px;
 }
 
 .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .shipment-nd-manifest-wrpr .consignment-list th {
-  background: #1c9d92;
+  background: #0c4473;
   color: #fff;
 }
 
@@ -1376,7 +1376,7 @@ margin-right: 3px;
 }
 
 .mani-popup-wrap .mani-popup-main footer.manifest-btn-wrap .manifest-print-btn {
-  background-color: #1c9d92;
+  background-color: #0c4473;
 }
 
 .mani-popup-wrap .mani-popup-main footer.manifest-btn-wrap .manifest-download-btn {
@@ -1556,12 +1556,12 @@ margin-right: 3px;
 	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-yes-btn,
 	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .yes-btn,
 	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-yes-btn {
-	  background-color: #1c9d92;
+	  background-color: #0c4473;
 	}
 
 	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .yes-btn,
 	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-yes-btn{
-	  background-color: #1c9d92;
+	  background-color: #0c4473;
 	}
 
 	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .no-btn,
@@ -1614,7 +1614,7 @@ margin-right: 3px;
     text-align: center
 }
  #mytoll #create-manifest-manuall-wrpr .popup-content-wrpr .manifest-popup .bgLess-btn-wrapper a {
-    background-color: #1c9d92;
+    background-color: #0c4473;
     color: #fff
 }
  #mytoll #create-manifest-manuall-wrpr .add-to-manifest-popup h1 i {
@@ -1628,7 +1628,7 @@ margin-right: 3px;
     margin-top: 20px
 }
  #mytoll #create-manifest-manuall-wrpr .add-to-manifest-popup .bgLess-btn-wrapper.add-manifest #add-manifest {
-    background-color: #1c9d92;
+    background-color: #0c4473;
     color: #fff
 }
 #mytoll #create-manifest-manuall-wrpr .address-dropdown .edit-wrpr {
@@ -1673,8 +1673,8 @@ margin-right: 3px;
 }
 .chosen-container-active{
     outline: 0!important;
-    border: 1px solid #1c9d92!important;
-    border-left: 3px solid #1c9d92!important;
+    border: 1px solid #0c4473!important;
+    border-left: 3px solid #0c4473!important;
     background-color: #d8f1ef!important;
 }
 .chosen-container-active .chosen-choices{
@@ -1796,7 +1796,7 @@ margin-right: 3px;
     }
 
     .tollDeletePopup-btnwrap .yes-btn{
-        background-color: #1c9d92;
+        background-color: #0c4473;
 
     }
     .tollDeletePopup-btnwrap .no-btn{
@@ -2148,7 +2148,7 @@ margin-right: 3px;
     }
     .track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container .mobile-view-content .status i {
         font-size: 30px;
-        color: #1c9d92;
+        color: #0c4473;
         float: left;
         margin-right: 10px
     }
@@ -2303,7 +2303,7 @@ margin-right: 3px;
 	.track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container .mobile-view-content .status i
 		{
 		font-size: 30px;
-		color: #1c9d92;
+		color: #0c4473;
 		float: left;
 		margin-right: 10px
 	}

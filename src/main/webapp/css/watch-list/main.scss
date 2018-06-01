@@ -7,7 +7,7 @@
 	}
 	.wtch-header{
 		height: 70px;
-	    border-top: 2px solid #1c9d92;
+	    border-top: 2px solid;
 	    padding: 21px 0 0 15px;
 	    font-size: 18px;
 	    font-family: "HelveticaNeue",Arial;
@@ -287,24 +287,6 @@
 
 @media (min-width: 1024px){
 	.watchlist-portlet{
-		.grid-row:hover,
-		.grid-row:hover .ico-style{
-			color: #fff;
-		}
-		.grid-row:hover{
-			background-color: #1C9D92;
-			color: #fff;
-		}
-		.grid-row:hover{
-			td.shipmentRef,td.estimatedDeliveryDate,td.milestone{
-				color: #fff;
-			}
-		}
-		.grid-row:hover{
-			div.name{
-				color: #fff;
-			}
-		}
 		tr.grid-header td.cell-mile,
 		td.milestone {min-width:160px;}
 		td.senderRef,
@@ -668,9 +650,9 @@
 			min-height: 45px;
 		}
 		tr.grid-row{
-		    border: 2px solid #1c9d92;
+		    border: 2px solid;
 		    margin-bottom: 10px;
-		    border-bottom: 10px solid #1c9d92;
+		    border-bottom: 10px solid;
 		    display: block;
 		    width: 94%;
 		    margin-left: auto;
@@ -721,9 +703,9 @@
 		    visibility: visible;
 		}
 		tr.grid-row{
-		    border: 2px solid #1c9d92;
+		    border: 2px solid;
 		    margin-bottom: 10px;
-		    border-bottom: 10px solid #1c9d92;
+		    border-bottom: 10px solid;
 		    display: block;
 		}
 		tr.grid-row:after{
