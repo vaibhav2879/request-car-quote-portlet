@@ -1,0 +1,379 @@
+<div id="print-mani-popup" class="popup-wrapper print-mani-popup">
+      <div class="mani-popup-wrap">
+          <div class="mani-popup-main">
+                <div id="popup-loader" class="popup-loader hidden"></div>
+                <div id="popup-page-loader-bg" class="modal-bg zi-9999 hidden"></div>
+            <a class="mani-popup-close"><i class="ico-delete"></i></a>
+            <header>
+                <h2>Print &amp; close manifest</h2>
+                
+            </header>
+            <section class="manifest-tab-box">
+                <h5 class="shipment-no-top"><label>Manifest-</label>{{this.manifestNumber}}</h5>
+                <ul class="manifest-tab-list">
+                        {{#ifEq this.activeTab "L"}}
+                    <li>
+                        <a href="#" data-tab="mani-tab1" title="Labels" class="active">Labels</a>
+                    </li>
+                    {{/ifEq}}
+                    {{#ifEq this.activeTab "M"}}
+                    <li>
+                        <a href="#" data-tab="mani-tab1" title="Labels">Labels</a>
+                    </li>
+                    {{/ifEq}}
+                    <li>
+                        {{#if this.isShipmentAllowed.shipStatus}}
+                        {{#ifEq this.activeTab "M"}}
+                        <a href="#" data-tab="mani-tab2" title="Shipment" class="active">Shipment & Manifest</a>
+                        {{/ifEq}}
+                        {{#ifEq this.activeTab "L"}}
+                        <a href="#" data-tab="mani-tab2" title="Shipment">Shipment & Manifest</a>
+                        {{/ifEq}}
+                        {{else}}
+                        {{#ifEq this.activeTab "M"}}
+                        <a href="#" data-tab="mani-tab2" title="Shipment" class="active">Manifest</a>
+                        {{/ifEq}}
+                        {{#ifEq this.activeTab "L"}}
+                        <a href="#" data-tab="mani-tab2" title="Shipment">Manifest</a>
+                        {{/ifEq}}
+                        {{/if}}
+                    </li>
+                </ul>
+                {{#ifEq this.activeTab "L"}}
+                <div class="mani-tab mani-tab1 mani-label-tab active">
+                {{/ifEq}}
+                {{#ifEq this.activeTab "M"}}
+                <div class="mani-tab mani-tab1 mani-label-tab">
+                {{/ifEq}}
+                    <div class="manifest-tab-box" id="manifest-label-preview"></div> 
+                    <div class="manifest-tab-box" id="manifest-label-preview-first"></div>
+                    <div id="popup-page-loader" class="hidden">
+                            <div class="active-loader wrapper">
+                              <i class="ico-loading"></i>
+                              <div class="msg">Please wait while we connect to your printer...</div>
+                            </div>
+                    </div>
+                    {{#if this.labelStatus}}
+                        {{else}}
+                        <div class="new-label-desc" id="ship-check">
+                          <p>Printing the labels will lock the freight lines and no further changes can be made.
+                          </p>
+                        </div>
+                        {{/if}}
+                    <div class="label-tab-left" id="manifest-label-tab">
+                        <div class="printing-option">
+                            <ul class="printing-opt-list">
+                               {{#if this.isThermal}}                         
+                                    {{else}}
+                                    <li>
+                                    {{#if this.IsLabelPDFSingle}}
+                                    
+                                            {{else}}
+                                            <div class="printing-opt-ind" id="quadrant-label">
+                                                <label for="quadrant">Quadrant printing</label>
+                                                <input type="text" value="Q1" id="quad-print-value" readonly/>
+                                            </div>
+                                            {{/if}}
+                                    </li>
+                                    {{/if}}
+                            </ul>
+                        </div>
+                            {{#if this.isThermal}}
+                            {{else}}
+                            {{#if this.IsLabelPDFSingle}}
+                            {{else}}
+                            <div class="label-tab-right">
+                                <ul class="print-state-list">
+                                     <li class="active">
+                                         <div class="printing-state-ind"><h3>Q1</h3></div>
+                                     </li>
+                                     <li>
+                                          <div class="printing-state-ind"><h3>Q2</h3></div>
+                                     </li>
+                                     <li>
+                                         <div class="printing-state-ind"><h3>Q3</h3></div>
+                                     </li>
+                                     <li>
+                                         <div class="printing-state-ind"><h3>Q4</h3></div>
+                                     </li>
+                                 </ul>
+                             </div>
+                            {{/if}}
+    
+                            {{/if}}
+                           <div class="new-label-box">                                
+            				  <div class="label-box">
+                                 <div class="table-responsive label-shipment-table">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>
+                                                                        <label>
+                                                                            <input type="checkbox" name="allCheck" id="shipment-check">
+                                                                            <span>Shipment </span>
+                                                                        <label>
+                                                                    </th>
+                                                                    <th>
+                                                                        <label>
+                                                                            <span>Print Unprinted Labels</span>
+                                                                        </label>
+                                                                    </th>
+                                                                     {{#if this.labelStatus}}
+                                                                    <th>
+                                                                        <label>
+                                                                            <span>Re-print Labels</span>
+                                                                        </label>
+                                                                    </th>
+                                                                    {{/if}}
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                {{#each this.Shipments as |shipmentDetail|}}
+                                                                <tr>
+                                                                    {{#ifEq shipmentDetail.isAvtiveCheck "O"}}
+                                                                    <td>
+                                                                        <input type="checkbox" id="shipcheckLabel" name="shipCheck" data-shipmentNum={{shipmentDetail.shipmentNumber}} data-shipmentID={{shipmentDetail.shipmentId}} class="check-label" checked />
+                                                                        <span>{{shipTruncate shipmentDetail.shipmentNumber}}
+                                                                       </span>
+                                                                    </td>
+                                                                    {{/ifEq}}
+                                                                    {{#ifEq shipmentDetail.isAvtiveCheck "P"}}
+                                                                    <td>
+                                                                        <input type="checkbox" id="shipcheckLabel" name="shipCheck" data-shipmentNum={{shipmentDetail.shipmentNumber}} data-shipmentID={{shipmentDetail.shipmentId}} class="check-label"/>
+                                                                        <span>{{shipTruncate shipmentDetail.shipmentNumber}}
+                                                                       </span>
+                                                                    </td>
+                                                                    {{/ifEq}}
+                                                                    <td>{{shipmentDetail.unpcount}}</td>
+                                                                     {{#if ../this.labelStatus}}
+                                                                    <td>{{shipmentDetail.pcount}}</td>
+                                                                    {{/if}}
+                                                                </tr>
+                                                                {{/each}}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+            					<ul class="label-list hidden">
+            						<li class="header">
+            							<div class="label-list-ind">
+            									<div class="label-list-abs">
+                                                    <input type="checkbox" id="allCheckLabel" name ="allCheck" onclick='checkAll()'>
+            									</div>
+            									<div class="label-list-col label-title">
+                                                 <strong>Shipment</strong>
+                                                </div>
+            									<div class="label-list-col line-item">
+                                                 <strong>Print Unprinted Labels</strong>
+                                                </div>
+            									<div class="label-list-col item-number">
+                                                 <strong>Re-print Labels</strong>
+                                                </div>
+            							</div>
+            						</li>
+                                             
+                                    {{#each this.Shipments as |shipmentDetail|}}
+                                    				
+            						<li class="content">
+            							<div class="label-list-ind">
+                                            <div class="label-list-abs">
+                                                <input type="checkbox" name="shipCheck" onclick="getItemId('{{shipmentDetail.shipmentNumber}}')"/>
+                                            </div>
+                                            <div class="label-list-col label-title">
+                                                {{shipmentDetail.shipmentNumber}}
+                                            </div>
+                                            <div class="label-list-col line-item">
+                                                <input type="checkbox" name ="print_{{shipmentDetail.shipmentNumber}}" onclick="checkPrint('print_{{shipmentDetail.shipmentNumber}}','{{shipmentDetail.shipmentNumber}}')"/>{{shipmentDetail.pcount}}
+                                            </div>
+                                            <div class="label-list-col item-number">    
+                                                <input type="checkbox" name ="reprint_{{shipmentDetail.shipmentNumber}}" onclick="checkRePrint('reprint_{{shipmentDetail.shipmentNumber}}','{{shipmentDetail.shipmentNumber}}')"/>{{shipmentDetail.unpcount}}
+                                            </div>
+            							</div>
+                                    </li> 
+                                    
+                                    {{/each}}
+            					</ul>
+            				    </div>
+			                 </div>
+                    </div>
+                    </div>
+                    {{#ifEq this.activeTab "M"}}
+                <div class="mani-tab mani-tab2 mani-cannot-tab active">
+                        {{/ifEq}}
+                        {{#ifEq this.activeTab "L"}}
+                        <div class="mani-tab mani-tab2 mani-cannot-tab">
+                                {{/ifEq}}
+                    <div id="manifest-ship-preview"></div>
+                    <div id="manifest-ship-preview-first"></div>
+                    {{#if this.manifestStatus}}
+                    {{else}}
+                    <div class="new-label-desc" id="mani-message">
+                      <p>
+                        Printing the consignment will lock the consignment and no further changes can be made.
+                      </p>
+                    </div>
+                    {{/if}}
+                        <div class="shipment-nd-manifest-wrpr" id="hide-shipment-nd-manifest-wrpr">
+                            {{#if this.isShipmentAllowed.shipStatus}}
+                            <div class="finalize-manifest-head">
+                                <input type="checkbox" class="cb-manifest" name="finalize-manifest" checked> Finalize &amp; Print Manifest
+                            </div>
+                            {{else}}
+                            <div class="finalize-manifest-head">
+                                <input type="checkbox" class="cb-manifest" name="finalize-manifest" checked> Finalize &amp; Print Manifest
+                            </div>
+                            {{/if}}
+                            {{!--Shipment & Manifest Content Here..--}}
+                            <div class="header-shipment-pop">
+                                <div class="clearfix header-row form-group">
+                                    <div class="col-sm-3">Manifest #</div>
+                                    <div class="col-sm-3">Carrier</div>
+                                    <div class="col-sm-2">Date</div>
+                                    <div class="col-sm-4">Sender</div>
+                                </div>
+                                <div class="clearfix body-row">
+                                    <div class="col-sm-3 f-strong">{{this.manifestNumber}}</div>
+                                    <div class="col-sm-3">{{this.tollCarrierName}}</div>
+                                    <div class="col-sm-2">{{this.dispatchDate}}</div>
+                                    <div class="col-sm-4">{{this.senderAddress.companyName}}, {{this.senderAddress.addressLine1}}, {{this.senderAddress.addressLine2}}, {{this.senderAddress.state}}, {{this.senderAddress.countryCode}}</div>
+                                </div>
+                            </div>
+                            {{#if this.isShipmentAllowed.shipStatus}}
+                            <div class="consignment-list" id="shipment-item-list">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th><input type="checkbox" name="consignment" id="cb-header-ship"></th>
+                                        <th>Shipment</th>
+                                        <th>Receiver</th>
+                                        <th>Receiver Location</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {{#each this.Shipments as |shipmentDetail|}}
+                                    <tr>
+                                    {{#ifEq shipmentDetail.isAvtiveCheck "O"}}
+                                        <td><input type="checkbox" name="consignment-list" data-shipmentid="{{shipmentDetail.shipmentId}}" class="cb-list-ship" id="shipment-item{{@index}}" checked></td>
+                                    {{/ifEq}}
+                                    {{#ifEq shipmentDetail.isAvtiveCheck "P"}}
+                                    <td><input type="checkbox" name="consignment-list" data-shipmentid="{{shipmentDetail.shipmentId}}" class="cb-list-ship" id="shipment-item{{@index}}"></td>
+                                    {{/ifEq}}
+                                        <td><a>{{shipTruncate shipmentDetail.shipmentNumber}}</a></td>
+                                        <td>{{shipmentDetail.receiverAddress.companyName}}</td>
+                                        <td>{{shipmentDetail.receiverAddress.state}} {{shipmentDetail.receiverAddress.suburb}}</td>
+                                        </tr>
+                                    
+                                    {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </div>
+            </section>
+            {{#ifEq this.activeTab "L"}}
+            <footer class="manifest-btn-wrap mani-tab1 active">
+                {{#if this.isThermal}}
+                {{#if this.labelStatus}}
+                <a class="manifest-print-btn" title="Print" id="label-print" onclick="printManifestThermalLabel()">RePrint<i class="ico-print">&nbsp;</i></a> 
+                {{else}}
+                 <a class="manifest-print-btn" title="Print" id="label-print" onclick="printManifestThermalLabel()">Print<i class="ico-print">&nbsp;</i></a> 
+                 {{/if}}
+                 {{else}}
+                 {{#if this.labelStatus}}
+                 <a class="view-review-btn" title="Print" id="label-preview" onclick="previewManifestLabel()">Preview</a> 
+                 <a class="manifest-print-btn" title="Print" id="label-print" onclick="printManifestLabel()">RePrint<i class="ico-print">&nbsp;</i></a>             
+                <a class="manifest-download-btn" id="manifest-label-download-btn" title="Download PDF" onclick="downloadManifestLabel()" download>Download Pdf<i class="ico-download">&nbsp;</i></a>
+                {{else}}
+                 <a class="view-review-btn" title="Print" id="label-preview" onclick="previewManifestLabel()">Preview</a>
+                <a class="manifest-print-btn" title="Print" id="label-print" onclick="printManifestLabel()">Print<i class="ico-print">&nbsp;</i></a>                
+                <a class="manifest-download-btn" id="manifest-label-download-btn" title="Download PDF" onclick="downloadManifestLabel()" download>Download Pdf<i class="ico-download">&nbsp;</i></a>
+                {{/if}}
+                {{/if}}                             
+            </footer>
+            {{/ifEq}}
+            {{#ifEq this.activeTab "M"}}
+            <footer class="manifest-btn-wrap mani-tab1">
+                {{#if this.isThermal}}
+                {{#if this.labelStatus}}
+                <a class="manifest-print-btn" title="Print" id="label-print" onclick="printManifestThermalLabel()">RePrint<i class="ico-print">&nbsp;</i></a> 
+                {{else}}
+                 <a class="manifest-print-btn" title="Print" id="label-print" onclick="printManifestThermalLabel()">Print<i class="ico-print">&nbsp;</i></a> 
+                 {{/if}}
+                 {{else}}
+                 {{#if this.labelStatus}}
+                 <a class="view-review-btn" title="Print" id="label-preview" onclick="previewManifestLabel()">Preview</a> 
+                 <a class="manifest-print-btn" title="Print" id="label-print" onclick="printManifestLabel()">RePrint<i class="ico-print">&nbsp;</i></a>             
+                <a class="manifest-download-btn" id="manifest-label-download-btn" title="Download PDF" onclick="downloadManifestLabel()" download>Download Pdf<i class="ico-download">&nbsp;</i></a>
+                {{else}}
+                 <a class="view-review-btn" title="Print" id="label-preview" onclick="previewManifestLabel()">Preview</a>
+                <a class="manifest-print-btn" title="Print" id="label-print" onclick="printManifestLabel()">Print<i class="ico-print">&nbsp;</i></a>                
+                <a class="manifest-download-btn" id="manifest-label-download-btn" title="Download PDF" onclick="downloadManifestLabel()" download>Download Pdf<i class="ico-download">&nbsp;</i></a>
+                {{/if}}
+                {{/if}}                             
+            </footer>
+            {{/ifEq}}
+            {{#ifEq this.activeTab "M"}}
+            <footer class="manifest-btn-wrap mani-tab2 active">
+                {{#if this.manifestStatus}}
+                <a class="view-review-btn" title="Print" id="ship-preview" onclick="previewManifestShipment()">Preview</a>
+                <a class="manifest-print-btn" title="Print" id="ship-print" onclick="printManifestShipment()">RePrint<i class="ico-print">&nbsp;</i></a>
+                <a class="manifest-download-btn" id="manifest-ship-download-btn" title="Download PDF" onclick="downloadManifestShipment()" download>Download Pdf<i class="ico-download">&nbsp;</i></a>
+
+                {{else}}
+                 <a class="view-review-btn" title="Print" id="ship-preview" onclick="previewManifestShipment()">Preview</a>
+                <a class="manifest-print-btn" title="Print" id="ship-print" onclick="printManifestShipment()">Print<i class="ico-print">&nbsp;</i></a>
+                <a class="manifest-download-btn" id="manifest-ship-download-btn" title="Download PDF" onclick="downloadManifestShipment()" download>Download Pdf<i class="ico-download">&nbsp;</i></a>
+                {{/if}}
+            </footer>
+            {{/ifEq}}
+            {{#ifEq this.activeTab "L"}}
+            <footer class="manifest-btn-wrap mani-tab2">
+                {{#if this.manifestStatus}}
+                <a class="view-review-btn" title="Print" id="ship-preview" onclick="previewManifestShipment()">Preview</a>
+                <a class="manifest-print-btn" title="Print" id="ship-print" onclick="printManifestShipment()">RePrint<i class="ico-print">&nbsp;</i></a>
+                <a class="manifest-download-btn" id="manifest-ship-download-btn" title="Download PDF" onclick="downloadManifestShipment()" download>Download Pdf<i class="ico-download">&nbsp;</i></a>
+
+                {{else}}
+                 <a class="view-review-btn" title="Print" id="ship-preview" onclick="previewManifestShipment()">Preview</a>
+                <a class="manifest-print-btn" title="Print" id="ship-print" onclick="printManifestShipment()">Print<i class="ico-print">&nbsp;</i></a>
+                <a class="manifest-download-btn" id="manifest-ship-download-btn" title="Download PDF" onclick="downloadManifestShipment()" download>Download Pdf<i class="ico-download">&nbsp;</i></a>
+                {{/if}}
+            </footer>
+            {{/ifEq}}
+          </div>
+      </div>
+  </div>
+</div>
+<div id="mani-confirmation-wrpr"  class="popup-wrapper popup-alert hidden">
+    <div class="del-ship-popup-wrap" id="manifest-popup">
+        <div class="del-popup-main">
+            <a class="del-popup-close" id="mani-popup-close"><i class="ico-delete"></i></a>
+        
+            <header>
+                <h2 id="printMessage"></h2>
+            </header>
+           
+            <footer class="del-ship-btnwrap">
+                <a class="mani-yes-btn" id="yes" onclick="manifestPrintPreview()">Yes</a>
+                <a class="mani-no-btn" id="no" onclick="hideManifestConfirm()">No</a>
+            </footer>
+        </div>
+    </div>
+</div>
+
+ <div id="confirmation-wrpr" class="popup-wrapper popup-alert hidden" name="label-ship-popup">
+    <div class="del-ship-popup-wrap">
+        <div class="del-popup-main">
+            <a class="del-popup-close" id="confirm-popup-close"><i class="ico-delete"></i></a>
+        
+            <header>
+                <h2 id="confirmation"></h2>
+            </header>
+           
+            <footer class="del-ship-btnwrap">
+                <a class="mani-yes-btn" id="yes" onclick="printLineItem()">Yes</a>
+                <a class="mani-no-btn" id="no" onclick="hideConfirm()">No</a>
+            </footer>
+        </div>
+    </div>
+</div>  

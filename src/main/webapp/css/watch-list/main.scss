@@ -1,0 +1,748 @@
+.watchlist-portlet{ /* wrap every thing in this portlet in parent container*/
+	#watchlist-container{
+		background-color: #fff;
+	}
+	.result-loader{
+		padding: 20px 0 20px 0;
+	}
+	.wtch-header{
+		height: 70px;
+	    border-top: 2px solid #1c9d92;
+	    padding: 21px 0 0 15px;
+	    font-size: 18px;
+	    font-family: "HelveticaNeue",Arial;
+	    color: #666666;
+	    background-color: #fff;    
+	}
+	.ico-watch-image{
+		width: 110px;
+	    height: 40px;
+	    background-color: #1c9d92;    
+	    margin: 0 auto;
+	    color: #fff;
+	    font-size: 12px;
+	    position: relative;
+	    padding-top: 11px;
+	    padding-left: 20px;
+	    border-radius: 20px;
+	    -moz-border-radius: 20px;
+	}
+	.ico-watch-image .star-icon{
+		position: absolute;
+	    width: 30px;
+	    height: 30px;
+	    color: #1c9d92;
+	    background-color: #fff;
+	    left: 5px;
+	    top: 5px;
+	    border-radius: 15px;
+	    -moz-border-radius: 15px;
+	    padding-top: 5px;
+	}
+	.wtch-no-result{
+		border-bottom: 1px solid #bbbbbb;
+		padding: 30px 0 30px 0;
+		border-top: 1px solid #bbbbbb;
+		text-align: center;
+	}
+	.no-res-content{
+		padding-top: 15px;
+		font-size: 14px;
+	    color: #2b3438;
+	}
+	.grid-footer{
+		height: 30px;
+		border-bottom: 1px solid #666666;
+		background-color: #fff;
+	}
+
+	.del-color {
+	    color: #1c9d92;
+	}
+
+	.grid-header{
+	    height: 54px;    
+	}
+	.grid-row{
+		color: #444;
+	}
+	.grid-footer{
+		height: 30px;
+		border-bottom: 1px solid #666666;
+	}
+
+	.grid-header td{
+		padding: 15px 0 15px 0;
+		font-size: 11px;
+	    color: #666666;
+	    border-top: 1px solid #bbbbbb;
+	    border-bottom: 2px solid #bbbbbb;
+	}
+	.grid-header td:first-child{
+		padding-left: 35px;
+	}
+
+	.grid-row td.mob-ico-save {
+	    background-color: #1c9d92;
+	    color: #fff;
+	    width: 30px;
+	    padding: 0;
+	    text-align: center;
+	    vertical-align: middle;
+	}
+	div.name{
+		color: #000;
+	}
+	td{
+		border-top:1px solid #E5E5E5;
+		border-bottom:1px solid #E5E5E5;
+		padding: 10px 0 10px 10px;
+		vertical-align: middle;
+		position: relative;
+		font-size: 14px;
+	    font-family: "HelveticaNeueLight",Arial;
+	    cursor: pointer;
+	}
+	.deleted-shipment{
+		td{
+			cursor: not-allowed;
+		}
+	}
+	.result-loader td{
+		cursor: initial;
+	}
+	.grid-row .deliveryLoc.address,.grid-row .senderLoc.address{
+		border-bottom: 0px;
+		padding-bottom: 0px;
+	}
+
+	.grid-row .seocnd-cell {
+		padding-left: 10px;
+	}
+
+	.grid-row .milestone .ico-style {
+	    line-height: 50px;
+	}   
+
+	.ico-style{
+		font-size: 30px;
+	}
+	td.shipmentRef{
+	    .shipNo{
+	    	letter-spacing: 0.5px;
+			font-weight: bold;
+			font-family: "HelveticaNeue",Arial;
+		}
+	    /* padding-left: 10px; */
+	}
+	.grid-row td.estimatedDeliveryDate{
+		font-size: 14px;
+		font-family: 'HelveticaNeue',Arial;
+		font-weight: bold;
+	}
+
+	.status-content{
+		display: block;
+		position: inherit;
+	    top: 0;
+	    margin-top: 15px;	
+	    font-size: 14px;
+	    font-family: "HelveticaNeue",Arial;
+	    font-weight: bold;
+	}
+	.mob-arrow-ico {
+	    position: absolute;
+	    right: 20px;
+	    color: #1c9d92;
+	    display: none;
+	}
+	.ico-star-mob {
+		display: none;
+	}
+
+	span.IsHide-excptn{
+		visibility:hidden;
+	}
+
+	td.senderLoc, td.deliveryLoc {
+		vertical-align: top;
+	}
+
+	td.senderLoc .location, td.deliveryLoc .location {
+	    font-size: 14px;
+	}
+
+	td.senderLoc .name, td.deliveryLoc .name {
+	    font-size: 16px;
+	    padding-bottom: 3px;
+	}
+
+	tr.grid-row td.items {
+	    padding-left: 10px;
+	}
+
+	.mob-label{
+		display: none;
+		color: #999;
+		font-size: 12px;
+		font-weight: normal;
+		line-height: 100%;
+		padding: 0 0 5px 0;
+	}
+	.mob-sender-ref{
+		display: none;
+		font-size: 14px;
+	}
+	.left-cell,.right-cell {
+	    width: 50%;
+	    float: left;
+	    /*padding-left: 10px;*/
+	}
+	.top-layer{
+		margin-bottom: 5px;
+	}
+
+	.ico-picked-up:before,.ico-PCKDUP:before,
+	.ico-in-transit:before,.ico-INTRNST:before,
+	.ico-partially-delivered:before,.ico-PRTDEL:before,
+	.ico-out-for-delivery:before,.ico-OUTFDL:before,
+	.ico-delivered:before,.ico-DELVERD:before,
+	.ico-exception:before,
+	.ico-awaiting-collection:before,.ico-AWTCOL:before,
+	.ico-collected:before,.ico-COLLCTD:before,
+	.ico-cancelled:before,.ico-CANCLD:before,
+	.ico-shipment-created:before,.ico-SHPCRE:before{
+		margin-left:0;
+		margin-right: 10px;
+	}
+
+	.grid-header .cell-del-sender,
+	td.sender-delivery-Loc{max-width: 320px;}
+
+	td.shipmentRef,td.estimatedDeliveryDate,td.milestone{
+		color: #000;
+	}
+	
+	td i.ico-style {
+		font-size: 30px;
+		margin-top: -10px;
+		margin-right: 6px;
+	}
+	
+	th.milestone {
+		width: 205px;
+	}
+}
+.block-spn{
+	display: block;
+	word-wrap: break-word;
+}
+.aui .watchlist-portlet{
+	.srch-term{
+		font-size: 16px;
+		color: #000000;
+	}
+
+	.pgntn-ctlrs{
+		width: 320px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.prev-block,.next-block{
+		width: 140px;
+		float: left;
+	}
+	.loader-icn{
+		width: 30px;
+		float: left;
+		padding: 10px;
+		i{
+			position: static;
+		    color: #1c9d92;
+		    width: 30px;
+		    height: 20px
+		}
+	}
+	.pgntn-ctlrs a,.pgntn-ctlrs a:hover{
+		display: inline-block;
+		padding: 10px;
+		text-decoration: none;
+		font-weight: bold;
+		color: #999;
+		cursor: initial;
+		margin: 0 2px;
+	}
+	.pgntn-ctlrs a span{
+		margin: 0 5px;
+	}
+	.pgntn-ctlrs a.active{
+		color: #1C9D92;
+		cursor: pointer;
+	}
+	.pgntn-ctlrs a.active:hover{
+		background-color: #1C9D92;
+		color: #fff;
+	}
+}
+
+@media (min-width: 1024px){
+	.watchlist-portlet{
+		.grid-row:hover,
+		.grid-row:hover .ico-style{
+			color: #fff;
+		}
+		.grid-row:hover{
+			background-color: #1C9D92;
+			color: #fff;
+		}
+		.grid-row:hover{
+			td.shipmentRef,td.estimatedDeliveryDate,td.milestone{
+				color: #fff;
+			}
+		}
+		.grid-row:hover{
+			div.name{
+				color: #fff;
+			}
+		}
+		tr.grid-header td.cell-mile,
+		td.milestone {min-width:160px;}
+		td.senderRef,
+		tr.grid-header td.cell-sender-rec{
+			min-width: 105px;
+			width: 105px;
+			word-wrap: break-word;
+		}
+		div.sender-ref{
+			max-width: 90px;
+			word-wrap: break-word;
+		}
+		.shipment-no-div{
+			max-width: 140px;
+			word-wrap: break-word;
+		}
+	}	 
+}
+@media (min-width: 1280px){
+	.watchlist-portlet {
+		.grid-header td:first-child{
+			padding-left:40px;
+		}
+		td.shipmentRef{
+			width: 160px;
+			max-width: 160px;
+			word-wrap: break-word;
+		}
+		tr.grid-header td.cell-mile,td.milestone{
+			padding-left:10px;
+			width: 200px;
+		}
+		td.cell-del-sender,td.cell-sender-rec,td.cell-est{
+			padding-left: 10px;
+		}
+		tr.grid-header td.cell-itm,td.items{
+			width: 70px;
+			padding-left: 10px;
+		}
+		div.sender-ref{
+			max-width: 100px;
+			word-wrap: break-word;
+		}
+	}
+}
+@media (max-width: 1279px){
+	.watchlist-portlet{
+		tr.grid-header .cell-del-sender,
+		td.sender-delivery-Loc{max-width: 320px;}
+	}
+}
+@media (max-width: 1160px){
+	.watchlist-portlet{
+		td.senderRef,
+		tr.grid-header td.cell-sender-rec{
+			display: none !important;
+		}
+		.grid-header td{
+			padding-left: 10px;
+		}
+		tr.grid-header td.cell-mile,
+		td.milestone {width:170px;}
+		tr.grid-header .cell-del-sender,
+		td.sender-delivery-Loc{width: 310px;max-width: 310px;}
+
+		.mob-sender-ref{
+			display: block;
+		    width: 150px;
+		    font-size: 14px;
+		    color: #444;
+		    margin-top: 5px;
+		}
+		.grid-row:hover .mob-sender-ref{
+			color: #fff;		
+		}
+		td.shipmentRef,.grid-header td.cell-shipmentno{
+			width: 150px;
+		}
+
+		.grid-row td.estimatedDeliveryDate,.grid-header .cell-est{
+			min-width: 135px;
+			padding-left: 10px;
+		}
+		.right-cell{
+			padding-left: 10px;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) and (orientation : portrait){
+	.mobdv-clearfix:after {
+		clear: both;
+		display: block;
+		content: " ";
+		height:0;
+		visibility: hidden;
+	}
+	.watchlist-portlet{
+		td.tap-port-hide,.mob-ico-save,
+		td.senderRef,td.senderRef{
+			display: none !important;
+		}
+		td{
+			padding-right: 0;
+			min-width: 98px;
+		}
+		.ico-star-mob {
+			display: block;
+		    color: #fff;
+		    font-size: 12px;
+		    position: static;
+		    float: none;
+		    line-height: 100%;
+		    margin-bottom: 3px;
+		}
+		tbody,
+		tr{
+			display: block;
+			width: 100%;
+		}
+
+		td.shipmentRef{
+			display: block;
+			width: 100%;
+			color: #fff;
+			background-color: #1C9D92;
+		}
+		.deleted-shipment .mob-label, .deleted-shipment td.shipmentRef .mob-label{
+			display: none;
+		}
+		td.shipmentRef .mob-label{
+			display: block;
+			color: #fff;
+		}
+		.shipment-no-div{
+			width: 170px;
+    		float: left;
+    		word-wrap: break-word;
+		}
+		.mob-sender-ref{
+			display: block;
+		    width: 250px;
+		    padding: 0;
+		    font-size: 14px;
+		    color: #fff;
+		    float: left;
+		    margin-top: 0;
+		    word-wrap: break-word;
+		}
+		.mob-arrow-ico{
+			display: block;
+			position: absolute;
+			right: 15px;
+			top: 24px;
+			color: #fff;
+			font-size: 12px;
+		}
+		.left-cell{
+			padding-left: 0;
+		}
+
+		/*tr.grid-header .cell-shipmentno{width:17%;}*/
+		/*tr.grid-header .cell-sender-rec{width:12%;}*/
+		.grid-header td,td{
+			border-top: 0px;
+			border-bottom: 0px;
+		}
+		.grid-row td.shipmentRef{
+			color: #fff;
+		}
+		tr.grid-header,tr{
+			border-top: 1px solid #bbb;
+			border-bottom: 1px solid #bbb;
+		}
+		.grid-header td.cell-mile{
+			width:185px !important;
+			padding-left:20px;	
+		}
+		td.milestone {width:170px;padding-left:10px;}
+		.grid-header{
+			border-left: 2px solid #fff;
+		}
+		
+		.grid-header .cell-del-sender,
+		td.sender-delivery-Loc{/*width: 45%;*/padding-left: 10px;}
+		
+		.grid-header .cell-est,
+		td.estimatedDeliveryDate{padding-left: 10px; width: 110px;}
+
+		/*.grid-header .cell-itm,
+		td.items{width:13%;}*/
+		.status-content{
+			width: auto;
+		}
+		.grid-header td{
+			padding-left: 10px;
+		}
+		.grid-row{
+		    border: 2px solid #1c9d92;
+		    margin-top: 15px;
+		    border-bottom: 10px solid #1c9d92;
+		    display: block;
+		    width: 96%;
+		    margin-left: auto;
+		    margin-right: auto;
+		}
+		.grid-row:after{
+			display: block;
+		    content: "";
+		    line-height: 0;
+		    clear: both;
+		}
+		tr.result-loader{
+			padding: 20px;
+			td{
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width:767px) {
+	.watchlist-portlet{
+		table,thead,tbody,
+		th,td,tr {
+			display: block;
+		}
+		tr.grid-header{
+			display: none !important;
+		}
+		td.mob-ico-save{display:none}
+		.mob-label{
+			display: block;
+		}
+		.deleted-shipment .mob-label{
+			display: none;
+		}
+		td {
+			border: none;
+			position: relative;
+			display: block;
+			width: 50%;
+			float: left;
+			padding: 10px;
+			min-height: 70px;
+			border-bottom: 1px solid #bbb;
+		}
+		tr.result-loader td {
+			border-bottom: 0;
+			display: block;
+			width: 100%;
+		}
+		.left-cell,.right-cell{
+			max-width: 50%;
+			padding-left: 0;
+		}
+		.right-cell{
+			padding-left: 10px;
+		}
+		td.shipmentRef{
+			width: 100%;
+			background-color: #1C9D92;
+			color: #fff;
+		}
+		td.shipmentRef .mob-label{
+			color: #fff;
+		}
+		td.milestone,td.sender-delivery-Loc{
+			width: 100%;
+			max-width: 100%;
+		}
+		td.senderRef{
+			display: none;
+		}
+		tr.grid-row td.sender-delivery-Loc,{
+			border-bottom: 1px solid #bbb;
+			padding-bottom: 10px;
+		}
+		.ico-star-mob {
+			display: block;
+		    color: #fff;
+		    font-size: 12px;
+		    position: static;
+		    float: none;
+		    line-height: 100%;
+		    margin-bottom: 3px;
+		}
+		
+		.grid-row td {
+			border-top: none;
+		}
+
+		.milestone .ico-style {
+			margin-left: 0;
+		}
+		tr.single-term {
+			background-color: #f5f5f5;
+		}
+
+		.shipment-no-div{
+			width: 160px;
+    		float: left;
+    		word-wrap: break-word;
+		}
+		.mob-sender-ref{
+			display: block;
+		    width: 200px;
+		    padding: 0;
+		    font-size: 14px;
+		    color: #fff;
+		    float: left;
+		    margin-top: 0;
+		    word-wrap: break-word;
+		}
+		
+		.grid-row-header.multi-term td {  
+		  border-top: none;
+		  border-bottom: 1px solid #bbbbbb;
+		  height: auto;
+		}
+		
+		td.estimatedDeliveryDate
+		
+		.wtch-header{
+		    border-bottom: 1px solid #bbbbbb;
+		    margin-bottom: 5px;
+		}
+		.watchlist-portlet{
+		 width:98%;
+		 margin: 0 auto;
+		 background-color: #fff;
+		}
+		#watchlst-records{
+			background-color:#f5f5f5;
+		}
+		.items{
+			line-height: 20px;
+		}
+		
+		div.wtch-no-result{
+			border-bottom: 1px solid #bbbbbb;
+			padding: 20px 0 20px 0;
+			border-top: 1px solid #bbbbbb;
+			text-align: center;
+		}
+		.wtch-header.not-watching {
+		    border-bottom: none;
+		    margin-bottom: 0px;
+		}
+		.mob-arrow-ico {
+		    position: absolute;
+		    right: 5px;
+		    top: 25px;
+		    color: #fff;
+		    display: block;
+		}
+		td.senderLoc .name, 
+		td.deliveryLoc .name{
+			line-height: 100%;
+			min-height: 45px;
+		}
+		tr.grid-row{
+		    border: 2px solid #1c9d92;
+		    margin-bottom: 10px;
+		    border-bottom: 10px solid #1c9d92;
+		    display: block;
+		    width: 94%;
+		    margin-left: auto;
+		    margin-right: auto;
+		}
+		tr.grid-row:after{
+			display: block;
+		    content: "";
+		    line-height: 0;
+		    clear: both;
+		}
+		.grid-row td.estimatedDeliveryDate{
+			width: 50%;
+			max-width: 50%;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.watchlist-portlet{
+		.grid-row td.shipmentRef{
+			min-height:125px; 
+		}
+		.shipment-no-div{
+			width: 250px;
+	    	float: none;
+	    	word-wrap: break-word;
+		}
+		.mob-sender-ref{
+			width: 250px;
+			font-size: 14px;
+			position: static;
+			padding: 5px 0 0 0;
+			color: #fff;
+			word-wrap: break-word;
+		}
+		td.senderLoc .name, 
+		td.deliveryLoc .name{
+			line-height: 100%;
+			min-height: 55px;
+		}
+		.mob-arrow-ico {
+		    position: absolute;
+		    right: 0px;
+		    top: 50px;
+		    color: #fff;
+		    display: block;
+		    visibility: visible;
+		}
+		tr.grid-row{
+		    border: 2px solid #1c9d92;
+		    margin-bottom: 10px;
+		    border-bottom: 10px solid #1c9d92;
+		    display: block;
+		}
+		tr.grid-row:after{
+			display: block;
+		    content: "";
+		    line-height: 0;
+		    clear: both;
+		}
+	}
+
+}
+
+
+@media (max-width: 320px) {
+	.aui.ios .quick-search-portlet textarea {
+	    max-width: 100%!important;
+	}
+	.prev-block,.next-block{
+		width: 130px;
+		float: left;
+	}
+}

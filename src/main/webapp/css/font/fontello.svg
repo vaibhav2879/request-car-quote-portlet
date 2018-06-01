@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2017 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="shipment-icon1" unicode="&#xe800;" d="M523 659l56 93h-117l-35 98h-159l-36-98h-117c18-31 45-74 56-93h352z m102 93h-1l-79-132h-396l-79 132h-1a69 69 0 0 1-69-69v-764a69 69 0 0 1 69-69h556a69 69 0 0 1 69 69v764a69 69 0 0 1-69 69z m-208-692h-278v40h278v-40z m139 139h-417v40h417v-40z m0 139h-417v40h417v-40z" horiz-adv-x="694" />
+
+<glyph glyph-name="bookapickup" unicode="&#xe801;" d="M637 730l-299-120-300 120 300 120z m-637-25l319-128v-395l-319 128v395z m357-523v395l319 128v-395z m-19-89l-169-242 240-1 98 1-169 242h0z" horiz-adv-x="676" />
+
+<glyph glyph-name="watchlist" unicode="&#xe802;" d="M105 545h1106v147h-527l-139 158h-440v-305z m-105-63l105-632h1106l105 632h-1316z" horiz-adv-x="1316" />
+
+<glyph glyph-name="icon---rate-enquiry" unicode="&#xe803;" d="M500 850c-275 0-500-225-500-500s225-500 500-500 500 225 500 500-225 500-500 500z m50-714v-68h-93v68c-57 14-111 50-114 118h68c3-36 28-65 93-65 67 0 82 36 82 57 0 29-15 58-93 75-86 22-143 58-143 129 0 61 46 100 107 114v68h93v-68c64-14 96-64 100-118h-68c-3 40-21 65-75 65-53 0-82-25-82-57 0-29 21-50 93-68 71-18 143-50 143-136-4-68-54-104-111-114z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

@@ -1,0 +1,1199 @@
+.track-shipment-dashboard .track-advacnce-search {
+    display: none
+}
+.advsearchmaro{
+  margin-bottom: 0px !important;
+}
+.advance-search {
+    display: inline-block;
+	float: right;
+	margin-top: 20px;
+	color: #1c9d92;
+	font-size: 12px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.advance-search i{
+	padding-right: 12px;
+	font-size: 9px;
+}
+.track-shipment-dashboard .track-advacnce-search h2 {
+    margin-top: 19px
+}
+.track-shipment-dashboard .track-advacnce-search label {
+    width: 48%;
+    vertical-align: bottom
+}
+.track-shipment-dashboard .track-advacnce-search .input-label-grp input {
+    background-color: #dedede;
+    padding: 0px 20px 0px 10px;
+    min-height: 45px
+}
+.track-shipment-dashboard .track-advacnce-search .input-label-grp span.add-data {
+    position: absolute;
+    right: 0;
+    font-size: 32px;
+    color: #fff;
+    background-color: #1c9d92;
+    padding: 0px 14px;
+    top: 0
+}
+.track-shipment-dashboard .track-advacnce-search .input-label-grp ul {
+    padding: 5px 10px;
+    background-color: #e2e2e2;
+    margin-top: 1px;
+    height: 70px;
+    max-height: 70px;
+    overflow-y: auto
+}
+.track-shipment-dashboard .track-advacnce-search .input-label-grp ul li {
+    background-color: #333;
+    color: #fff;
+    padding: 2px 10px;
+    margin-right: 5px;
+    float: left;
+    margin-bottom: 5px
+}
+.track-shipment-dashboard .track-advacnce-search .input-switch-label {
+    display: inline-block;
+    text-align: right;
+    width: 50%
+}
+.track-shipment-dashboard .track-advacnce-search .switch {
+    width: 120px
+}
+.track-shipment-dashboard .track-advacnce-search .switch .switch-label:before {
+    left: 40px
+}
+.track-shipment-dashboard .track-advacnce-search .switch .switch-label:after {
+    left: 13px
+}
+.track-shipment-dashboard .track-advacnce-search .switch .switch-input:checked ~ .switch-handle {
+    left: 84px
+}
+.track-shipment-dashboard .track-advacnce-search .hidden-input-label-grp {
+    visibility: hidden
+}
+
+.mt-50 {
+	margin-top: -50px;
+}
+
+.emptyDataInfo {
+	display: none;
+}
+
+#dashboard-features-info #featuresTab li {
+    width: 20%;
+}
+
+.saved-search-li {
+	display: inline-block;
+	padding: 5px 10px;
+	margin-right: 10px;
+	background-color: #dedede;
+	margin-top: 10px;
+}
+
+.active-search {
+	background-color: #1c9d92;
+}
+
+.active-search a {
+    color: #fff !important;
+}
+
+a.current-saved-deletion {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+li.saved-search-li:hover {
+	background-color: #1c9d92;
+}
+
+li.saved-search-li:hover a {
+    color: #fff;
+}
+
+.edit-icon {
+	padding-right: 5px;
+    font-size: 10px;
+}
+
+.pdl40 {
+	padding-left: 40px;
+}
+
+.saved-search-ikon:before {	
+  content:url('../../images/icons_saved_searches.png');	
+  possition: absolute;
+}
+
+li.active .saved-search-ikon:before {	
+  content:url('../../images/icons_saved_searches_active.png');	
+  possition: absolute;
+}
+
+.draft-shipment-ikon:before {	
+  content:url('../../images/icons_draft.png');	
+  possition: absolute;
+}
+
+li.active .draft-shipment-ikon:before {	
+  content:url('../../images/icons_draft_active.png');	
+  possition: absolute;
+}
+
+
+/* satish*/
+.tollSaveSearchPopup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.8); }
+  .tollSaveSearchPopup .tollSaveSearch-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate;
+    transform: translate(-50%, -50%);
+    margin: inherit !important;
+    width: 100%;
+    max-width: 450px;
+    background-color: #fff;
+    padding: 25px; }
+  .tollSaveSearchPopup .tollSaveSearch-main {
+    text-align: center; }
+  .tollSaveSearchPopup .tollSaveSearch-close {
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    right: 10px;
+    top: 10px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    cursor: pointer; 
+    color: #a2a2a2;
+    transition: all 0.5s ease;
+  }
+  .tollSaveSearchPopup .tollSaveSearch-close:hover {
+    color: #000;
+  }
+
+  .tollSaveSearchPopup .advSrchSavebtn {
+    margin-top: 25px;
+    font-size: 16px;
+    color: #fff;
+    padding: 7px 40px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    background-color: #1c9d92;
+    margin-right: 15px important;
+    display: inline-block;
+    border: none;
+  }
+  .tollSaveSearchPopup .tollSaveSearch-main header {
+    float: left;
+    width: 100%;
+    margin-top: 0px; }
+  .tollSaveSearchPopup .tollSaveSearch-main header h2 {
+    text-align: left;
+    padding-top: 0px;
+    margin-top: 0px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+   .tollSaveSearchPopup .alignleft{
+    text-align: left;
+   }
+  .tollSaveSearchPopup #adl_saveSearchName{
+    font-size: 13px;
+    color: #000;
+    text-align: left;
+    display: block;
+    font-weight: normal;
+    margin-top: 10px;
+  }
+  .tollSaveSearchPopup .paddingleft0 {
+    padding-left: 0px; }
+  .tollSaveSearchPopup .advSavedSearch-error {
+    border: 1px solid #de2817 !important;
+    border-left: 3px solid #de2817 !important;
+    background-color: #fadfdc !important;
+    padding: 8px 20px 8px 17px !important; }
+
+#tblAdvSerhResult tr:hover {
+  background-color: #1c9d92;
+  color: #FFF; }
+
+#tblAdvSerhResult tr:hover td .del-color.ico-style {
+  background-color: #1c9d92;
+  color: #FFFFFF !important; }
+
+#tbl_adv_search_result thead tr {
+  border-bottom: 1px solid #dedede !important; }
+
+#getMoreAvdSearch {
+  background-color: #222;
+  color: #ffffff;
+  letter-spacing: 0;
+  margin-right: 0px; }
+
+.draftviewmorediv {
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-bottom: 10px;
+  padding-right: 40px;
+  background-color: #fff;
+  border-top: 1px solid #ccc; }
+
+.advheadCol1 {
+  float: left; }
+
+.advheadCol2 {
+  float: right; }
+
+.advheadCol3 {
+  float: right; margin-right: 15px; }
+
+.advheadCol4{
+  float: right;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  color: #000;
+  box-sizing: border-box;
+  padding: 5px;
+  background: #dedede;
+  margin-right: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 12px;
+  position: relative;
+  top: -2px;
+}
+
+#advSearchRelClose {
+  position: absolute;
+  right: 15px;
+  top: 14px;
+  cursor: pointer; }
+
+#advanceSearchResults .result-section {
+  padding-top: 35px; }
+
+.ifEditSavednameDiv {
+  display: none;
+  padding-top: 5px;
+  text-align: left; }
+  .ifEditSavednameDiv input {
+    position: relative;
+    top: 3px; }
+  .ifEditSavednameDiv label {
+    font-size: 12px;
+    color: #5e5e5e !important; }
+
+#advScrhNoDataDiv {
+  padding: 35px;
+  text-align: center;
+  font-weight: bold;
+  background: #FFFFFF; }
+  #advScrhNoDataDiv .emptyDataImg {
+    background-image: url(../../images/asset_icons/empty_icon.png);
+    background-repeat: no-repeat;
+    min-height: 100px;
+    background-position: 50%; }
+  #advScrhNoDataDiv .visitor-msg {
+    font-size: 12px;
+    margin-bottom: 0;
+    padding: 0px;
+    padding-top: 7px;
+  }
+
+/* satish end*/
+
+
+
+/* new test css*/
+
+
+#advanceSearchResults .tab-content .advSrchEditbtn {
+  background: #FFF !important;
+  border: solid 1px #1c9d92 !important;
+  color: #1c9d92 !important;
+  margin-left: 0px !important;
+  transition: all 0.5s ease-out;
+}
+#advanceSearchResults .tab-content .advSrchEditbtn:hover{
+  background: #1c9d92 !important;
+  color: #FFF !important;
+}
+
+#advanceSearchResults .tab-content .advSrchTotalCounter {
+  padding: 10px 0px !important; }
+#advanceSearchResults .tab-content .advSrchTotalCounter .total-counter {
+    font-size: 12px;
+    color: #888888; }
+
+#advanceSearchResults #dashboard-features-info {
+  text-decoration: none;
+  /*font-size: 12px;*/
+  /*color: #444444;*/
+  border: 0;
+  margin-right: 1px;
+  border-radius: 0;
+  /*background-color: #f7f7f7;*/
+  transition: all 0.2s ease-in-out;
+  min-height: 63px; }
+#advanceSearchResults #dashboard-features-info #featuresTab li.active {
+    background-color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    color: #444;
+    border: 0;
+    margin-right: 1px;
+    border-radius: 0;
+    padding: 20px 0px 0 35px;
+    transition: all 0.2s ease-in-out;
+    min-height: 63px; }
+#advanceSearchResults #dashboard-features-info #featuresTab li.active:before {
+      content: 'Search Results'; }
+#advanceSearchResults #dashboard-features-info #featuresTab li.active .search-ico.mob-only {
+      display: none; }
+#advanceSearchResults #dashboard-features-info #featuresTab li.active > a, #advanceSearchResults #dashboard-features-info #featuresTab li.active > a:focus, #advanceSearchResults #dashboard-features-info #featuresTab li.active > a:hover {
+      background-color: inherit;
+      border: 0;
+      margin-top: -15px;
+      float: right; }
+#advanceSearchResults #dashboard-features-info #featuresTab li.active span.tab-cnc {
+      color: #bbb;
+      float: right;
+      font-size: 20px; }
+
+#advanceSearchResults .tab-content {
+  background: #fff;
+  padding: 15px 0;
+  z-index: 2;
+  position: relative; }
+#advanceSearchResults .tab-content .content-title {
+    margin-bottom: 15px;
+    margin-top: 12px;
+    padding: 0 35px; }
+#advanceSearchResults .tab-content .saved-search-token {
+    padding: 0 40px; }
+#advanceSearchResults .tab-content .total-counter {
+    font-size: 14px;
+    color: #888888; }
+#advanceSearchResults .tab-content .download-link, #advanceSearchResults .tab-content .view-more-data, #advanceSearchResults .tab-content .save-search-download-link {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1c9d92;
+    cursor: pointer; 
+    margin-right: 0px;
+}
+#advanceSearchResults .tab-content .download-link, #advanceSearchResults .tab-content .save-search-download-link {
+    line-height: 20px;
+    float: right; }
+#advanceSearchResults .tab-content .download-link i, #advanceSearchResults .tab-content .save-search-download-link i {
+      font-size: 10px;
+      padding-right: 6px; }
+#advanceSearchResults .tab-content .view-more-data {
+    text-align: right;
+    padding: 0 40px; }
+#advanceSearchResults .tab-content .view-more-data i {
+      padding-right: 14px;
+      font-size: 8px; }
+#advanceSearchResults .tab-content table {
+    width: 100%; }
+#advanceSearchResults .tab-content table tr {
+      border-top: 1px solid #dedede; }
+#advanceSearchResults .tab-content table tr:first-child {
+        border: none; }
+#advanceSearchResults .tab-content table tr.showresult td {
+        text-align: center !important;
+        background-color: #f5f5f5 !important;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 20px 0 20px 0;
+        vertical-align: middle;
+        position: relative;
+        font-size: 14px;
+        color: #666;
+        cursor: pointer; }
+#advanceSearchResults .tab-content table tr.showresult td span {
+          color: #1c9d92;
+          padding-right: 10px; }
+#advanceSearchResults .tab-content table tr.data-row:hover {
+        background-color: #1c9d92;
+        color: #FFF; }
+#advanceSearchResults .tab-content table tr.data-row:hover td .ico-style {
+          color: #fff !important; }
+#advanceSearchResults .tab-content table tr.single-term td {
+        background-color: #f5f5f5; }
+#advanceSearchResults .tab-content table tr.no-shipment td {
+        border-top: 1px solid #b6b6b6;
+        padding-top: 25px;
+        color: #000;
+        padding-bottom: 25px; }
+#advanceSearchResults .tab-content table tr.no-shipment td .no-res-floter {
+          margin: 0 22.5%;
+          text-align: left;
+          font-weight: normal;
+          text-transform: none;
+          font-size: 14px; }
+#advanceSearchResults .tab-content table tr.no-shipment td.no-res-found i {
+          font-size: 30px;
+          color: #bbb;
+          float: left;
+          margin-top: -5px;
+          margin-right: 15px; }
+#advanceSearchResults .tab-content table th {
+      padding: 10px 0 12px 35px;
+      font-size: 12px;
+      color: #222;
+      font-weight: 600;
+       }
+#advanceSearchResults .tab-content table th:last-child{
+  padding-right: 35px;
+}
+#advanceSearchResults .tab-content table td {
+      padding: 23px 0 21px 35px;
+      /*font-weight: 600;*/
+      width: 15%;
+      font-size: 14px;
+      cursor: pointer;
+       }
+#advanceSearchResults .tab-content table td:last-child{
+  padding-right: 35px ;
+}
+#advanceSearchResults .tab-content table td:first-child{
+    font-weight: 600;
+}
+#advanceSearchResults .tab-content table .estimatedDeliveryDate,
+#advanceSearchResults .tab-content table .senderRef{
+  width:17%;
+}
+#advanceSearchResults .tab-content table td.large-cell {
+        width: 18%; }
+#advanceSearchResults .tab-content table td.item {
+        width: 5%; }
+#searchResults .tab-content table td .mob-label, #searchResults .tab-content table td.device-only, #searchResults .tab-content table td .device-label, #advanceSearchResults .tab-content table td.mob-only, #advanceSearchResults .tab-content table td .mob-label, #advanceSearchResults .tab-content table td.device-only, #advanceSearchResults .tab-content table td .device-label {
+        display: none; }
+#advanceSearchResults .tab-content table td:last-child {
+        padding-right: 40px !important; }
+#advanceSearchResults .tab-content table td.milestone {
+        min-width: 180px; }
+#advanceSearchResults .tab-content table td.milestone .status-content {
+          display: block;
+          font-size: 12px;
+          width: calc(100% + 30px);
+          font-weight: bold;
+          margin-top: 10px; }
+#advanceSearchResults .tab-content table td button {
+        float: right;
+        min-width: 170px;
+        padding: 21px 0px;
+        font-size: 12px;
+        border: 2px solid #999;
+        margin-right: 0;
+        background-color: transparent; }
+#advanceSearchResults .tab-content table td .status-content {
+        display: block;
+        font-size: 14px;
+        /*font-weight: bold;*/
+        margin-top: 0px; }
+#advanceSearchResults .tab-content table td .ico-style {
+        font-size: 30px;
+        margin-right: 10px;
+        margin-top: 0px;
+         }
+#advanceSearchResults .tab-content table td .del-color.ico-style {
+        color: #1c9d92; }
+
+#advanceSearchResults [class^='mob'] {
+  display: none; }
+
+/* new test css end*/
+
+#advSaveSearch-errorMg{
+    text-align: left;
+    margin-top: 0px !important;
+}
+
+#advance-search .popover-content {
+  line-height: 15px; }
+
+#advance-search .popover.top > .arrow:after {
+  border-top-color: #000; }
+
+#advance-search .popover.top > .arrow:after {
+  border-top-color: #000; }
+
+#advance-search .popover.top > .arrow:after {
+  border-top-color: #000; }
+  
+ul#saved-search-list, .edit-view-btns {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+  .advNodatasaveSearch{
+    position: relative;
+    top: -20px;
+  }
+   .advNodatasaveSearch .advSrchSaveBtn{
+        text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1c9d92;
+    cursor: pointer;
+   }
+   .delete-saved-icon {
+       font-size: 11px;
+    }
+    
+
+   /* .saas  */
+
+.track-advacnce-search #advance-search .track-banner { 
+  height: 85px; 
+}
+.mytoll .track-advacnce-search .select-label-grp{
+  margin-top: 30px !important;
+}
+.mytoll .track-advacnce-search .custom-dropdown .dropdown-list, .mytoll .address-dropdown .dropdown-list{
+  top:37px;
+}
+.mytoll .track-advacnce-search .search-input-date-period .select-label-grp{
+  margin-top: auto !important;
+}
+
+.mytoll .track-advacnce-search .custom-dropdown .label-wrapper .current-selected, 
+.mytoll .track-advacnce-search.address-dropdown .label-wrapper .current-selected {
+height: 35px;
+background-color: #eeeeee;
+padding-right: 40px;
+padding-top: 1px;
+}
+.mytoll .track-advacnce-search .custom-dropdown {
+  max-height: 37px;
+  height: 37px;
+  background-color: #eee;
+}
+.mytoll .track-advacnce-search .input-label-grp input[type=text], 
+.mytoll .track-advacnce-search .input-label-grp input[type=password], 
+.mytoll .track-advacnce-search .input-label-grp input[type=number], 
+.mytoll .track-advacnce-search .input-label-grp input[type=tel], 
+.mytoll .track-advacnce-search .input-label-grp input[type=email]{
+  height: 37px;
+    min-height: 37px;
+    background-color: #eee;
+    border-left-width: 1px;
+    padding-right: 50px;
+    border-color: #eeeeee;
+}
+.track-advacnce-search .chosen-container.chosen-container-multi{
+  height: auto !important;
+    background-color: #eee;
+    opacity: 1;
+    border-left-width: 1px;
+    border-color: #eee;
+}
+.track-advacnce-search .chosen-container-multi .chosen-choices li.search-field input[type=text] {
+   height: auto !important; 
+}
+.track-advacnce-search .thin-tab .tab{
+  height: 37px;
+  margin-right: 1px;
+  width: 24.5%;
+  background-color: #eee;
+  color: rgba(34, 34, 34, 0.7);
+
+}
+.track-advacnce-search .thin-tab .input-label-grp .dateRangeDetails input[type=text]{
+  font-size: 11px !important;
+}
+.track-advacnce-search .thin-tab .input-label-grp .dateRangeDetails{
+  margin-left: 2px;
+  float: right;
+}
+.track-advacnce-search .date-box{
+  height: 38px;
+  border:none;
+}
+.track-advacnce-search .label-wrapper .toggler,
+.track-advacnce-searc .address-dropdown .label-wrapper .toggler{
+top:2px !important;
+}
+.track-shipment-dashboard .track-advacnce-search .input-label-grp span.add-data{
+  height: 37px;
+}
+.track-shipment-dashboard .track-advacnce-search .input-label-grp span.add-data span{
+  font-size: 30px;
+  font-family: serif;
+  display: block;
+  margin-top: -2px;
+}
+    
+.track-advacnce-search .up-arrow-head{
+  margin-top: -47px;
+}
+.track-advacnce-search #sender-loc-add-op, 
+.track-advacnce-search #receiver-loc-add-op{
+  height: 37px;
+  background-color:#1c9d92;
+  width: 45px;
+}
+.track-advacnce-search .add-data .ico-arrow-down-green {
+  color: #fff;
+  font-size: 10px;
+  position: relative;
+  top: -12px;
+  left: 0px;
+}
+.mytoll .track-advacnce-search .input-label-grp, 
+.mytoll .textarea-label-grp{
+  min-height: auto;
+}
+.mytoll .track-advacnce-search .select-label-grp {
+  position: relative;
+  min-height: auto;
+  padding-bottom: 0;
+}
+.mytoll .track-advacnce-search .chosen-container-multi .chosen-choices li.search-choice{
+  min-height: 28px !important;
+  height: auto !important;
+  padding: 7px 27px 7px 10px;
+  line-height: normal !important;
+  border-radius: 2px;
+  margin:3px 2px 3px 3px; 
+}
+.mytoll .track-advacnce-search .chosen-container-multi .chosen-choices{
+  max-height: 73px;
+  min-height: 28px;
+  line-height: normal !important;
+}
+.mytoll .track-advacnce-search .chosen-container-multi .chosen-choices li.search-choice .search-choice-close{
+  margin-top: -4px;
+    right: 10px;
+}
+.mytoll .track-advacnce-search .chosen-container-multi .chosen-choices li.search-field input[type=text] {
+  height: 33px!important;
+  vertical-align: middle;
+  color: rgba(34, 34, 34, 0.7);
+
+}
+.mytoll .track-advacnce-search .track-advacnce-search .input-label-grp ul li{
+padding: 7px 10px  !important;
+    margin: 5px;
+    line-height: normal !important;
+    border-radius: 2px;
+}
+.delete-chip {
+  font-size: 19px;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #999;
+  font-weight: bold;
+  display: block;
+  float: right;
+  margin-left: 5px;
+  line-height: 12px;
+}
+.delete-chip:hover, a.search-choice-close:hover {
+  color: #fff;
+  }
+
+.track-advacnce-search span.chip-value {
+  white-space: pre-wrap;
+}
+.track-advacnce-search .thin-tab .active label{
+  color: #fff;
+}
+.track-advacnce-search .thin-tab .active {
+  background-color: #1c9d92;
+}
+.delete-search
+{
+  font-size: 32px;
+    line-height: 22px;
+    display: block;
+    float: right;
+    color: #ff0000;
+    font-family: serif;
+    margin-top: -2px;
+    cursor: pointer;
+    margin-right: -4px;
+}
+.mytoll .custom-dropdown .dropdown-list li:hover .delete-search, .traversing .delete-search
+{
+  color: #fff;
+  opacity: 1;
+
+}
+.mytoll .custom-dropdown .dropdown-list ul, .mytoll .address-dropdown .dropdown-list ul{
+  max-height: 190px !important;
+}
+.mytoll .track-advacnce-search .thin-tab label {
+  width: auto !important;
+  margin: 10px auto;
+  color: rgba(34, 34, 34, 0.7);
+}
+.mytoll .track-advacnce-search .thin-tab .active label{
+  color: #fff;
+
+}
+.track-advacnce-search #sender-receiver-loction-editor { 
+  height: auto;
+  background-color: #ccc; 
+	position: relative;
+	margin: 60px 15px 15px 15px !important;
+	display:none;
+}
+
+#sender-receiver-loction-editor .form-row{
+  padding-top: 20px;
+}
+.mytoll .track-advacnce-search #sender-receiver-loction-editor .input-label-grp input[type=text]{
+background-color: #fff;
+}
+.mytoll .track-advacnce-search .thin-tab .dateRangeDetails label {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.chosen-search-input{
+  text-transform: none !important;
+}
+.ico-not-found{
+  font-size: 16px;
+}
+.mytoll .switch input[type="checkbox"]{
+  height: 16px;
+    width: 16px;
+    top: -3px;
+    left: -3px;
+}
+.track-advacnce-search .input-label-grp input[type=text]::placeholder,
+.track-advacnce-search .current-selected::placeholder {
+   /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(34, 34, 34, 0.7);
+}
+.mytoll .track-advacnce-search .input-label-grp input{
+  background-color: #eeeeee;
+}
+.mytoll .track-advacnce-search .mytoll-tip {
+margin-top: -4px;
+}
+.mytoll .track-advacnce-search .custom-dropdown .label-wrapper{
+  
+  background-color: #eeeeee !important;
+  position: relative;
+  padding-right: 0px;
+  border: none !important;
+  border-left: 3px solid #eeeeee;
+  width: 100%;
+}
+.search-input-date-period{
+  padding-right: 0 !important;
+}
+
+#quick-advance-search-tab li a{
+	font-size: 18px; 
+	background-color: #f6f6f6 !important;
+   border: 0px !important; 
+}
+
+#quick-advance-search-tab li a{
+	border-radius: 0px;
+	margin: 0px;
+}
+
+#quick-advance-search-tab li a:hover{
+	font-weight: bold;
+	
+}
+
+#quick-advance-search-tab li.active a {
+	font-weight: bold;
+	background-color: #fff !important;
+  border: 0px !important;
+}
+
+.dashboard-list {
+	/* font-size: 12px; */
+}
+
+
+/* css to resolved scss conflict*/
+
+.mytoll .track-advacnce-search .mytoll-tip {
+    margin-top: -2px;
+    margin-right: 1px;
+
+}
+.ico-not-found {
+    font-size: 14px;
+}
+
+.mytoll .track-advacnce-search .btn-reset {
+  background-color: transparent;
+  border: none;
+  text-transform: capitalize;
+  padding:14px 0 14px 5px; 
+  font-size: 12px;
+}
+.mytoll .track-advacnce-search .btn-reset .ico-routing-details{
+  color: #000;
+}
+.mytoll .switch input[type="checkbox"] {
+    margin-top: 6px !important;
+    height: 12px;
+    width: 12px;
+    left: -7px;
+    opacity: 0;
+}
+span.adl_exclude {
+    display: block;
+    margin-top: 0px;
+    margin-right: 4px;
+}
+
+.track-shipment-dashboard .track-advacnce-search .input-label-grp ul
+{    margin-bottom: 15px;
+}
+
+.track-shipment-dashboard .track-advacnce-search .input-switch-label {
+    display: inline-block;
+    text-align: right;
+    width: 50%;
+    float: right;
+}
+.track-shipment-dashboard .track-advacnce-search .switch {
+    height: auto;
+    min-height: auto;
+    width: 70px!important;
+    margin-bottom: 3px;
+}
+.mytoll .custom-dropdown .label-wrapper .current-selected{
+
+    color: rgba(34,34,34,0.7) !important;
+}
+
+#savedsrchTopNoDataDiv{
+  text-align: center;
+  border-top: 1px solid #dedede;
+  clear: both;
+  padding-top: 10px;
+}
+#savedsrchTopNoDataDiv .emptyDataImg{
+  background-image: url("../../images/asset_icons/empty_icon.png");
+    background-repeat: no-repeat;
+    min-height: 100px;
+    background-position: 50%;
+}
+#savedsrchTopNoDataDiv .visitor-msg{
+  font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+/******Checkbox**********/
+/* Hide the browser's default checkbox */
+.chk_container input[checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 1px;
+  left: -10px;
+  height: 14px;
+  width: 14px;  
+  border: 1px solid #1c9d92;
+  border-radius: 2px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.chk_container input:checked ~ .checkmark {
+  background-color: #1c9d92;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.chk_container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.chk_container .checkmark:after {
+  left: 4px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/******end Checkbox******/
+@media (max-width: 1024px) and (min-width: 768px){
+  #advanceSearchResults .tab-content table tr{
+    padding: 15px 0;
+    display: inline-block;
+    margin: 0 15px 10px;
+    border: 1px solid #ccc;
+  }
+  #advanceSearchResults .tab-content table tr {
+  	width: 97%;
+  }
+  #advanceSearchResults .tab-content table td{
+    width: 50%;
+    float: left;
+    padding: 0 15px 10px;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: #222222;
+  }
+  #advanceSearchResults .tab-content table tr:first-child{
+    border: 1px solid #ccc;
+  }
+  #advanceSearchResults #tblAdvSerhResult .data-title{
+    color: #888;
+    font-size: 10px;
+    display: block;
+    letter-spacing: 0.3px;
+  }
+  
+  #advanceSearchResults .tab-content .content-title{
+    padding: 0 15px;
+  }
+  #advSearchResultsdiv #featuresTab li{
+    width: 50%;
+  }
+  #advanceSearchResults .mobpadding0{
+    padding-left:0px !important;
+    padding-right: 0px !important;
+  }
+  
+  .mytoll #advanceSearchResults .btn-link{
+    margin-bottom: 10px;
+  }
+ 
+  #advanceSearchResults .milestoneMob {
+  	width: 100% !important;
+	background: #eee;
+	padding: 5px 15px !important;
+	font-weight: 700;
+	margin-bottom: 10px;
+	font-size: 14px !important;
+  }
+  #advanceSearchResults  .tableFullBtnMob {
+	width: 100% !important;
+	background: #eee;
+	padding: 10px 15px !important;
+	font-weight: 700;
+	font-size: 14px !important;
+  }
+  #advanceSearchResults .table100perMob {
+	width: 100% !important;
+  }
+  #advanceSearchResults .milestoneMob span {
+	position: relative;
+	top: 10px;
+  }
+  #advanceSearchResults .btnleftMob {
+	float: left !important;
+  }
+  #advanceSearchResults .hidden-xs {
+  	display: none !important
+  }
+  #advanceSearchResults .visible-xs {
+  	display: block !important
+  }
+}
+
+@media (max-width: 767px){
+   #advanceSearchResults #dashboard-features-info #featuresTab li.active{
+    padding-left: 15px !important;
+  }
+.mytoll .track-advacnce-search .custom-dropdown .label-wrapper .current-selected, 
+.mytoll .track-advacnce-search.address-dropdown .label-wrapper .current-selected {
+    height: 55px;
+}
+  #advanceSearchResults .tab-content table tr{
+    padding: 15px 0;
+    display: inline-block;
+    margin: 0 15px 10px;
+    border: 1px solid #ccc;
+  }
+  #advanceSearchResults .tab-content table td{
+    width: 50%;
+    float: left;
+    padding: 0 15px 10px;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: #222222;
+  }
+  #advanceSearchResults .tab-content table tr:first-child{
+    border: 1px solid #ccc;
+  }
+  #tblAdvSerhResult .data-title{
+    color: #888;
+    font-size: 10px;
+    display: block;
+    letter-spacing: 0.3px;
+  }
+  .track-advacnce-search .btn-reset{
+    display: none;
+  }
+  #advanceSearchResults .tab-content .content-title{
+    padding: 0 15px;
+  }
+  #advSearchResultsdiv #featuresTab li{
+    width: 50%;
+  }
+  .tollSaveSearchPopup .tollSaveSearch-wrap{
+    width: 90%;
+  }
+  #quick-advance-search-tab li a{
+    font-size: 14px;
+    text-overflow: inherit;
+    white-space: normal;
+    padding-right: 30px;
+    text-align: left;
+    height: 60px;
+   
+  }
+  .track-advacnce-search #advance-search .track-banner{
+    background-image: url(../../images/Dashboard_Illustration_Trolley.svg);
+    height: 55px !important;
+    background-position: right;
+    background-size: auto;
+    background-repeat: no-repeat;
+    text-align: right;
+    margin-right: 20px;
+    width: 60px;
+  }
+  .mytoll .track-advacnce-search .select-label-grp{
+    margin-top: 0px !important; 
+  }
+  .mobpadding0{
+    padding-left:0px !important;
+    padding-right: 0px !important;
+  }
+  .track-advacnce-search #get-advance-search{
+    margin-bottom: 0px;
+    margin-top:30px;
+  }
+  .track-advacnce-search .primary{
+    margin-left: 0px;
+  }
+  .track-advacnce-search .btn_adv_search, .track-advacnce-search .btn_adv_search:hover{
+    width: 100%;
+    background-image: none !important;
+    text-align: center;
+  }
+  #advance-search .mytoll button, .mytoll .btn-link{
+    margin-bottom: 10px;
+  }
+ .track-advacnce-search .label-wrapper .toggler, .track-advacnce-searc .address-dropdown .label-wrapper .toggler{
+    top: 12px !important;
+  }
+
+  .track-advacnce-search{
+    font-size: 14px !important;
+  }
+  .mytoll .track-advacnce-search .custom-dropdown .dropdown-list{
+    top: 55px;
+  }
+
+}
+.mytoll .track-advacnce-search h4{
+  margin: 0 0 10px 0 !important;
+}
+
+.mytoll .track-advacnce-search .error-msg {
+  margin-top: -15px !important;  
+  margin-bottom: 12px !important;
+}
+
+
+/* End - css to resolved scss conflict*/
+
+.mytoll .track-advacnce-search .ms-row .select-label-grp{
+  margin-top: 0 !important;
+  /*z-index: 4;*/
+}
+.mytoll .track-advacnce-search .ms-row .custom-dropdown {
+  max-height: 37px;
+  height: 37px;
+  outline: none;
+  border: 1px solid #eeeeee;
+}
+
+i.ikon.rate-enquiry-ikon {
+  z-index: 1 !important;
+}
+#advanceSearchResults .popover.top > .arrow:after {
+  border-top-color: #000;
+}
+#savedSearchPopover{
+  margin-top: -24px;
+}
+.mytoll .track-advacnce-search .select-label-grp input[type=text]:focus{
+  /* outline: none;
+  border: 1px solid #1c9d92;
+  border-left: 3px solid #1c9d92; */
+  /* padding: 8px 20px 8px 17px; */
+  background-color: #d8f1ef;
+}
+.mytoll .track-advacnce-search .select-label-grp .open{
+  outline: none;
+  border: 1px solid #1c9d92;
+  border-left: 3px solid #1c9d92;
+  /* padding: 8px 20px 8px 17px; */
+  background-color: #d8f1ef;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+  /* IE10+ specific styles go here */ 
+  .track-advacnce-search .btn_adv_search, .track-advacnce-search .btn_adv_search:hover{
+    background-position: -19px 8px !important;
+    background-size: 100px !important;
+  } 
+}
+@media screen and (max-width: 380px){
+  #advSearchResultsdiv #featuresTab li{
+    width: 60%;
+  }
+}
+
+#error-box{
+  display: none;
+}
+/* #wrapper-advance-search{
+  display: none;
+} */

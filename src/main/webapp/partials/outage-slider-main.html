@@ -1,0 +1,39 @@
+<div class="layout-outage-slides owl-carousel owl-theme" id="slider-outage">
+    {{#each this as |slide|}}
+        <div class="outage-slides-inner {{slide.type}} item">
+            <div class="outage-container">
+                <div class="outage-slide-item">
+                    {{#ifEq slide.type "out_error"}}
+                    <div class="outage-slide-ind">
+                        <div class="outage-slide-icon">
+                            <i class="ico-alert">&nbsp;</i>
+                        </div>
+                        <div class="outage-slide-text">
+                            <p>{{{slide.message}}}</p>
+                        </div>
+                    </div>
+                    {{/ifEq}}
+
+                    {{#ifEq slide.type "out_warn"}}
+                    <div class="outage-slide-ind">
+                        <div class="outage-slide-icon">
+                            <i class="ico-warning">&nbsp;</i>
+                        </div>
+                        <div class="outage-slide-text">
+                            <p>{{{slide.message}}}</p>
+                        </div>
+                    </div>
+                    {{/ifEq}}
+
+                    
+                    <div class="cust-control-prev">
+                        <i class="ico-accordian-up">&nbsp;</i>
+                    </div>
+                    <div class="cust-control-next">
+                        <i class="ico-accordian-down">&nbsp;</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>

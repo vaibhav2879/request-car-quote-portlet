@@ -1,0 +1,2945 @@
+/*#featuresTab{ display: table; width:100%; }
+#featuresTab > li{ display: table-cell; float:none !important; }*/
+@font-face {
+    font-family: '$$toll-ikons';
+    src: url('../font/fontello.eot');
+    src: url('../font/fontello.eot') format('embedded-opentype'),
+         url('../font/fontello.woff') format('woff'),
+         url('../font/fontello.ttf') format('truetype'),
+         url('../font/fontello.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.ikon{ 
+    font-family: '$$toll-ikons'; 
+    font-style: normal;
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    left: 30px;
+    top: 12px;
+    font-size: 25px;
+    color: #29635f !important;
+}
+.shipment-ikon::before{ content:'\e800'; }
+.bap-ikon::before{ content:'\e801'; }
+.watchlist-ikon::before{ content:'\e802'; }
+.rate-enquiry-ikon::before{ content:'\e803'; }
+.bap30{ font-size: 30px; }
+i.ikon.rate-enquiry-ikon {
+   /* top: 22px; */
+}
+
+.error{
+	border:1px solid red !important;
+	}
+.pdr2{
+	padding-right: 2px;
+}
+.del-color {
+	color: #1c9d92 !important;
+}
+.track-shipment-dashboard {
+    /* margin-top: 18px; */
+}
+.track-shipment-dashboard .dropdown-list {
+    z-index: 2 !important
+}
+.track-shipment-dashboard .content-box {
+    min-height: 180px;
+    padding: 23px 41px 23px 40px !important;
+}
+.track-shipment-dashboard .boxShad {
+    box-shadow: 0px 4px 4px 0px #CCC
+}
+.track-shipment-dashboard h2 {
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 19px;
+    font-family: GothamHTF-Book;
+    text-transform: uppercase;
+    text-align: left;
+    color: #222222;
+    letter-spacing: 0.5px
+}
+.track-shipment-dashboard .input-label-grp ,
+.track-shipment-dashboard .select-label-grp{
+    margin: 0px!important;
+}
+.track-shipment-dashboard .search-button-icon,
+.track-shipment-dashboard i.tablet-search-button-icon {
+    min-height: 55px;
+    min-width: 55px;
+    background: #1c9d92;
+    padding: 11px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer
+}
+.track-shipment-dashboard i.tablet-search-button-icon {
+    color: #FFF;
+    font-size: 26px;
+    padding: 9px 15px
+}
+.track-shipment-dashboard .input-label-grp input[type=text] {
+    background-color: #eeeeee;
+    /*min-height: 55px;*/
+    padding: 20px 25px 19px 25px;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    color: #8e8e8e;
+    font-family: GothamHTF-Book;
+    border: 0
+}
+.track-shipment-dashboard .light-grey-text {
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 20px;
+    color: #383838
+}
+.track-shipment-dashboard .track-banner {
+    background-image: url("/images/asset_icons/image_banner4.png");
+    height: 131px;
+    background-position: 0;
+    background-size: auto;
+    background-repeat: no-repeat
+}
+.track-shipment-dashboard .advance-search {
+    display: inline-block;
+    float: right;
+    margin-top: 20px;
+    color: #1c9d92;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer
+}
+.track-shipment-dashboard .advance-search i {
+    padding-right: 12px;
+    font-size: 9px
+}
+.track-advacnce-search {
+    display: none
+}
+.track-shipment-dashboard #toll-shipment-live-updates {
+    margin-left: -15px;
+    margin-right: -15px
+}
+.track-shipment-dashboard .shipment-live-updates {
+    /* margin-top: 30px */
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-created,
+.track-shipment-dashboard .shipment-live-updates .pickups-confirmed {
+    padding: 18px 35px;
+    background-color: #FFF;
+    /* min-height: 225px */
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-created-title h2,
+.track-shipment-dashboard .shipment-live-updates .pickups-confirmed-title h2 {
+    margin-bottom: 20px
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-created-details>div,
+.track-shipment-dashboard .shipment-live-updates .pickups-confirmed-details>div {
+    border-top: 5px solid #1c9d92;
+    display: inline-block;
+    margin-right: 13px;
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-created-details>div:first-child,
+.track-shipment-dashboard .shipment-live-updates .pickups-confirmed-details>div:first-child {
+    border-top-color: #fda100
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-created-details>div:last-child,
+.track-shipment-dashboard .shipment-live-updates .pickups-confirmed-details>div:last-child {
+    margin-right: 0;
+    border-top-color: #167870
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-created-details>div .counter,
+.track-shipment-dashboard .shipment-live-updates .pickups-confirmed-details>div .counter {
+    background-color: #222222;
+    padding: 3px
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-created-details span,
+.track-shipment-dashboard .shipment-live-updates .pickups-confirmed-details span {
+    background: #333333;
+    color: #fff;
+    padding: 20px 5px;
+    font-size: 28px;
+    font-family: sans-serif;
+    display: inline-block;
+    margin-right: 3px;
+    position: relative;
+}
+.track-shipment-dashboard .shipment-live-updates .counter span:before{
+    /* border-top: 2px #222 solid;
+    content: "";
+    position: absolute;
+    top: 47%;
+    width: 100%;
+    margin-left: -5px; */
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-created-details span:last-child,
+.track-shipment-dashboard .shipment-live-updates .pickups-confirmed-details span:last-child {
+    margin-right: 0;
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-created-details .counter-label,
+.track-shipment-dashboard .shipment-live-updates .pickups-confirmed-details .counter-label {
+    text-align: center;
+    margin-top: 10px;
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-created-details .counter-label label,
+.track-shipment-dashboard .shipment-live-updates .pickups-confirmed-details .counter-label label {
+    font-size: 15px;
+    color: #383838;
+    margin: 0
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul li {
+    margin-bottom: 10px
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul li img {
+    position: absolute;
+    top: 18px;
+    left: 26px;
+    z-index: 1
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul li:last-child {
+    margin-bottom: 0px
+}
+/*.track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul li:first-child {
+    margin-bottom: 0px
+}*/
+
+.track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul a {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #1c9d92;
+    color: #ffffff;
+    font-size: 18px;
+    min-height: 60px;
+    letter-spacing: 0.5px;
+    line-height: 60px;
+    padding: 0;
+    padding-left: 78px;
+    background-repeat: no-repeat;
+    background-position: 25px 16px;
+}
+/* .track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul a.rate-enquery-nav{
+    background-image: url(../../images/asset_icons/icons_getrateenquiry.png);
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul a.create-shipment-nav{
+    background-image: url(../../images/asset_icons/icons_create_shipment.png);
+}
+.track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul a.bookapickup-nav{
+    background-image: url(../../images/asset_icons/icons_bookapickups.png);
+} */
+
+.shipment-live-nav li{ position:relative; }
+
+.track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul a i {
+    transform: rotate(-90deg);
+    font-size: 11px;
+    right: 20px;
+    position: absolute;
+    top: 5px
+}
+.track-shipment-dashboard #dashboard-features-info {
+    /* margin-top: 35px */
+}
+.track-shipment-dashboard #dashboard-features-info #featuresTab li.active a {
+    background-color: #FFF;
+    color: #222
+}
+.track-shipment-dashboard #dashboard-features-info #featuresTab img {
+    z-index: 1;
+    top: 17px;
+    left: 20px;
+    position: absolute
+}
+.track-shipment-dashboard #dashboard-features-info #featuresTab img.right-button {
+    top: 25px;
+    position: absolute;
+    left: 90%
+}
+#dashboard-features-info #featuresTab li{
+    box-sizing: border-box;
+    padding-right: 4px;
+}
+#dashboard-features-info #featuresTab li:last-child{
+    padding-right: 0px;
+}
+.track-shipment-dashboard #dashboard-features-info #featuresTab a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    color: #444444;
+    border: 0;
+    margin-right: 0px;
+    border-radius: 0;
+    background-color: #f7f7f7;
+    padding: 17px 10px 17px 80px;
+    transition: all 0.2s ease-in-out;
+    min-height: 68px;
+    background-repeat: no-repeat;
+    background-position: 26px 18px;
+    /*min-width: 238px;*/
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    display: table;
+    width: 100%;
+}
+.track-shipment-dashboard #dashboard-features-info #featuresTab a span{
+    display: table-cell;
+    vertical-align: middle;
+}
+.track-shipment-dashboard #dashboard-features-info #featuresTab a:hover {
+    background-color: #fff
+}
+.track-shipment-dashboard #dashboard-features-info #featuresTab li:last-child a{
+    margin-right: 0;
+}
+li#watchList.active > i,
+li#watchList:hover > i,
+li#manifestLi.active > i,
+li#manifestLi:hover > i,
+li#pickupLi.active > i,
+li#pickupLi:hover > i,
+li#draftshipmentLi.active > i,
+li#draftshipmentLi:hover > i,
+li#savedsearchLi.active > i,
+li#savedsearchLi:hover > i {
+    color: #1c9d92 !important;
+}
+li#watchList > i{
+    font-size: 25px;
+    color: #c1c1c1 !important;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+    top: 13px;
+    left: 35px;
+    pointer-events: none;
+}
+li#manifestLi > i{
+    font-size: 22px;
+    color: #c1c1c1 !important;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+    top: 16px;
+    left: 35px;
+    pointer-events: none;
+}
+li#draftshipmentLi > i{
+    font-size: 22px;
+    color: #c1c1c1 !important;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+    top: 16px;
+    left: 35px;
+    pointer-events: none;
+}
+li#savedsearchLi > i{
+    font-size: 25px;
+    color: #c1c1c1 !important;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+    top: 16px;
+    left: 35px;
+    pointer-events: none;
+}
+li#pickupLi > i{
+    font-size: 30px;
+    color: #c1c1c1 !important;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+    top: 13px;
+    left: 35px;
+    pointer-events: none;
+}
+/* .track-shipment-dashboard #dashboard-features-info #featuresTab a[href="#watchlist"] {
+    background-image: url(../../images/asset_icons/icon_watchlist.png)
+} */
+/* .track-shipment-dashboard #dashboard-features-info #featuresTab a[href="#manifest"] {
+    background-image: url(../../images/asset_icons/icon_manifest.png)
+}
+.track-shipment-dashboard #dashboard-features-info #featuresTab a[href="#mypickups"] {
+    background-image: url(../../images/asset_icons/icon_pickups.png)
+}
+.track-shipment-dashboard #dashboard-features-info #featuresTab a[href="#draft-shipment"] {
+    background-image: url(../../images/asset_icons/icons_draft.png)
+}
+.track-shipment-dashboard #dashboard-features-info #featuresTab a[href="#savedSearch"] {
+    background-image: url(../../images/asset_icons/icons_saved_searches.png)
+} */
+/* on hover and active */
+/* .track-shipment-dashboard #dashboard-features-info #featuresTab li.active a[href="#watchlist"],
+.track-shipment-dashboard #dashboard-features-info #featuresTab a[href="#watchlist"]:hover {
+    background-image: url(../../images/asset_icons/icon_watchlist_active.png)
+} */
+/* .track-shipment-dashboard #dashboard-features-info #featuresTab li.active a[href="#manifest"],
+.track-shipment-dashboard #dashboard-features-info #featuresTab a[href="#manifest"]:hover {
+    background-image: url(../../images/asset_icons/icon_manifest_active.png)
+}
+.track-shipment-dashboard #dashboard-features-info #featuresTab li.active a[href="#mypickups"],
+.track-shipment-dashboard #dashboard-features-info #featuresTab a[href="#mypickups"]:hover {
+    background-image: url(../../images/asset_icons/icon_pickups_active.png)
+}
+.track-shipment-dashboard #dashboard-features-info #featuresTab li.active a[href="#draft-shipment"],
+.track-shipment-dashboard #dashboard-features-info #featuresTab a[href="#draft-shipment"]:hover {
+    background-image: url(../../images/asset_icons/icons_draft_active.png)
+}
+.track-shipment-dashboard #dashboard-features-info #featuresTab li.active a[href="#savedSearch"],
+.track-shipment-dashboard #dashboard-features-info #featuresTab a[href="#savedSearch"]:hover {
+    background-image: url(../../images/asset_icons/icons_saved_searches_active.png)
+} */
+.track-shipment-dashboard #dashboard-features-info .tab-content {
+    background: #fff;
+    padding: 15px 0px 0px 0px;
+    z-index: 2;
+    position: relative;
+    margin-top:-1px;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .content-title {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    padding: 0 35px;
+    text-align: right;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content #mypickups input {
+    float: left;
+    margin-right: 1%;
+    color: #333333;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .manifest-table-search-filter,
+.track-shipment-dashboard #dashboard-features-info .tab-content .pickup-table-search-filter {
+    padding: 0 35px
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .dateRangeDetails{
+    position: relative;
+    float: left;
+    width: 42.5%;
+    margin-right: 5px;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .dateRangeDetails i{
+    font-size: 20px;
+    top: 7px;
+    right: 10px;
+    position: absolute;
+    color: #888;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content #fromDate,
+.track-shipment-dashboard #dashboard-features-info .tab-content #toDate {
+    /*width: 40%;*/
+    float: left;
+    margin-right: 2%
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .manifest-table-search-filter .ico-search,
+.track-shipment-dashboard #dashboard-features-info .tab-content .pickup-table-search-filter .ico-search{
+    background-color: #1c9d92;
+    color: #FFF;
+    font-size: 22px;
+    padding: 6px 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content button.searchFilter{
+    padding: 0;
+    margin: 0;
+    width: 12%;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content button.searchFilter[disabled="disabled"]{
+    opacity: 0.3;
+    cursor: default;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .total-counter {
+    font-size: 14px;
+    color: #888888
+}
+#savedSearchCountdown{
+    padding: 0 0 10px 0;
+    display:  block;
+    color: #888888;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .download-link,
+.track-shipment-dashboard #dashboard-features-info .tab-content .view-more-data,
+.track-shipment-dashboard #dashboard-features-info .tab-content .save-search-download-link {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1c9d92;
+    cursor: pointer
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .download-link,
+.track-shipment-dashboard #dashboard-features-info .tab-content .save-search-download-link {
+    line-height: 20px;
+    /* float: right */
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .download-link i,
+.track-shipment-dashboard #dashboard-features-info .tab-content .save-search-download-link i {
+    font-size: 10px;
+    padding-right: 6px
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .view-more-data {
+    text-align: right;
+    padding: 0 40px
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .view-more-data i {
+    padding-right: 14px;
+    font-size: 8px
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content table {
+    width: 100%
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content table tbody tr {
+    border-top: 1px solid #dedede;
+    cursor: pointer;
+    position: relative;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content table tr:first-child {
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content table tr:hover button,
+.track-shipment-dashboard #dashboard-features-info .tab-content table tr:hover a
+ {
+    background-color: #333;
+    color: #fff;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content table tr:hover td {
+/* .track-shipment-dashboard #dashboard-features-info .tab-content table tr:hover td i{ */
+    background-color: #1c9d92;
+    color: #FFF
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content table tr:hover td i{
+    color:white !important;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content table th {
+    padding: 10px 0px 10px 35px;
+    font-size: 12px;
+    color: #222;
+    word-wrap: break-word;
+    font-weight: 600; width:15%;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content table .senderRef,
+.track-shipment-dashboard #dashboard-features-info .tab-content table .estimatedDeliveryDate{
+    width:17% ;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content table th:last-child {
+    padding-right: 35px;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content table td {
+    padding: 20px 0px 20px 35px;
+    /* font-weight: 600; */
+    word-wrap: break-word;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content table td:last-child {
+    padding-right: 35px;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content tbody tr td:first-child{
+    font-weight: 600;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content table td:last-child {
+    /*padding-right: 40px !important*/
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content table td button,
+.track-shipment-dashboard #dashboard-features-info .tab-content table td a {
+    float: right;
+    min-width: 118px;
+    max-width: 118px;
+    padding: 14px 0px;
+    font-size: 12px;
+    border: 1px solid #999;
+    margin-right: 0;
+    background-color: transparent;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content tbody td i{
+    font-size: 30px!important;
+    color: #000;
+    float: left;
+    margin-top: 0px;
+    margin-right: 6px;
+}
+.milestoneMob span{
+    position: relative;
+    top: 10px;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-token {
+    padding: 16px 35px 10px 35px;
+    /*margin-bottom: 10px*/
+}
+.totaldraftshipment-count{
+    color: #888;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-token .token-items {
+    font-size: 13px;
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 21px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-weight: 600;
+    color: #FFF
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-token .token-items:hover,
+.track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-token .token-items:active,
+.track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-token .token-items:focus,
+.track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-token .token-items.active {
+    background-color: #1c9d92;
+    color: #fff
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-token .share-link {
+    margin-right: 15px
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .manual-manifest,
+.track-shipment-dashboard #dashboard-features-info .tab-content .mypickup-option,
+.track-shipment-dashboard #dashboard-features-info .tab-content .view-more-data {
+    border-top: 1px solid #ccc;
+    padding-top: 10px
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .manual-manifest button,
+.track-shipment-dashboard #dashboard-features-info .tab-content .mypickup-option button,
+.track-shipment-dashboard #dashboard-features-info .tab-content .view-more-data button {
+    background-color: #222 ;
+    color: #ffffff;
+    letter-spacing: 0;
+    margin-left: 0px
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-options {
+    border-top: 1px solid #ccc;
+    padding-top: 10px
+}
+/*.track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-options button {
+    padding: 10px 15px;
+    letter-spacing: 0
+}*/
+.savedSrchEditbtn{
+    background: #FFF !important;
+  border: solid 1px #1c9d92 !important;
+  color: #1c9d92 !important;
+  margin-left: 0px !important;
+  transition: all 0.5s ease-out;
+}
+.savedSrchEditbtn:hover{
+  background: #1c9d92 !important;
+  color: #FFF !important;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-options button.edit-search {
+    background-color: #333;
+    color: #fff;
+    _margin-left: 40px;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-options button.edit-search:hover
+{
+background-color: #606060;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-options button.delete-saved-search {
+    border: 2px solid #333;
+    float: right;
+    margin-right: 40px
+}
+/* .track-shipment-dashboard .track-advacnce-search h2 {
+    margin-top: 19px
+}
+.track-shipment-dashboard .track-advacnce-search label {
+    width: 48%;
+    vertical-align: bottom
+}
+.track-shipment-dashboard .track-advacnce-search .input-label-grp {
+    display: inline-block;
+    text-align: right;
+    width: 50%
+}
+.track-shipment-dashboard .track-advacnce-search .switch {
+    width: 120px
+}
+.track-shipment-dashboard .track-advacnce-search .switch .switch-label:before {
+    left: 40px
+}
+.track-shipment-dashboard .track-advacnce-search .switch .switch-label:after {
+    left: 13px
+}
+.track-shipment-dashboard .track-advacnce-search .switch .switch-input:checked ~ .switch-handle {
+    left: 84px
+}
+.track-shipment-dashboard .track-advacnce-search .hidden-input-label-grp {
+    visibility: hidden
+} */
+.track-shipment-dashboard #advacnce-search-results {
+    background-color: #fff;
+    padding: 15px 20px;
+    margin-top: 30px;
+    position: relative;
+    display: none
+}
+.track-shipment-dashboard #advacnce-search-results h5 {
+    margin-top: 0
+}
+.track-shipment-dashboard #advacnce-search-results #close-search-results {
+    position: absolute;
+    right: 12px;
+    top: 5px;
+    font-size: 24px;
+    cursor: pointer
+}
+.track-shipment-dashboard #advacnce-search-results .save-search {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    color: #1c9d92;
+    cursor: pointer;
+    line-height: 20px;
+    float: right
+}
+.track-shipment-dashboard #advacnce-search-results .save-search i {
+    font-size: 10px;
+    padding-right: 6px
+}
+.track-shipment-dashboard #advacnce-search-results table {
+    width: 100%
+}
+.track-shipment-dashboard #advacnce-search-results table tr {
+    border-top: 1px solid #ccc
+}
+.track-shipment-dashboard #advacnce-search-results table tr:first-child {
+    border: none
+}
+.track-shipment-dashboard #advacnce-search-results table tr:hover button {
+    background-color: #333;
+    color: #fff
+}
+.track-shipment-dashboard #advacnce-search-results table tr:hover td {
+    background-color: #1c9d92;
+    color: #FFF
+}
+.track-shipment-dashboard #advacnce-search-results table th {
+    padding: 10px 0 7px;
+    font-size: 11px;
+    color: #888
+}
+.track-shipment-dashboard #advacnce-search-results table td {
+    padding: 10px 0;
+    font-weight: 600
+}
+.track-shipment-dashboard #advacnce-search-results table td:last-child {
+    padding-right: 40px
+}
+.track-shipment-dashboard #advacnce-search-results table td button {
+    float: right;
+    min-width: 170px;
+    padding: 21px 0px;
+    font-size: 12px;
+    border: 2px solid #999;
+    margin-right: 0;
+    background-color: transparent
+}
+.track-shipment-dashboard #advacnce-search-results .modal-content {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #ccc
+}
+.track-shipment-dashboard #advacnce-search-results .modal-header {
+    border: 0
+}
+.track-shipment-dashboard #advacnce-search-results .modal-header h4 {
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: 20px
+}
+.track-shipment-dashboard #advacnce-search-results .modal-header .close {
+    float: right;
+    font-size: 40px;
+    line-height: 22px;
+    color: #333;
+    cursor: pointer
+}
+.track-shipment-dashboard #advacnce-search-results .modal-body label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px
+}
+.track-shipment-dashboard #advacnce-search-results .modal-body input {
+    width: 85%;
+    height: 35px
+}
+.track-shipment-dashboard #advacnce-search-results .modal-body button {
+    margin-top: 10px
+}
+.track-shipment-dashboard #advacnce-search-results .search-results-options {
+    border-top: 1px solid #ccc;
+    padding-top: 10px
+}
+.track-shipment-dashboard #advacnce-search-results .search-results-options button {
+    padding: 10px 15px;
+    letter-spacing: 0
+}
+.track-shipment-dashboard #advacnce-search-results .search-results-options button.edit-search-results {
+    background-color: #333;
+    color: #fff
+}
+.track-shipment-dashboard .brand-marketting {
+    margin-top: 30px
+}
+.track-shipment-dashboard .brand-marketting .marketting-container {
+    margin-left: -15px;
+    margin-right: -15px
+}
+.track-shipment-dashboard .brand-marketting h2 {
+    width: 200px;
+    line-height: 25px
+}
+.track-shipment-dashboard .brand-marketting button {
+    padding: 10px 20px;
+    margin-top: 10px
+}
+.track-shipment-dashboard .brand-marketting p {
+    margin: 20px 0;
+    color: #999;
+    width: 199px;
+    font-weight: 600;
+    font-size: 13px
+}
+.track-shipment-dashboard .brand-marketting .manage-watchlist,
+.track-shipment-dashboard .brand-marketting .email-preferences {
+    padding: 20px 34px;
+    background: #fff;
+    position: relative;
+    min-height: 305px
+}
+.track-shipment-dashboard .brand-marketting .manage-watchlist img,
+.track-shipment-dashboard .brand-marketting .email-preferences img {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    width: 172px;
+    height: 183px
+}
+.track-shipment-dashboard .brand-marketting .traffic-alert {
+    padding: 33px 34px;
+    color: #fff;
+    min-height: 305px;
+    background-image: url("../../images/asset_icons/image_banner3.png")
+}
+.track-shipment-dashboard .brand-marketting .traffic-alert p {
+    color: #fff
+}
+.track-shipment-dashboard .brand-marketting .traffic-alert button {
+    background: transparent;
+    border: 1px solid
+}
+ .track-shipment-dashboard .popup-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 9999;
+}
+
+/*PRINT AND CLOSE MANIFEST POPUP STYLE*/
+
+.mani-popup-wrap {
+    width: 100%;
+    margin: 10px auto;
+    max-width: 930px;
+}
+
+.mani-popup-wrap .mani-popup-main{
+    float: left;
+    width: 100%;
+    background: #fff;
+    padding: 0 50px 30px;
+    position: relative;
+}
+
+.mani-popup-wrap .mani-popup-main .mani-popup-close {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  right: 10px;
+  top: 10px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.mani-popup-wrap .mani-popup-main .mani-popup-close i {
+  color: #0f524c;
+}
+
+.mani-popup-wrap .mani-popup-main header {
+  float: left;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.mani-popup-wrap .mani-popup-main header h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 26px;
+  color: #222222;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.mani-popup-wrap .mani-popup-main header p {
+  color: #1c9d92;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box {
+  float: left;
+  width: 100%;
+  margin: 20px 0 10px;
+  position: relative;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .shipment-no-top{
+    position: absolute;
+    top: 0;
+    right: 0; 
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .shipment-no-top{
+    float: right;
+}
+
+.shipment-no-top{
+    font-size: 16px;
+font-weight: 700;
+}
+
+.shipment-no-top label {
+font-weight: 400;
+font-size: 16px;
+display: inline-block;
+margin-right: 3px;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .manifest-tab-list {
+	float: left;
+	width: 100%;
+	margin: 0 !important;
+	padding: 0;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .manifest-tab-list>li {
+  float: left;
+  margin-left: 5px;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .manifest-tab-list>li>a {
+  display: block;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 10px 40px;
+  color: #222222;
+  background-color: #f5f5f5;
+/*  margin: 0px 0 10px;*/
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .manifest-tab-list>li>a.active {
+	background-color: #e8e8e8;
+	font-weight: 700;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .manifest-tab-list>li:first-child {
+	margin-left: 0;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab {
+	float: left;
+	width: 100%;
+	min-height: 320px;
+	box-sizing: border-box;
+	background-color: #eeeeee;
+	display: none;
+	padding: 34px;
+	border: 3px solid #e8e8e8;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab.mani-tab2 {
+	padding: 10px;	
+} 
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab table{
+    margin-top: 0 !important;
+    margin-bottom: 0;		
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab.active {
+	display: block;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .finalize-manifest-head {
+	background: #1c9d92;
+	color: #fff;
+	padding: 8px 15px 8px;
+	font-weight: 600;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left {
+  width: 100%;
+  float: left;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .printing-option {
+    float: left;
+    width: 50%;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .printing-option h4 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #222222;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .printing-option .printing-opt-list {
+	float: left;
+	width: 100%;
+	margin: 15px 0 20px;
+	padding-left: 0;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .printing-option .printing-opt-list>li {
+	float: left;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .printing-option .printing-opt-list>li:last-child {
+  margin-bottom: 0;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .printing-option .printing-opt-list .printing-opt-ind {
+  position: relative;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .printing-option .printing-opt-list .printing-opt-ind label {
+    display: block;
+    position: relative;
+    color: #222222;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 6px 0;
+    font-weight: 700;
+}
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .printing-option .printing-opt-list .printing-opt-ind input[type="text"]{
+    height: 40px;
+    min-height: 40px;
+    padding-left: 5px;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .printing-option .printing-opt-list .printing-opt-ind input[type="radio"] {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .printing-option .printing-opt-list .printing-opt-ind input[type="radio"]:checked+label::after {
+  display: block;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .quad-printing-option {
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+	}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .quad-printing-option h4 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #222222;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .quad-printing-option .quad-printing-ind {
+  float: left;
+  width: 100%;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .quad-printing-option .quad-printing-ind label {
+	display: block;
+	margin: 5px 0 7px;
+	color: #222222;
+	font-size: 13px;
+	line-height: 22px;
+	font-weight: 400;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .quad-printing-option .quad-printing-ind input[type="text"] {
+	background: #fff;
+	color: #222222;
+	line-height: 35px;
+	font-size: 12px;
+	width: 100px;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+
+/*new label css*/
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box {
+  float: left;
+  width: 100%;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box-top {
+  float: left;
+  width: 100%;
+  margin: 10px 0;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box-top p{
+  position: relative;
+  padding-left: 25px;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box-top p input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box{
+  float: left;
+  width: 100%;
+  max-height: 210px;
+  overflow-y: auto;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box .label-list{
+  float: left;
+  width: 100%;
+  background: #fff;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box .label-list>li {
+  float: left;
+  width: 100%;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box .label-list>li .label-list-ind {
+  float: left;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 5px 5px 5px 25px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box .label-list>li .label-list-ind .label-list-col {
+  float: left;
+  box-sizing: border-box;
+  padding: 0 5px;
+  min-width:80px;
+  max-width:80px;
+  word-wrap:break-word;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box .label-list>li .label-list-ind .label-list-col h3{
+  font-size: 11px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #222222;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box .label-list>li .label-list-ind .label-list-col p {
+  font-size: 11px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #222222;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box .label-list>li .label-list-ind .label-list-col.label-title {
+  min-width:100px;
+  max-width:100px;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box .label-list>li .label-list-ind .label-list-col.line-item {
+  width: 35%;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box .label-list>li .label-list-ind .label-list-col.item-number {
+  width: 45%;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box .label-list>li .label-list-ind .label-list-abs {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box .label-list>li .label-list-ind::first-child {
+  border-bottom: 0;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box .label-list>li .label-list-ind::last-child {
+  border-bottom: 0;
+}
+
+ .mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-left .new-label-box .label-box .label-list li.header .label-list-ind {
+  background-color: #e8e8e8;
+}
+
+
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right {
+    width: 40%;
+    float: right;
+    box-sizing: border-box;
+    padding-left: 100px;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list {
+    float: left;
+    width: 100%;
+    max-width: 140px;
+    box-sizing: border-box;
+    padding: 5px;
+    background: #fff;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list>li {
+  padding: 5px;
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list>li .printing-state-ind {
+  width: 100%;
+  display: table;
+  height: 90px;
+  text-align: center;
+  background: #eeeeee;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #eeeeee;
+}
+ #printing-label-image{
+    background-image: url("../../images/six.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+ #printing-label-image2{
+    background-image: url("../../images/four.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list>li .printing-state-ind h3 {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 20px;
+	color: #222222;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list>li .printing-state-ind:hover {
+	-moz-transition: all 0.3s ease-in-out 0s;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+	background-color: #1c9d92;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list>li .printing-state-ind:hover h3 {
+  color: #fff;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list>li.active .printing-state-ind {
+  background: #fff;
+  border: 2px dashed #e8e8e8;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list>li.active .printing-state-ind h3 {
+  color: #eeeeee;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list-single {
+  float: left;
+  width: 100%;
+  max-width: 255px;
+  box-sizing: border-box;
+  padding: 5px;
+  background: #fff;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list-single>li {
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list-single>li .printing-state-ind {
+  width: 100%;
+  display: table;
+  height: 300px;
+  text-align: center;
+  background: #eeeeee;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list-single>li .printing-state-ind h3 {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 30px;
+  color: #222222;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list-single>li .printing-state-ind:hover {
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  background-color: #1c9d92;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list-single>li .printing-state-ind:hover h3 {
+  color: #fff;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list-single>li.active .printing-state-ind {
+  background: #fff;
+  /*border: 2px dashed #e8e8e8;*/
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .label-tab-right .print-state-list-single>li.active .printing-state-ind h3 {
+  color: #eeeeee;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .shipment-nd-manifest-wrpr .header-shipment-pop {
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+  border-radius: 5px;
+  background: #ffffff;
+  margin-bottom: 10px;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .shipment-nd-manifest-wrpr .header-shipment-pop .header-row {
+  padding-right: 0;
+  font-weight: 600;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .shipment-nd-manifest-wrpr .header-shipment-pop .body-row {
+  padding-right: 0;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .shipment-nd-manifest-wrpr .consignment-list table {
+  margin-top: 10px;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .shipment-nd-manifest-wrpr .consignment-list th {
+  background: #1c9d92;
+  color: #fff;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .shipment-nd-manifest-wrpr .consignment-list th:first-child {
+	padding-left: 15px;
+}
+
+.mani-popup-wrap .mani-popup-main section.manifest-tab-box .mani-tab .shipment-nd-manifest-wrpr .consignment-list td {
+  background: #fff;
+  font-size: 12px;
+}
+
+.mani-popup-wrap .mani-popup-main footer.manifest-btn-wrap {
+  display: none;
+}
+
+.mani-popup-wrap .mani-popup-main footer.manifest-btn-wrap .manifest-print-btn,
+.mani-popup-wrap .mani-popup-main footer.manifest-btn-wrap .manifest-download-btn,.mani-popup-wrap .mani-popup-main footer.manifest-btn-wrap .view-review-btn {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 22px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin: 0px 0 10px;
+}
+
+.mani-popup-wrap .mani-popup-main footer.manifest-btn-wrap .manifest-print-btn i,.mani-popup-wrap .mani-popup-main footer.manifest-btn-wrap .manifest-download-btn i,.mani-popup-wrap .mani-popup-main footer.manifest-btn-wrap .view-review-btn i {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.mani-popup-wrap .mani-popup-main footer.manifest-btn-wrap .view-review-btn {
+  background-color: #666666;
+}
+
+.mani-popup-wrap .mani-popup-main footer.manifest-btn-wrap .manifest-print-btn {
+  background-color: #1c9d92;
+}
+
+.mani-popup-wrap .mani-popup-main footer.manifest-btn-wrap .manifest-download-btn {
+  background-color: #383838;
+}
+
+.mani-popup-wrap .mani-popup-main footer.manifest-btn-wrap.active {
+  display: block;
+}
+
+.mytoll #del-shipment-wrpr .del-ship-popup-wrap,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap {
+	  position: relative;
+	  width: 650px;
+	  background-color: #fff;
+	  padding: 0 50px 30px;
+	  margin: 10px auto;
+	  max-width: 100%;
+	}
+
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap{
+	  position: relative;
+	  width: 650px;
+	  background-color: #fff;
+	  padding: 0 50px 30px;
+	  margin: 10px auto;
+	  max-width: 100%;
+	}
+
+
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main {
+	  text-align: center;
+	}
+
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main{
+	  text-align: center;
+	}
+
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main .del-popup-close{
+	  position: absolute;
+	  display: block;
+	  width: 25px;
+	  height: 25px;
+	  right: 10px;
+	  top: 10px;
+	  text-align: center;
+	  font-size: 16px;
+	  line-height: 30px;
+	}
+
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main .del-popup-close,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main .del-popup-close {
+	  position: absolute;
+	  display: block;
+	  width: 25px;
+	  height: 25px;
+	  right: 10px;
+	  top: 10px;
+	  text-align: center;
+	  font-size: 16px;
+	  line-height: 30px;
+	}
+
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main .del-popup-close i,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main .del-popup-close i {
+	  color: #0f524c;
+	}
+
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main .del-popup-close i{
+	  color: #0f524c;
+	}
+
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main header,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main header {
+	  float: left;
+	  width: 100%;
+	  margin-top: 40px;
+	}
+
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main header{
+	  float: left;
+	  width: 100%;
+	  margin-top: 40px;
+	}
+
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main header h2,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main header h2 {
+	  font-size: 17px;
+	  text-transform: uppercase;
+	  line-height: 26px;
+	  color: #222222;
+	  margin: 0 0 10px;
+	  padding: 0;
+	  font-weight: 700;
+	}
+
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main header h2{
+	  font-size: 17px;
+	  text-transform: uppercase;
+	  line-height: 26px;
+	  color: #222222;
+	  margin: 0 0 10px;
+	  padding: 0;
+	  font-weight: 700;
+	}
+
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main header h2 i,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main header h2 i {
+	  display: inline-block;
+	  margin-right: 10px;
+	  font-size: 24px;
+	}
+
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main header h2 i{
+	  display: inline-block;
+	  margin-right: 10px;
+	  font-size: 24px;
+	}
+
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main section.print-popup-section,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main section.print-popup-section {
+	  float: left;
+	  width: 100%;
+	  margin: 20px 0 10px;
+	  min-height: 350px;
+	  background-color: #eeeeee;
+	}
+
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main section.print-popup-section{
+	  float: left;
+	  width: 100%;
+	  margin: 20px 0 10px;
+	  min-height: 350px;
+	  background-color: #eeeeee;
+	}
+
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .yes-btn,.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .no-btn,
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-yes-btn,.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-no-btn,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .yes-btn,.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .no-btn,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-yes-btn,.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-no-btn {
+	  display: inline-block;
+	  font-size: 16px;
+	  color: #fff;
+	  padding: 10px 40px;
+	  line-height: 30px;
+	  text-transform: uppercase;
+	  margin-bottom: 10px;
+	}
+
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .yes-btn,.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .no-btn,
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-yes-btn,.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-no-btn{
+	  display: inline-block;
+	  font-size: 16px;
+	  color: #fff;
+	  padding: 10px 40px;
+	  line-height: 30px;
+	  text-transform: uppercase;
+	  margin-bottom: 10px;
+	}
+
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .yes-btn i,.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .no-btn i,
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-yes-btn i,.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-no-btn i,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .yes-btn i,.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .no-btn i,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-yes-btn i,.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-no-btn i {
+	  display: inline-block;
+	  margin-left: 15px;
+	}
+
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .yes-btn i,.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .no-btn i,
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-yes-btn i,.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-no-btn i{
+	  display: inline-block;
+	  margin-left: 15px;
+	}
+
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .yes-btn,
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-yes-btn,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .yes-btn,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-yes-btn {
+	  background-color: #1c9d92;
+	}
+
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .yes-btn,
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-yes-btn{
+	  background-color: #1c9d92;
+	}
+
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .no-btn,
+	.mytoll #del-shipment-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-no-btn,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .no-btn,
+	.mytoll #confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-no-btn {
+	  background-color: #383838;
+	}
+
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .no-btn,
+	.mytoll #mani-confirmation-wrpr .del-ship-popup-wrap .del-popup-main footer.del-ship-btnwrap .mani-no-btn{
+	  background-color: #383838;
+	}
+
+
+
+
+
+/*manual create manifest style*/
+
+ #mytoll #create-manifest-manuall-wrpr .popup-content-wrpr {
+    background-color: #fff;
+    width: 550px;
+    margin: 65px auto 0 auto;
+    position: relative;
+    padding: 40px 60px
+}
+ #mytoll #create-manifest-manuall-wrpr .popup-content-wrpr .close-ico {
+    right: 0 px;
+    top: 0 px;
+}
+ #mytoll #create-manifest-manuall-wrpr .popup-content-wrpr .close-ico i {
+    font-size: 22px;
+    color: #222;
+    background: #fff;
+}
+ #mytoll #create-manifest-manuall-wrpr .popup-content-wrpr .manifest-popup fieldset>div {
+    margin-bottom: 10px
+}
+ #mytoll #create-manifest-manuall-wrpr .popup-content-wrpr .manifest-popup h1 {
+    padding-left: 15px;
+    margin-bottom: 40px
+}
+ #mytoll #create-manifest-manuall-wrpr .popup-content-wrpr .manifest-popup h1 i {
+    margin-right: 15px;
+    font-size: 35px
+}
+ #mytoll #create-manifest-manuall-wrpr .popup-content-wrpr .manifest-popup .bgLess-btn-wrapper {
+    margin-top: 10px;
+    text-align: center
+}
+ #mytoll #create-manifest-manuall-wrpr .popup-content-wrpr .manifest-popup .bgLess-btn-wrapper a {
+    background-color: #1c9d92;
+    color: #fff
+}
+ #mytoll #create-manifest-manuall-wrpr .add-to-manifest-popup h1 i {
+    margin-right: 10px
+}
+ #mytoll #create-manifest-manuall-wrpr .add-to-manifest-popup p {
+    padding: 15px 15px 0
+}
+ #mytoll #create-manifest-manuall-wrpr .add-to-manifest-popup .bgLess-btn-wrapper.add-manifest {
+    text-align: center;
+    margin-top: 20px
+}
+ #mytoll #create-manifest-manuall-wrpr .add-to-manifest-popup .bgLess-btn-wrapper.add-manifest #add-manifest {
+    background-color: #1c9d92;
+    color: #fff
+}
+#mytoll #create-manifest-manuall-wrpr .address-dropdown .edit-wrpr {
+    display: none;
+}
+.track-shipment-dashboard #create-manifest-manuall-wrpr input[type=text]{
+    color: #222;
+}
+
+.manifestt-toggle{
+    width: 40px; 
+    position: absolute; 
+    right: 9px;
+    top: 37px;
+}
+.chosen-container.chosen-container-multi{
+    width: 100%!important;
+    background-color: #dedede;
+    padding: 0;
+    border: 1px solid #dedede;
+    border-left: 3px solid #dedede;
+    font-size: 15px;
+    line-height: 15px;
+    height: 44px;
+    display: block;
+    box-sizing: border-box;
+    padding-right: 40px;
+}
+.chosen-search-input{
+    text-transform: capitalize;
+}
+.chosen-search-input.default{
+    width: 100%!important;
+}
+.chosen-container-multi .chosen-choices{
+    padding: 0!important;
+    height: 42px!important;
+    border: 0!important;
+    background-color: transparent!important;
+    background-image: none!important;
+    line-height: 37px!important;
+}
+.chosen-container-active{
+    outline: 0!important;
+    border: 1px solid #1c9d92!important;
+    border-left: 3px solid #1c9d92!important;
+    background-color: #d8f1ef!important;
+}
+.chosen-container-active .chosen-choices{
+    box-shadow: none!important;
+}
+.chosen-container-multi .chosen-choices li.search-field{
+    padding-left: 10px!important;
+}
+.chosen-container-multi .chosen-choices li.search-field input[type=text]{
+    height: 40px!important;
+    font-size: 14px !important;
+}
+.chosen-container-multi .chosen-choices li.search-choice{
+    height: 37px!important;
+    background-color: #333333!important;
+    background-image: none!important;
+    border-radius: 0!important;
+    border: 0!important;
+    color: #ffffff!important;
+    line-height: 30px!important;
+    font-size: 12px;
+}
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close{
+    top: 13px!important;
+}
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close:hover{
+    background-position: -42px 1px!important;
+}
+.chosen-container .chosen-drop{
+    background-color: #F6F6F6!important;
+    border: 0!important;
+    box-shadow: none!important;
+}
+.chosen-container .chosen-results li{
+    border-bottom: 1px solid #FFFFFF!important;
+    padding: 10px 20px!important;
+}
+.chosen-container .chosen-results li.highlighted{
+    background-color: #EEEEEE!important;
+    background-image: none!important;
+    color: #333333!important;
+}
+.track-shipment-dashboard h1.fontWeight-normal{display: none;}
+.track-shipment-dashboard #track-shipment{margin-top: 0;}
+.track-shipment-dashboard #track-shipment .content-box{margin-bottom: 0px;}
+
+/*Draft shipment*/
+	#draftShipList tr td a{
+		min-width: 150px !important;
+    	max-width: 150px !important;
+	}
+	#draftShipList tr td span.draftshipDel i.ico-delete{
+    font-size: 12px !important;
+    color: #df2d1c !important;
+    margin-top: 3px;
+    cursor: pointer;
+    }
+	
+	.tollDeletePopup{
+	position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 10;
+    background: rgba(0,0,0,0.3);
+	}
+	.tollDeletePopup-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate;
+    transform: translate(-50%, -50%);
+    margin: inherit !important;
+    width: 100%;
+    max-width: 650px;
+    background-color: #fff;
+    padding: 0 50px 30px;
+	}
+    .tollDeletePopup-main{
+    text-align: center;
+    }
+    .tollDeletePopup-close{
+        position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    right: 10px;
+    top: 10px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    cursor: pointer;
+
+    }
+    .tollDeletePopup-main header{
+        float: left;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    }
+   
+	.tollDeletePopup-main header h2 {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 0px;
+    margin: 0 0 10px;
+    line-height: 26px;
+	}
+     .tollDeletePopup-btnwrap .yes-btn,  .tollDeletePopup-btnwrap .no-btn{
+        display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 40px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    }
+
+    .tollDeletePopup-btnwrap .yes-btn{
+        background-color: #1c9d92;
+
+    }
+    .tollDeletePopup-btnwrap .no-btn{
+        background-color: #383838;
+    }
+    .draftviewmorediv{
+        width: 100%;
+        padding-top: 10px;
+        padding-left: 35px !important;
+        padding-bottom: 10px;
+        padding-right: 35px !important;
+        background-color: #fff;
+    }
+    #draftHasMoreButton{
+       margin-right: 0px; 
+    }
+    
+#pickupHasMoreDiv{
+    width: 100%;
+    padding-top:10px;
+    padding-left:35px;
+    padding-bottom:10px;
+    padding-right:35px;
+    background-color: #fff
+}
+#watchlistHasMoreButton{
+    margin-right: 0 !important;
+}	
+/*Draft shipment end*/
+
+/************ MEDIA QUERY ************/
+
+
+
+@media screen and (max-width: 1090px) and (min-width: 1024px){
+    .track-shipment-dashboard #dashboard-features-info .tab-content table td button, 
+    .track-shipment-dashboard #dashboard-features-info .tab-content table td a{
+        min-width: auto;
+    }
+}    
+
+/* MEDIA QUERY FOR IPAD */
+@media screen and (max-width: 1024px) and (min-width: 768px){
+    .track-shipment-dashboard {
+        /* margin-top: 30px; */
+    }
+    .track-shipment-dashboard .content-box {
+        padding: 20px !important;
+        padding-top: 0px !important
+    }
+    .track-shipment-dashboard .content-box .tablet-banner-title .tablet-banner {
+        background-image: url(../../images/asset_icons/image_banner4_tablet.png);
+        height: 74px;
+        background-repeat: no-repeat;
+        background-position: 0;
+        background-size: 74px;
+        margin-left: -15px;
+        margin-bottom: 11px
+    }
+    .track-shipment-dashboard .content-box .tablet-banner-title h2 {
+        margin-top: 30px;
+        margin-left: -30px
+    }
+    .track-shipment-dashboard .light-grey-text {
+        width: 50%
+    }
+    .track-shipment-dashboard .shipment-live-updates {
+        margin-top: 3px
+    }
+    .track-shipment-dashboard .shipment-live-updates .shipment-created,
+    .track-shipment-dashboard .shipment-live-updates .pickups-confirmed {
+        padding: 20px 20px;
+    }
+    .track-shipment-dashboard .shipment-live-updates .shipment-created-title h2,
+    .track-shipment-dashboard .shipment-live-updates .pickups-confirmed-title h2 {
+        margin-bottom: 20px
+    }
+    .track-shipment-dashboard .shipment-live-updates .shipment-created-details>div,
+    .track-shipment-dashboard .shipment-live-updates .pickups-confirmed-details>div{
+        margin-right: 6px;
+    }
+    .track-shipment-dashboard .shipment-live-updates .shipment-created-details .counter-label,
+    .track-shipment-dashboard .shipment-live-updates .pickups-confirmed-details .counter-label {
+        margin-top: 13px
+    }
+    .track-shipment-dashboard .shipment-live-updates .shipment-live-nav {
+        margin-top: 13px
+    }
+    .track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul li {
+        margin-bottom: 10px
+    }
+    .track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul li img {
+        top: 14px
+    }
+    .track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul a {
+        font-size: 14px;
+        min-height: 60px;
+        line-height: 60px;
+        background-position: 20px 16px;
+        padding-left: 68px;
+    }
+    .track-shipment-dashboard .shipment-live-updates .shipment-created-details span, 
+    .track-shipment-dashboard .shipment-live-updates .pickups-confirmed-details span{
+        font-size: 47px;
+    }
+    .track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul a i {
+        top: 2px
+    }
+    .track-shipment-dashboard #dashboard-features-info {
+        /* margin-top: 22px */
+    }
+    /* .track-shipment-dashboard #dashboard-features-info .tab-content .manifest-table-search-filter, 
+    .track-shipment-dashboard #dashboard-features-info .tab-content .pickup-table-search-filter{
+        padding: 0 20px;
+    }
+    li#watchList > i {
+        pointer-events: none;
+        font-size: 31px;
+        color: #c2c2c2;
+        position: absolute;
+        transition: all 0.2s ease-in-out;
+        z-index: 10;
+        top: 13px;
+        left: calc(50% - 15px);
+    }
+    .track-shipment-dashboard #dashboard-features-info #featuresTab li a {
+        padding: 0;
+        background-color: #f7f7f7;
+        margin-left: 5.5px;
+        min-width: 139px;
+        min-height: 63px;
+        text-indent: -99999px;
+        background-position: 50px
+    }
+    .track-shipment-dashboard #dashboard-features-info #featuresTab a{
+        min-height: 68px;
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content table {
+	    display: table !important;
+	    table-layout: fixed;
+	}
+    .track-shipment-dashboard #dashboard-features-info .tab-content table th,
+    .track-shipment-dashboard #dashboard-features-info .tab-content table td{
+        padding-left: 20px;
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content table th:last-child,
+    .track-shipment-dashboard #dashboard-features-info .tab-content table td:last-child{
+        padding-right: 20px!important;
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content table td button, 
+    .track-shipment-dashboard #dashboard-features-info .tab-content table td a{
+        min-width: auto;
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content tbody#watchlistDataTbody td i {
+	    display: none;
+	}
+    .track-shipment-dashboard #dashboard-features-info #featuresTab li:first-child a {
+        margin-left: 0
+    }
+    .track-shipment-dashboard #dashboard-features-info #featuresTab img {
+        position: relative;
+        top: 0;
+        left: 0
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .content-title {
+        padding: 0 20px
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .view-more-data {
+        text-align: center
+    }
+    .track-shipment-dashboard .brand-marketting {
+        margin-top: 13px;
+        margin-bottom: 37px
+    }
+    .track-shipment-dashboard .brand-marketting .manage-watchlist,
+    .track-shipment-dashboard .brand-marketting .email-preferences {
+        padding: 20px;
+        min-height: 250px
+    }
+    .track-shipment-dashboard .brand-marketting .manage-watchlist img,
+    .track-shipment-dashboard .brand-marketting .email-preferences img {
+        width: 123px;
+        height: auto
+    }
+    .track-shipment-dashboard .brand-marketting .email-preferences h2 {
+        width: 100%
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .manual-manifest button, 
+    .track-shipment-dashboard #dashboard-features-info .tab-content .mypickup-option button, 
+    .track-shipment-dashboard #dashboard-features-info .tab-content .view-more-data button{
+        margin-left: 20px;
+    } */
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) and (orientation : landscape){
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) and (orientation : portrait){
+    .track-shipment-dashboard .shipment-live-updates .shipment-created-details span, 
+    .track-shipment-dashboard .shipment-live-updates .pickups-confirmed-details span{
+        font-size: 31px;
+        padding: 20px 3px;
+    }
+    .track-shipment-dashboard .shipment-live-updates .shipment-created-details>div, 
+    .track-shipment-dashboard .shipment-live-updates .pickups-confirmed-details>div{
+        margin-right: 8px;
+    }
+    .mobile-view-shipment-nav {
+        margin-top: 12px;
+    }
+    /* .track-shipment-dashboard #dashboard-features-info #featuresTab li a{
+        text-indent: -99999px;
+        padding: 0;
+        min-width: 139px;
+        min-height: 63px;
+        text-indent: -99999px;
+        background-position: 50px;
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .dateRangeDetails{
+        width: 43.5%;
+    } */
+}
+
+/* IPAD PRO */
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1024px) and (orientation: landscape){
+
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait){
+
+}
+
+
+/* MEDIA QUERY FOR MOBILE */
+@media screen and (max-device-width: 767px) and (min-device-width: 320px){
+
+    .track-shipment-dashboard {
+        /*margin-top: 20px*/
+    }
+    .track-shipment-dashboard .content-box {
+        min-height: auto
+    }
+    .track-shipment-dashboard .content-box .tablet-banner-title .tablet-banner {
+        margin-left: -8px
+    }
+    .track-shipment-dashboard .content-box .tablet-banner-title h2 {
+        margin-left: -5px;
+        width: 250px;
+        margin-top: 22px
+    }
+    .track-shipment-dashboard #dashboard-features-info{
+        /*margin-top: 20px;*/
+    }
+    .track-shipment-dashboard .portlet-content h2{
+        display: none;
+    }
+    .track-shipment-dashboard .input-label-grp input[type=text] {
+        font-size: 14px;
+        padding-left: 19px
+    }
+    .track-shipment-dashboard #toll-shipment-live-updates {
+        margin-left: 0;
+        margin-right: 0
+    }
+    .track-shipment-dashboard #toll-shipment-live-updates .mobile-view-shipment-nav {
+        padding-left: 0;
+        padding-right: 0
+    }
+    .track-shipment-dashboard #dashboard-features-info #featuresTab li a{
+        text-indent: -99999px;
+        padding: 0;
+        /*min-width: 139px;*/
+        min-height: 63px;
+        text-indent: -99999px;
+        background-position: 50px;
+        /*margin-left: 2.5px;*/
+        /*min-width: 75px;*/
+        background-position: 22px
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .mobileViewSearchStyle {
+        padding: 0 15px;
+        margin-bottom: 10px;
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .content-title {
+        margin: 0;
+        padding: 0 15px
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content table,
+    .track-shipment-dashboard #dashboard-features-info .tab-content tbody,
+    .track-shipment-dashboard #dashboard-features-info .tab-content tr,
+    .track-shipment-dashboard #dashboard-features-info .tab-content td{
+        display: block;
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content tbody tr {
+        padding: 15px 0 0px 0;
+        display: inline-block;
+        margin: 0 15px 15px;
+        border: 1px solid #ccc;
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content tbody td{
+        width: 50%;
+        float: left;
+        padding: 0 15px 10px;
+        font-size: 13px;
+        letter-spacing: 0.4px;
+        text-align: left;
+        color: #222222
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content table tr:hover td{
+        background: none;
+        color: #222222;
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content tbody td.fullWidthtd {
+        background-color: #eeeeee;
+        width: 100%;
+        letter-spacing: 0.4px;
+        text-align: left;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content tbody td.fullWidthtd .data-title{
+        color: #999999;
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container{
+        padding: 15px;
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container .mobile-view-content {
+        border: 1px solid #d8d8d8;
+        display: inline-block;
+        padding: 15px 0 0px
+        margin-bottom: 10px;
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container .mobile-view-content>div
+    {
+        width: 50%;
+        float: left;
+        padding: 0 15px 10px
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container .mobile-view-content .status{
+        background-color: #eeeeee;
+        width: 100%;
+        letter-spacing: 0.4px;
+        text-align: left;
+        color: #222222;
+        padding: 0 15px;
+        line-height: 50px;
+        margin-bottom: 10px
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container .mobile-view-content .status i {
+        font-size: 30px;
+        color: #1c9d92;
+        float: left;
+        margin-right: 10px
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container .mobile-view-content .data-title,
+    .track-shipment-dashboard #dashboard-features-info .tab-content td .data-title {
+        color: #888;
+        font-size: 10px;
+        display: block;
+        letter-spacing: 0.3px
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container .mobile-view-content .data-details {
+        font-size: 13px;
+        letter-spacing: 0.4px;
+        text-align: left;
+        color: #222222
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .viewMoreContainer{
+        padding: 0 15px;
+    }
+    .track-shipment-dashboard #dashboard-features-info .tab-content .viewMoreContainer .view-more-data{
+        text-align: center;
+        padding: 16px 0px;
+        border: 1px solid #dcdcdc;
+        color: #666666;
+    }
+    .track-shipment-dashboard .brand-marketting .marketting-container {
+        margin: 0
+    }
+    .track-shipment-dashboard .brand-marketting .marketting-container>div {
+        padding-left: 0;
+        padding-right: 0
+    }
+    .track-shipment-dashboard .brand-marketting .marketting-container button {
+        width: auto;
+        margin-bottom: 0
+    }
+    .track-shipment-dashboard .brand-marketting .marketting-container .email-preferences {
+        margin-bottom: 46px
+    }
+    .track-shipment-dashboard .brand-marketting .manage-watchlist {
+        margin-bottom: 16px
+    }
+}
+@media screen and (max-device-width: 1024px)  {
+	.track-shipment-dashboard #dashboard-features-info .tab-content table tbody tr {
+		pointer-events: none;
+		width: 95%;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content table#watchlistTableId tbody tr {
+		pointer-events: inherit;
+	}
+}
+
+/* MEDIA QUERY FOR MOBILE and TABLET*/
+@media screen and (max-device-width: 1024px) and (min-device-width:
+	768px) {
+	.track-shipment-dashboard #dashboard-features-info #featuresTab li a {
+		text-indent: -99999px;
+		padding: 0;
+		/*min-width: 139px;*/
+		min-height: 63px;
+		text-indent: -99999px;
+		background-position: 50px;
+		/*margin-left: 2.5px;*/
+		/*min-width: 75px;*/
+		background-position: 22px
+	}
+	.track-shipment-dashboard #dashboard-features-info .visible-xs {
+        display:block !important;
+    }
+    .track-shipment-dashboard #dashboard-features-info .hidden-xs {
+    	display: none !important;
+	}	
+	.track-shipment-dashboard #dashboard-features-info .tab-content .mobileViewSearchStyle
+		{
+		padding: 0 15px;
+		margin-bottom: 10px;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .content-title
+		{
+		margin: 0;
+		padding: 0 15px
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content table,
+		.track-shipment-dashboard #dashboard-features-info .tab-content tbody,
+		.track-shipment-dashboard #dashboard-features-info .tab-content tr,
+		.track-shipment-dashboard #dashboard-features-info .tab-content td {
+		display: block;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content tbody tr
+		{
+		padding: 15px 0 0px 0;
+		display: inline-block;
+		margin: 0 15px 15px;
+		border: 1px solid #ccc;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content tbody td
+		{
+		width: 50%;
+		float: left;
+		padding: 0 15px 10px;
+		font-size: 13px;
+		letter-spacing: 0.4px;
+		text-align: left;
+		color: #222222
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content table tr:hover td
+		{
+		background: none;
+		color: #222222;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content tbody td.fullWidthtd
+		{
+		background-color: #eeeeee;
+		width: 100%;
+		letter-spacing: 0.4px;
+		text-align: left;
+		padding: 10px 15px;
+		margin-bottom: 10px;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content tbody td.fullWidthtd .data-title
+		{
+		color: #999999;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container
+		{
+		padding: 15px;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container .mobile-view-content
+		{
+		border: 1px solid #d8d8d8;
+		display: inline-block;
+		padding: 15px 0 0px margin-bottom: 10px;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container .mobile-view-content>div
+		{
+		width: 50%;
+		float: left;
+		padding: 0 15px 10px
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container .mobile-view-content .status
+		{
+		background-color: #eeeeee;
+		width: 100%;
+		letter-spacing: 0.4px;
+		text-align: left;
+		color: #222222;
+		padding: 0 15px;
+		line-height: 50px;
+		margin-bottom: 10px
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container .mobile-view-content .status i
+		{
+		font-size: 30px;
+		color: #1c9d92;
+		float: left;
+		margin-right: 10px
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container .mobile-view-content .data-title,
+		.track-shipment-dashboard #dashboard-features-info .tab-content td .data-title
+		{
+		color: #888;
+		font-size: 10px;
+		display: block;
+		letter-spacing: 0.3px
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .mobile-view-container .mobile-view-content .data-details
+		{
+		font-size: 13px;
+		letter-spacing: 0.4px;
+		text-align: left;
+		color: #222222
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .viewMoreContainer
+		{
+		padding: 0 15px;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .viewMoreContainer .view-more-data
+		{
+		text-align: center;
+		padding: 16px 0px;
+		border: 1px solid #dcdcdc;
+		color: #666666;
+	}
+	.track-shipment-dashboard #dashboard-features-info .manifestSearchfilterBtn {
+		clear: both;
+		padding-top: 10px;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content button.searchFilter
+		{
+		width: 100% !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .manifest-table-search-filter .ico-search,
+		.track-shipment-dashboard #dashboard-features-info .tab-content .pickup-table-search-filter .ico-search
+		{
+		width: 100% !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .dateRangeDetails
+		{
+		width: 50%;
+		margin-right: 0px !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .dateRangeDetails:first-child
+		{
+		padding-right: 5px;
+	}
+	.track-shipment-dashboard #dashboard-features-info  #manifestFromDate, #manifestToDate {
+		font-size: 12px !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info  #searchResults #featuresTab li {
+		width: 65% !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info .milestoneMob {
+		width: 100% !important;
+		background: #eee;
+		padding: 5px 15px !important;
+		font-weight: 700;
+		margin-bottom: 10px;
+		font-size: 14px !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info  .tableFullBtnMob {
+		width: 100% !important;
+		background: #eee;
+		padding: 10px 15px !important;
+		font-weight: 700;
+		font-size: 14px !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info  .table100perMob {
+		width: 100% !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info .milestoneMob span {
+		position: relative;
+		top: 10px;
+	}
+	.track-shipment-dashboard #dashboard-features-info .btnleftMob {
+		float: left !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info #watchlistHasMoreDiv {
+		padding: 15px;
+	}
+	.track-shipment-dashboard #dashboard-features-info ul#saved-search-list, .edit-view-btns {
+		padding: 0px 15px 0px 15px;
+	}
+	.track-shipment-dashboard #dashboard-features-info #saved-search-list .edit-search {
+		margin-bottom: 20px;
+	}
+	.track-shipment-dashboard #dashboard-features-info #getMoreSavedRecord {
+		float: inherit !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-token
+		{
+		padding: 0px 15px 15px 15px;
+	}
+	.track-shipment-dashboard #dashboard-features-info #manifestHasMoreDiv {
+		padding: 15px;
+	}
+	
+	.track-shipment-dashboard #dashboard-features-info #searchResults #featuresTab li {
+		width: 50% !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info #searchResults .tab-content .content-title {
+		padding: 0 20px !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info #searchResults .tab-content table tr {
+		margin: 0 15px 10px;
+		padding: 15px 0 0px 0;
+	}
+	.track-shipment-dashboard #dashboard-features-info #quickSearchTableResult .data-title {
+		color: #888;
+		font-size: 10px;
+		letter-spacing: .3px;
+	}
+	#searchResults .tab-content table tr th.milestone, #searchResults .tab-content table tr td.milestone,
+		#searchResults .tab-content table tr td.items.milestone {
+		padding: 5px 15px !important;
+		margin-bottom: 10px;
+	}
+	#searchResults .tab-content table td .ico-style {
+		margin-top: 0px !important;
+	}
+	#searchResults .status-content {
+		position: relative;
+		top: 13px;
+	}
+	.track-shipment-dashboard #dashboard-features-info .draftCloseMob {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		width: auto !important;
+	}
+	#searchResults .tab-content table tr th, #searchResults .tab-content table tr td,
+		#searchResults .tab-content table tr td.items {
+		min-width: 48%;
+		max-width: 48%;
+		padding: 0 15px 10px !important;
+		font-size: 13px;
+		letter-spacing: 0.4px;
+		text-align: left;
+		color: #222222;
+	}
+	
+	#searchResults .tab-content table td.milestone .status-content {
+		margin-top: 0px !important;
+	}
+	#quickSearchTableResult .single-term {
+		background-color: #f5f5f5;
+		padding-top: 10px !important;
+	}
+	#searchResults .tab-content table tr.single-term td {
+		padding-left: 15px;
+	}
+	
+	#searchResults #dashboard-features-info #featuresTab li.active>a,
+		#searchResults #dashboard-features-info #featuresTab li.active>a:focus,
+		#searchResults #dashboard-features-info #featuresTab li.active>a:hover
+		{
+		position: absolute;
+		right: 0px;
+		top: 20px;
+	}
+	#searchResults #dashboard-features-info #featuresTab li.active {
+		padding-left: 15px !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info ul#saved-search-list, .edit-view-btns {
+		padding-left: 15px !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info #pickupHasMoreDiv {
+		padding: 10px 15px 0 15px !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info #pickupHasMoreButton {
+		margin-bottom: 15px !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info #watchlistHasMoreButton {
+		margin-right: 0px;
+		margin-bottom: 30px;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .manual-manifest,
+		.track-shipment-dashboard #dashboard-features-info .tab-content .mypickup-option,
+		.track-shipment-dashboard #dashboard-features-info .tab-content .view-more-data
+		{
+		padding-bottom: 0px !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info .mobremovemargin {
+		margin-bottom: -20px;
+	}
+	.track-shipment-dashboard #dashboard-features-info #savedSearch {
+		padding-bottom: 0px !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info .tab-content .total-counter
+		{
+		padding: 10px 0px 5px 0px;
+	}
+	.track-shipment-dashboard #dashboard-features-info .draftviewmorediv {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+	.track-shipment-dashboard #dashboard-features-info .draftviewmorediv_l {
+		width: 100%;
+		padding-bottom: 10px;
+	}
+	.track-shipment-dashboard #dashboard-features-info .draftviewmorediv_r {
+		width: 100%;
+	}
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .emptyDataInfo {
+    padding: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .emptyDataInfo .emptyDataImg{
+    background-image: url("../../images/asset_icons/empty_icon.png");
+    background-repeat: no-repeat;
+    min-height: 100px;
+    background-position: 50%;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .emptyDataInfo .visitor-name{
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .emptyDataInfo .visitor-msg{
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+/*for reprint table css*/
+ .label-shipment-table{
+     border: 1px solid #ccc;
+ }
+.label-shipment-table thead{
+        background-color: grey;
+}
+.label-shipment-table tr{
+     border-bottom: 1px solid #ccc;
+ }
+.label-shipment-table td{
+            word-break: break-all;
+            -ms-word-break: break-all;  
+ }
+.label-shipment-table th>label{
+            font-size:14px;
+ }
+ .closeFrameLabel{
+    position: relative;
+    left: 774px;
+    top:-34px;
+    color: #0f524c;
+ }
+  .closeFrame{
+	position:relative;
+	left:798px;
+	color:#0f524c;
+	top:-12px;
+    }
+    #pintManifestFrame,#pintManifestShipmentFrame{
+        width:100%;
+		height:400px;
+    }
+.track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul a:hover
+	{
+	background-color: #49b1a8;
+	border-color: #49b1a8;
+}
+
+#savedsearch-pagination li {
+    display: inline;
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.content-count-title {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    padding: 5px 40px;
+    text-align: left;
+}
+ .section-error {
+    padding: 3px !important;
+}
+.section-error i.icon{
+    top: 14px !important;
+}
+.draft-delete {
+	padding-right: 0px !important;
+}
+#savedSearch{
+    padding-bottom: 15px;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .manual-manifest, .track-shipment-dashboard #dashboard-features-info .tab-content .mypickup-option, .track-shipment-dashboard #dashboard-features-info .tab-content .view-more-data{
+    padding-bottom: 10px;
+}
+#quickSearchForm{
+    padding-top: 25px;
+}
+#searchResults .features-info-container{
+   margin-top: 34px;
+}
+#shipment-live-updates .shipment-live-nav{
+    box-shadow: none !important;
+}
+#getMoreSavedRecord{
+    margin-right: 0px !important;
+}
+#quicksearchTabAnchor, #advancesearchTabAnchor{
+    padding-left: 35px; padding-right: 35px; text-align: center;
+}
+@media screen and (max-width: 992px){
+/*new mobile Css*/
+#quickSearchForm{
+    padding-top: 0px;
+}
+li#watchList > i, li#manifestLi > i, li#draftshipmentLi > i, li#savedsearchLi > i, li#pickupLi > i{
+        transform: translate(-50%, -50%) !important;
+        top: 50% !important;
+        left: 50% !important;
+    }
+    .track-shipment-dashboard #dashboard-features-info #featuresTab a{
+        margin-right: 3px;
+    }
+
+    #searchBannerMob{
+    display: table;
+    padding-bottom: 15px;
+    }
+    #searchBannerMob .searchBannerMob_img{
+        display: table-cell;
+    }
+    #searchBannerMob .searchBannerMob_con{
+        display: table-cell;
+        padding-left: 20px;
+        vertical-align: middle;
+        font-size: 25px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.7px;
+      text-align: left;
+      color: #222222;
+    }   
+   
+}
+#manifestHasMoreDiv{
+    width: 100%;
+    padding-top:10px;
+    padding-left:35px;
+    padding-bottom:10px;
+    padding-right:35px;
+    background-color: #fff;
+}
+#watchlistHasMoreDiv{
+    padding-left:35px;
+    padding-right:35px;
+}
+#manifestHasMoreButton{
+    margin-right: 0px
+}
+#watchlistHasMoreButton{
+    /*margin-right: 40px*/
+}
+#searchResults .tab-content table th{
+    padding-left: 35px !important;
+}
+#searchResults .tab-content table th:last-child{
+    padding-right: 35px !important;
+}
+#searchResults .tab-content table td{
+    padding-left: 35px !important;
+    width: 15%;
+}
+#searchResults .tab-content table td.senderRef,
+#searchResults .tab-content table td.estimatedDeliveryDate{
+    width: 17%;
+}
+#searchResults .tab-content table td .ico-style{
+    margin-top: 0px !important;
+  }
+#searchResults .tab-content table td.milestone .status-content{
+        margin-top: 13px !important;
+  }
+#searchResults .tab-content .content-title{
+    padding: 0 35px !important; 
+}
+#searchResults .tab-content{
+    padding: 15px 0 0px 0 !important;
+}
+#quick-advance-search-tab{
+    padding-top: 16px;
+    border: none;
+}
+#searchResults .tab-content table .data-row td {
+    cursor: pointer;
+}
+
+#track-shipment .content-box{
+    margin-bottom: 0px !important;
+}
+.brand-marketting{
+    margin-top: 0px !important;
+}
+
+
+.mytoll .input-label-grp input[type=text], .mytoll .input-label-grp input[type=password], .mytoll .input-label-grp input[type=number], .mytoll .input-label-grp input[type=tel], .mytoll .input-label-grp input[type=email]{
+    font-size: 14px !important;
+}
+.track-shipment-dashboard #dashboard-features-info .tab-content .manual-manifest button:hover, .track-shipment-dashboard #dashboard-features-info .tab-content .mypickup-option button:hover, .track-shipment-dashboard #dashboard-features-info .tab-content .view-more-data button:hover{
+    background-color: #606060;
+}
+
+@media (max-width: 767px){
+    #quicksearchTabAnchor, #advancesearchTabAnchor{
+    padding-left: 15px; padding-right: 15px; text-align: center;
+}
+  .track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul li{
+    margin-bottom: 0px;
+  }
+  #track-shipment .content-box{
+    padding: 15px !important;
+  }
+  .mytoll .page-body .content-box{
+    padding: 15px !important;
+  }
+  .mytoll button, .mytoll .btn-link{
+    margin-bottom: 15px !important;
+  }
+  .milestoneMob{
+    width: 100% !important;
+    background: #eee;
+    padding: 5px 15px !important;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 14px !important;
+  }
+  .tableFullBtnMob{
+    width: 100% !important;
+    background: #eee;
+    padding: 10px 15px !important;
+    font-weight: 700;
+    font-size: 14px !important;
+  }
+  .table100perMob{
+    width: 100% !important;
+  }
+  .milestoneMob span {
+    position: relative;
+    top: 10px;
+  }
+  .btnleftMob{
+    float: left !important;
+  }
+  #track-shipment .light-grey-text{
+    margin-top: 0px !important;
+  }
+  #watchlistHasMoreDiv{
+    padding: 15px;
+  }
+  ul#saved-search-list, .edit-view-btns{
+    padding: 0px 15px 0px 15px;
+  }
+  #saved-search-list .edit-search{
+    margin-bottom: 20px;
+  }
+  #getMoreSavedRecord{
+    float: inherit !important;
+  }
+  .track-shipment-dashboard #dashboard-features-info .tab-content .saved-search-token{
+    padding: 0px 15px 15px 15px;
+  }
+  #manifestHasMoreDiv{
+    padding: 15px;
+  }
+  #track-shipment .input-label-grp textarea{
+    padding: 20px 25px 19px 20px !important;
+    font-size: 14px !important;
+  }
+  #searchResults #featuresTab li{
+    width: 50% !important;
+  }
+  #searchResults .tab-content .content-title{
+    padding: 0 20px !important;
+  }
+  #searchResults .tab-content table tr{
+    margin: 0 15px 10px;
+    padding: 15px 0 0px 0 ;
+  }
+  #quickSearchTableResult .data-title{
+    color: #888;
+    font-size: 10px;
+    letter-spacing: .3px;
+  }
+  #searchResults .tab-content table tr th.milestone, #searchResults .tab-content table tr td.milestone, #searchResults .tab-content table tr td.items.milestone{
+    padding: 5px 15px !important;
+    margin-bottom: 10px;
+  }
+  #searchResults .tab-content table td .ico-style{
+    margin-top: 0px !important;
+  }
+  #searchResults .status-content{
+    position: relative;
+    top: 13px;
+  }
+  .draftCloseMob{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: auto !important;
+  }
+  #searchResults .tab-content table tr th, #searchResults .tab-content table tr td, #searchResults .tab-content table tr td.items{
+    min-width: 48%;
+    max-width: 48%;
+    padding: 0 15px 10px !important;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: #222222;
+  }
+
+  .mytoll label{
+    margin-bottom: 0px !important;
+  }
+  #searchResults .tab-content table td.milestone .status-content{
+    margin-top: 0px !important;
+  }
+  #quickSearchTableResult .single-term{
+    background-color: #f5f5f5;
+    padding-top: 10px !important;
+  }
+  #searchResults .tab-content table tr.single-term td{
+    padding-left: 15px;
+  }
+  #track-shipment .track-banner.mobile{
+    width: 60px !important;
+    height: 55px !important;
+  }
+  #searchResults #dashboard-features-info #featuresTab li.active > a, #searchResults #dashboard-features-info #featuresTab li.active > a:focus, #searchResults #dashboard-features-info #featuresTab li.active > a:hover{
+    position: absolute;
+    right: 0px;
+    top: 20px;
+  }
+  #searchResults #dashboard-features-info #featuresTab li.active{
+    padding-left: 15px !important;
+  }
+ 
+  ul#saved-search-list, .edit-view-btns{
+    padding-left: 15px !important;
+  }
+  #pickupHasMoreDiv{
+    padding: 10px 15px 0 15px !important;
+  }
+  #pickupHasMoreButton{
+    margin-bottom: 15px !important;
+  }
+  #watchlistHasMoreButton{
+    margin-right: 0px;
+    margin-bottom: 30px;
+    }
+   .track-shipment-dashboard #dashboard-features-info .tab-content .manual-manifest, .track-shipment-dashboard #dashboard-features-info .tab-content .mypickup-option, .track-shipment-dashboard #dashboard-features-info .tab-content .view-more-data{
+    padding-bottom: 0px !important;
+ }
+ .mobremovemargin{
+     margin-bottom: -20px;
+ }
+ #savedSearch{
+    padding-bottom: 0px !important;
+ }
+ .track-shipment-dashboard #dashboard-features-info .tab-content .total-counter{
+    padding: 10px 0px 5px 0px;
+ }
+ .draftviewmorediv{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+ }
+ .draftviewmorediv_l{
+    width: 100%;
+    padding-bottom: 10px;
+ }
+ .draftviewmorediv_r{
+    width: 100%;
+ }
+}
+
+@media (max-width: 430px){
+    #track-shipment .input-label-grp textarea{
+        padding: 10px 25px !important;
+        font-size: 14px;
+  }
+  .manifestSearchfilterBtn{
+    clear: both;
+    padding-top: 10px;
+  }
+  .track-shipment-dashboard #dashboard-features-info .tab-content button.searchFilter{
+    width: 100% !important;
+  }
+  .track-shipment-dashboard #dashboard-features-info .tab-content .manifest-table-search-filter .ico-search, .track-shipment-dashboard #dashboard-features-info .tab-content .pickup-table-search-filter .ico-search{
+   width: 100% !important; 
+  }
+  .track-shipment-dashboard #dashboard-features-info .tab-content .dateRangeDetails{
+    width: 50%;
+    margin-right: 0px !important;
+
+  }
+  .track-shipment-dashboard #dashboard-features-info .tab-content .dateRangeDetails:first-child{
+    padding-right: 5px;
+  }
+  #manifestFromDate, #manifestToDate{
+    font-size: 12px !important;
+  }
+  #searchResults #featuresTab li{
+    width: 65%!important;
+  }
+ 
+}
+@media (max-width: 360px) {
+	.ikon {
+		left: 10px;
+	} 
+	.track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul a {
+		padding-left: 45px;
+	}
+	.track-shipment-dashboard .shipment-live-updates .shipment-live-nav ul a i {
+		right: 10px;
+	}
+}
+/*new mobile Css end*/
+
+.saved-search-counter {
+	padding-left: 35px;
+    padding-right: 35px;
+    font-size: 14px;
+    color: #888888;
+}

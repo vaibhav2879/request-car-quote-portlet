@@ -1,0 +1,84 @@
+<div id="create-manifest-manuall-wrpr" class="popup-wrapper popup-alert">
+  <div class="popup-content-wrpr add-to-tmplt-content clearfix">
+    <a id="close-save-template-popup" class="close-ico">
+    <!--<img class="close-icon" src="../images/icon-cross-modelbox.png" alt="Close">-->
+    <i class="ico-close"></i>
+    </a>
+    <div class="manifest-popup">
+      <h1><i class="ico-shipment-created"></i>CREATE MANUAL MANIFEST</h1>
+      <fieldset id="manual-manifest">
+        <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+			<label for="pickup-date">Dispatch date</label>
+			<div class="input-label-grp date-picker">
+				<i class="ico-date-range field-icon"></i>
+				<input type="text" name="date" id="dispatch-date" readonly="" tabindex="0" />
+				<a class="widget-tog gler" title="Click to enter dispatch date"></a>
+			</div>
+		</div>
+
+
+        <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+          <label>Toll Carrier</label>
+	      <div class="select-label-grp">
+	        <div class="custom-dropdown" id="BU-selector">
+	          <label class="label-wrapper">
+	            <input type="hidden" name="business-unit" id="business-unit" />
+	            <input type="text" class="current-selected" name="placeholder-bu" placeholder="Select Toll Carrier (BU)" readonly="readonly" tabindex="0" />
+	            <a class="toggler"><i class="ico-arrow-down-green"></i></a>
+	          </label>
+			
+	          <div class="dropdown-list">
+                <ul class="dropdown-list-ul">
+                {{#each this.carrierAccounts}}
+                    <li data-val="{{this.CarrierCode}}">
+                    <div>{{this.CarrierName}}</div>
+                    </li>
+                {{/each}}
+                </ul>
+            </div>
+
+	        </div>
+	      </div>
+        </div>
+		<div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+			<label>Sender</label>
+			<div class="select-label-grp">
+				<div class="address-dropdown" id="sender-selector">
+					<label class="label-wrapper">
+						<input type="hidden" name="sender" id="sender" value="000" required />
+						<input type="text" class="current-selected" name="placeholder-location" placeholder="Please select sender" value="{{this.SenderAddress.defaultAddress.Company}}" readonly="readonly" tabindex="0" />
+						<a class="toggler"><i class="ico-arrow-down-green"></i></a>
+					</label>
+					<div class="selected-details placeholder">
+			        
+						<div class="edit-wrpr">
+							<a class="edit-link">Edit <i class="ico-pencil"></i></a>
+						</div>
+						<div>
+						</div>
+							
+						<div>
+						</div>
+			        
+			    </div>
+					<div class="dropdown-list">
+						<ul class="dropdown-list-ul address-list-ul">
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>  
+			<div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
+				<label>Manifest name</label>            
+				<div class="input-label-grp">
+					<input type="text" name="manifest-name" id="manifest-name" maxlength="30" placeholder="Enter the name of the manifest" value="">
+				</div>
+			</div>
+        
+      </fieldset>
+      <div class="bgLess-btn-wrapper clearfix">
+        <a id="save-manifest" onClick="saveManifest(event)" class="btn-link primary">SAVE MANIFEST</a>
+      </div>
+    </div>    
+  </div>
+</div>

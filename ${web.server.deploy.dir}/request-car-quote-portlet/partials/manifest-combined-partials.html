@@ -1,0 +1,709 @@
+<!-- SHARE TEMPLATE POP UP -->
+<script id="share-template" type="text/x-handlebars-template">
+    <div id="share-template-pop" class="popup-wrapper">
+        <div class="popup-content-wrpr add-to-tmplt-content share-popup share-popup1 clearfix">
+            <a id="close-share-template-popup" class="close-ico"><i class="ico-delete"></i></a>
+            <header>
+                <h2><span>Share</span></h2>
+            </header>
+            <section>
+                <div class="share-popup-main">
+                    <div class="share-popup-desc">
+                        <label>You can enter upto 5 email addresses</label>
+                    </div>
+                    <form>
+                        <div class="share-popup-form">
+
+                            <div class="input-label-grp">
+                                <input type="text" name="email-address1" id="email-address1" placeholder="Email Address 1">
+                            </div>
+                            <div class="add-more-email">
+                                <input type="button" value="Add More Email" />
+                            </div>
+                            <div class="input-label-grp">
+                                <textarea id="share-message" name="share-message" placeholder="Enter Message"></textarea>
+                            </div>
+
+                            <div class="share-control-box">
+                                <input type="button" value="Cancel" />
+                                <a class="share-btn" id="share-emails">Share</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</script>
+<!-- SHARE SUCCESS CONFIRM POP UP -->
+<script id="share-success-confirm-template" type="text/x-handlebars-template">
+    <div id="share-success-pop-confrm" class="popup-wrapper hidden">
+        <div class="popup-content-wrpr add-to-tmplt-content share-popup share-popup2 clearfix">
+            <a id="close-share-template-cnfrm-popup" class="close-ico"><i class="ico-delete"></i></a>
+            <header>
+                <h2><span>Done</span></h2>
+            </header>
+            <section>
+                <div class="share-popup-main share-success-main">
+                    <div class="share-popup-desc">
+                        <label>You have shared the shipment confirmation with the below email address</label>
+                    </div>
+
+                    <div class="email-list-box">
+                        <ul class="share-email-list">
+                            <li>smith@tollgroup.com</li>
+                            <li>smith@gmail.com</li>
+                            <li>john@gmail.com</li>
+                        </ul>
+                    </div>
+                    <div class="pickup-btn-box">
+                        <a href="/shipments/automated-manifest">My Shipments</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</script>
+<!-- PRINT LABEL POP UP -->
+<script id="print-label-template" type="text/x-handlebars-template">
+    <div id="print-label-wrpr" class="popup-wrapper popup-alert ">
+        <div class="print-label-popup-wrap">
+            <div class="print-popup-main">
+                <a class="print-popup-close"><i class="ico-delete"></i></a>
+
+                <header>
+                    <h2>PRINT LABEL</h2>
+                </header>
+                <section class="manifest-tab-box">
+                    <div class="mani-tab mani-tab1 mani-label-tab active">
+                        <div class="label-tab-left">
+                            <div class="printing-option">
+                                <h4>Choose printing option:</h4>
+                                <ul class="printing-opt-list">
+                                    <li>
+                                        <div class="printing-opt-ind">
+                                            <input type="radio" name="printing-option-op1" id="single" name="single-print" value="0" checked/>
+                                            <label for="single">Single - 6*4</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        {{#if this.isThermal}}
+                                        <div class="printing-opt-ind hidden">
+                                            <input type="radio" name="printing-option-op1" id="single" name="single-print" value="0" checked/>
+                                            <label for="single">Single - 6*4</label>
+                                        </div>
+                                        {{else}}
+                                        <div class="printing-opt-ind">
+                                            <input type="radio" name="printing-option-op1" value="1" id="quadrant" name="quadrant-print" />
+                                            <label for="quadrant">Quadrant printing</label>
+                                        </div>
+                                        {{/if}}
+                                        <table width="100%">
+
+                                        </table>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="quad-printing-option hidden">
+                                <h4>Quadrant printing option:</h4>
+                                <div class="quad-printing-ind">
+                                    <label>Print from</label>
+                                    <input type="text" value="Q1" id="quad-label-print-value" />
+                                </div>
+                            </div>
+                            <!--new label box start-->
+                            <!-- <div class="new-label-box">
+<div class="label-box-top">
+<p>
+<input type="checkbox" val="" />
+Print Unprinted Labels (10)
+</p>
+<p>
+<input type="checkbox" val="" />
+Reprint Labels (5)
+</p>
+</div>
+<div class="label-box">
+<ul class="label-list">
+<li class="header">
+<div class="label-list-ind">
+<div class="label-list-abs">
+<input type="checkbox" val="" />
+</div>
+<div class="label-list-col label-title">
+<h3>Label</h3>
+</div>
+<div class="label-list-col line-item">
+<h3>Line Item</h3>
+</div>
+<div class="label-list-col item-number">
+<h3>Item Number</h3>
+</div>
+</div>
+</li>									
+{{#each this.Shipments as |shipmentDetail|}}	
+{{#each shipmentDetail.shipmentLines as |shipmentLine|}}	
+{{#each shipmentLine.shipmentLineItems as |shipmentLineItem|}}	
+<li class="content">
+<div class="label-list-ind">
+<div class="label-list-abs">
+<input type="checkbox" val="" />
+</div>
+<div class="label-list-col label-title">
+<p>{{inc @index}}</p>
+</div>
+<div class="label-list-col line-item">
+<p>{{shipmentLineItem.description}}</p>
+</div>
+<div class="label-list-col item-number">
+<p>{{shipmentLineItem.itemLabelNo}}</p>
+</div>
+</div>
+</li>
+{{/each}}
+{{/each}}                       
+{{/each}}
+
+</ul>
+</div>
+</div> -->
+                            <!--new label box end-->
+                        </div>
+                        <div class="label-tab-right">
+                            <ul class="print-state-list hidden">
+                                <li class="active">
+                                    <div class="printing-state-ind">
+                                        <h3>Q1</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="printing-state-ind">
+                                        <h3>Q2</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="printing-state-ind">
+                                        <h3>Q3</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="printing-state-ind">
+                                        <h3>Q4</h3>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="print-state-list-single">
+                                <li class="active">
+                                    <div class="printing-state-ind"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </section>
+                <footer class="print-label-btnwrap active">
+                    {{#if this.isThermal}}
+                    <a class="label-print-btn" id="thermal-label" title="Print" onclick="printLabel()">Print<i class="ico-print">&nbsp;</i></a>                    {{else}}
+                    <a class="label-print-btn" id="laser-label" title="Print" onclick="printLabel()">Print<i class="ico-print">&nbsp;</i></a>
+                    <a class="label-download-btn" title="Download PDF" onclick="printLabel()" download>Download Pdf<i class="ico-download">&nbsp;</i></a>                    {{/if}}
+                </footer>
+            </div>
+        </div>
+    </div>
+</script>
+<!-- PRINT SHIPMENT POP UP -->
+<script id="print-shipment-template" type="text/x-handlebars-template">
+    <div id="print-shipment-wrpr" class="popup-wrapper popup-alert ">
+        <div class="print-ship-popup-wrap">
+            <div class="print-popup-main">
+                <a class="print-popup-close"><i class="ico-delete"></i></a>
+
+                <header>
+                    <h2>PRINT SHIPMENT</h2>
+                </header>
+                <section class="manifest-tab-box">
+                    <div class="mani-tab mani-tab2 mani-cannot-tab active">
+                        <div class="shipment-nd-manifest-wrpr">
+
+                            <div class="consignment-list" id="div-ship-id">
+
+
+                                <table class="table">
+                                    <thead>
+                                        <th>Shipment</th>
+                                        <th>Receiver</th>
+                                        <th>Receiver Location</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="td-ship-id" data-printshipmentid="{{this.shipmentId}}"><a>{{this.shipmentNumber}}</a></td>
+                                            <td>{{this.receivercompanyName}}</td>
+                                            <td>{{this.receiverLocation}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="print-ship-btnwrap active">
+                    <a class="ship-print-btn" title="Print" onclick="printShipment()">Print<i class="ico-print">&nbsp;</i></a>
+                    <a class="ship-download-btn" title="Download PDF" onclick="printShipment()" download>Download Pdf<i class="ico-download">&nbsp;</i></a>
+                </footer>
+            </div>
+        </div>
+    </div>
+</script>
+<!-- COMMERCIAL INVOICE POP UP -->
+<script id="commerical-invoice-template" type="text/x-handlebars-template">
+    <div id="ci-wrpr" class="popup-wrapper popup-alert ">
+        <div class="ci-popup-wrap">
+            <div class="ci-popup-main">
+                <a class="ci-popup-close"><i class="ico-delete"></i></a>
+
+                <header>
+                    <h2><i class="ico-shipment-created"></i>Create Commercial Invoice</h2>
+                </header>
+                <section class="ci-popup-section">
+                    <p>Would you like to create a commercial invoice with my toll?<br/> Current Toll copy to be supplied
+                    </p>
+                </section>
+                <footer class="ci-btnwrap">
+                    <a href="manifest2-invoice" class="yes-btn" title="Yes Please">Yes Please</a>
+                    <a href="manifest2-no" class="no-btn" title="No Thanks">No Thanks</a>
+                </footer>
+            </div>
+        </div>
+    </div>
+</script>
+<!-- MOVE MANIFEST POP UP -->
+<script id="move-manifest-dropdown-template" type="text/x-handlebars-template">
+
+    <div id="move-manifest-wrpr" class="popup-wrapper popup-alert">
+
+        <div class="popup-content-wrpr add-to-tmplt-content clearfix">
+            <a id="close-move-shipment-popup" class="close-ico">
+                <!--<img class="close-icon" src="../images/icon-cross-modelbox.png" alt="Close">-->
+                <i class="ico-delete"></i>
+            </a>
+            <div class="add-to-manifest-popup">
+                <h1><i class="ico-move"></i>MOVE TO MANIFEST</h1>
+                <p>Move shipment to a current or new manifest</p>
+                <div class="radio-grp add-ship-radio-grp" id="add-ship-rad">
+                    <label class="radio-inline">
+<input type="radio" id="save-radio" name="add-ship-radios" value="yes" checked> <span class="radio-txt">Saved</span>
+</label>
+
+                    <label class="radio-inline">
+<input type="radio" id="new-radio" name="add-ship-radios" value="no"> <span class="radio-txt">New</span>
+</label>
+                </div>
+                <fieldset id="manual-manifest" class="row">
+                    <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12 new-manifest-div hidden">
+                        <label>New Manifest</label>
+                        <div class="input-label-grp">
+                            <input type="text" name="new-manifest-name" id="new-manifest-name" placeholder="Enter the name of the manifest" value="">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12 save-manifest-div">
+                        <label>Saved manifests</label>
+                        <div class="select-label-grp">
+                            <div class="custom-dropdown" id="move-manifest-selector" tabindex="0" data-placeholder="Who pays">
+                                <div class="label-wrapper">
+                                    <input type="hidden" name="move-manifest" id="move-manifest" value="000">
+                                    <input type="text" class="current-selected" name="placeholder-manifest" placeholder="Select a manifest" readonly="readonly"
+                                    />
+                                    <a class="toggler"><i class="ico-arrow-down-green"></i></a>
+                                </div>
+                                <div class="dropdown-list">
+                                    <ul class="dropdown-list-ul">
+                                        {{#each this}}
+                                        <li data-val="{{this.manifestID}}">
+                                            <div class="">{{this.manifestName}}</div>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="bgLess-btn-wrapper add-manifest clearfix pdng-top-10px">
+                    <a id="add-manifest" onClick="loadManifestID();" class="btn-link primary">MOVE TO MANIFEST</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script id="print-close-manifest-popup-template" type="text/x-handlebars-template">
+    <div id="print-mani-popup" class="popup-wrapper print-mani-popup">
+        <div class="mani-popup-wrap">
+            <div class="mani-popup-main">
+                <a class="mani-popup-close"><i class="ico-delete"></i></a>
+                <header>
+                    <h2>Print &amp; close manifest</h2>
+                    <p>To close manifest, please print shipment, labels and manifest</p>
+                </header>
+                <section class="manifest-tab-box">
+                    <ul class="manifest-tab-list">
+                        <li>
+                            <a href="#" data-tab="mani-tab1" title="Labels" class="active">Labels</a>
+                        </li>
+                        <li>
+                            <a href="#" data-tab="mani-tab2" title="Shipment">Shipment & Manifest</a>
+                        </li>
+                    </ul>
+                    <div class="mani-tab mani-tab1 mani-label-tab active">
+                        <div class="manifest-tab-box" id="manifest-label-preview"></div>
+                        <div class="label-tab-left" id="manifest-label-tab">
+                            <div class="printing-option">
+                                <h4>Choose printing option:</h4>
+                                <ul class="printing-opt-list">
+                                    <li>
+                                        <div class="printing-opt-ind" id="single-label">
+                                            <input type="radio" name="printing-option-op2" id="single" value="0" checked/>
+                                            <label for="single">Single - 6*4</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="printing-opt-ind" id="quadrant-label">
+                                            <input type="radio" name="printing-option-op2" value="1" id="quadrant" />
+                                            <label for="quadrant">Quadrant printing</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="quad-printing-option hidden">
+                                    <h4>Quadrant printing option:</h4>
+                                    <div class="quad-printing-ind">
+                                        <label>Print from</label>
+                                        <input type="text" value="Q1" id="quad-print-value" />
+                                    </div>
+                                </div>
+                                <div class="new-label-box">
+                                    <div class="label-box">
+                                        <div class="table-responsive label-shipment-table">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <label>
+                                                                <input type="checkbox" name="allCheck" onclick='checkAll()'>
+                                                                <span>Shipment </span>
+                                                            <label>
+                                                        </th>
+                                                        <th>
+                                                            <label>
+                                                                <span>Print Unprinted Labels</span>
+                                                            </label>
+                                                        </th>
+                                                        <th class="hidden">
+                                                            <label>
+                                                                <span>Re-print Labels</span>
+                                                            </label>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {{#each this.Shipments as |shipmentDetail|}}
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" name="shipCheck" onclick="getItemId('{{shipmentDetail.shipmentNumber}}')" />
+                                                            <span>{{shipmentDetail.shipmentNumber}}</span>
+                                                        </td>
+                                                        <td>{{shipmentDetail.unpcount}}</td>
+                                                        <td class="hidden">{{shipmentDetail.pcount}}</td>
+                                                    </tr>
+                                                    {{/each}}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <ul class="label-list hidden">
+                                            <li class="header">
+                                                <div class="label-list-ind">
+                                                    <div class="label-list-abs">
+                                                        <input type="checkbox" name="allCheck" onclick='checkAll()'>
+                                                    </div>
+                                                    <div class="label-list-col label-title">
+                                                        <h3>Shipment</h3>
+                                                    </div>
+                                                    <div class="label-list-col line-item">
+                                                        <h3>Print Unprinted Labels</h3>
+                                                    </div>
+                                                    <div class="label-list-col item-number hidden">
+                                                        <h3>Re-print Labels</h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            {{#each this.Shipments as |shipmentDetail|}}
+
+                                            <li class="content">
+                                                <div class="label-list-ind">
+                                                    <div class="label-list-abs">
+                                                        <input type="checkbox" name="shipCheck" onclick="getItemId('{{shipmentDetail.shipmentNumber}}')" />
+                                                    </div>
+                                                    <div class="label-list-col label-title">
+                                                        {{shipmentDetail.shipmentNumber}}
+                                                    </div>
+                                                    <div class="label-list-col line-item">
+                                                        <!-- <input type="checkbox" name="print_{{shipmentDetail.shipmentNumber}}" onclick="checkPrint('print_{{shipmentDetail.shipmentNumber}}','{{shipmentDetail.shipmentNumber}}')"
+                                                        /> -->
+                                                        {{shipmentDetail.pcount}}
+                                                    </div>
+                                                    <div class="label-list-col item-number hidden">
+                                                        <input type="checkbox" name="reprint_{{shipmentDetail.shipmentNumber}}" onclick="checkRePrint('reprint_{{shipmentDetail.shipmentNumber}}','{{shipmentDetail.shipmentNumber}}')"
+                                                        />{{shipmentDetail.unpcount}}
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--new label box start-->
+                        <!-- 
+<div class="new-label-box">                                
+<div class="label-box">
+<ul class="label-list">
+<li class="header">
+<div class="label-list-ind">
+<div class="label-list-abs">
+<input type="checkbox" val="" />
+</div>
+<div class="label-list-col label-title">
+<h3>Label</h3>
+</div>
+<div class="label-list-col line-item">
+<h3>Line Item</h3>
+</div>
+<div class="label-list-col item-number">
+<h3>Item Number</h3>
+</div>
+</div>
+</li>
+{{#each this.Shipments as |shipmentDetail|}}	
+{{#each shipmentDetail.shipmentLines as |shipmentLine|}}	
+{{#each shipmentLine.shipmentLineItems as |shipmentLineItem|}}	
+<li class="content">
+<div class="label-list-ind">
+<div class="label-list-abs">
+<input type="checkbox" val="" />
+</div>
+<div class="label-list-col label-title">
+<p>{{inc @index}}</p>
+</div>
+<div class="label-list-col line-item">
+<p>{{shipmentLineItem.description}}</p>
+</div>
+<div class="label-list-col item-number">
+<p>{{shipmentLineItem.itemLabelNo}}</p>
+</div>
+</div>
+</li>
+{{/each}}
+{{/each}}                       
+{{/each}}
+
+</ul>
+</div>
+</div> -->
+                        <!--new label box end-->
+
+                        <!-- <div class="label-box">
+<ul class="label-list">
+<li class="header">
+<div class="label-list-ind">
+<div class="label-list-abs">
+<input type="checkbox" val="" />
+</div>
+<div class="label-list-col item-number2">
+<h3>Shipment</h3>
+</div>
+<div class="label-list-col line-item2">
+<h3>Print Unprinted Labels</h3>
+</div>
+<div class="label-list-col label-title2">
+<h3>Re-Print Labels</h3>
+</div>
+</div>
+</li>
+<li class="content">
+<div class="label-list-ind">
+<div class="label-list-abs">
+<input type="checkbox" val="" />
+</div>
+<div class="label-list-col item-number2">
+<p>0009327500034440</p>
+</div>
+<div class="label-list-col line-item2">
+<p>1</p>
+</div>
+<div class="label-list-col label-title2">
+<p>Botels</p>
+</div>
+</div>
+</li>
+<li class="content">
+<div class="label-list-ind">
+<div class="label-list-abs">
+<input type="checkbox" val="" />
+</div>
+<div class="label-list-col item-number2">
+<p>0009327500034440</p>
+</div>
+<div class="label-list-col line-item2">
+<p>1</p>
+</div>
+<div class="label-list-col label-title2">
+<p>Botels</p>
+</div>
+</div>
+</li>
+<li class="content">
+<div class="label-list-ind">
+<div class="label-list-abs">
+<input type="checkbox" val="" />
+</div>
+<div class="label-list-col item-number2">
+<p>0009327500034440</p>
+</div>
+<div class="label-list-col line-item2">
+<p>1</p>
+</div>
+<div class="label-list-col label-title2">
+<p>Botels</p>
+</div>
+</div>
+</li>
+<li class="content">
+<div class="label-list-ind">
+<div class="label-list-abs">
+<input type="checkbox" val="" />
+</div>
+<div class="label-list-col item-number2">
+<p>0009327500034440</p>
+</div>
+<div class="label-list-col line-item2">
+<p>1</p>
+</div>
+<div class="label-list-col label-title2">
+<p>Botels</p>
+</div>
+</div>
+</li>
+<li class="content">
+<div class="label-list-ind">
+<div class="label-list-abs">
+<input type="checkbox" val="" />
+</div>
+<div class="label-list-col item-number2">
+<p>0009327500034440</p>
+</div>
+<div class="label-list-col line-item2">
+<p>1</p>
+</div>
+<div class="label-list-col label-title2">
+<p>Botels</p>
+</div>
+</div>
+</li> </ul></div>-->
+
+                        <div class="label-tab-right">
+                            <ul class="print-state-list hidden">
+                                <li class="active">
+                                    <div class="printing-state-ind">
+                                        <h3>Q1</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="printing-state-ind">
+                                        <h3>Q2</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="printing-state-ind">
+                                        <h3>Q3</h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="printing-state-ind">
+                                        <h3>Q4</h3>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="print-state-list-single">
+                                <li class="active">
+                                    <div class="printing-state-ind"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mani-tab mani-tab2 mani-cannot-tab">
+                        <div class="shipment-nd-manifest-wrpr" id="manifest-ship-preview">
+                            <div class="finalize-manifest-head">
+                                <input type="checkbox" class="cb-manifest" name="finalize-manifest" onclick="manifestChecked()">                                Finalize &amp; Print Manifest
+                            </div>
+                            {{!--Shipment & Manifest Content Here..--}}
+                            <div class="header-shipment-pop">
+                                <div class="clearfix header-row form-group">
+                                    <div class="col-sm-3">Manifest #</div>
+                                    <div class="col-sm-3">Carrier</div>
+                                    <div class="col-sm-2">Date</div>
+                                    <div class="col-sm-4">Sender</div>
+                                </div>
+                                <div class="clearfix body-row">
+                                    <div class="col-sm-3 f-strong">{{this.manifestId}}</div>
+                                    <div class="col-sm-3">{{this.tollCarrierName}}</div>
+                                    <div class="col-sm-2">{{this.dispatchDate}}</div>
+                                    <div class="col-sm-4">{{this.senderAddress.companyName}}, {{this.senderAddress.addressLine1}}, {{this.senderAddress.addressLine2}},
+                                        {{this.senderAddress.state}}, {{this.senderAddress.countryCode}}</div>
+                                </div>
+                            </div>
+                            <div class="consignment-list" id="shipment-item-list">
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox" name="consignment" id="cb-header-ship" onclick="checkUncheckShipmentCB()"></th>
+                                            <th>Shipment</th>
+                                            <th>Receiver</th>
+                                            <th>Receiver Location</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each this.Shipments as |shipmentDetail|}}
+                                        <tr>
+                                            <td><input type="checkbox" name="consignment-list" data-shipmentid="{{shipmentDetail.shipmentId}}"
+                                                    class="cb-list-ship" id="shipment-item{{@index}}" onclick="shipmentCheckboxClick()"></td>
+                                            <td><a>{{shipmentDetail.shipmentNumber}}</a></td>
+                                            <td>{{shipmentDetail.receiverAddress.companyName}}</td>
+                                            <td>{{shipmentDetail.receiverAddress.state}} {{shipmentDetail.receiverAddress.suburb}}</td>
+                                        </tr>
+
+                                        {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="manifest-btn-wrap mani-tab1 active">
+                    <a class="view-review-btn" title="Print" id="label-preview" onclick="previewManifestLabel()">Preview</a>
+                    <a class="manifest-print-btn" title="Print" id="label-print" onclick="printManifestLabel()">Print<i class="ico-print">&nbsp;</i></a>
+                    <a class="manifest-download-btn" id="manifest-label-download-btn" title="Download PDF" onclick="printManifestLabel()" download>Download Pdf<i class="ico-download">&nbsp;</i></a>
+                </footer>
+                <footer class="manifest-btn-wrap mani-tab2">
+                    <a class="view-review-btn" title="Print" id="ship-preview" onclick="previewManifestShipment()">Preview</a>
+                    <a class="manifest-print-btn" title="Print" id="ship-print" onclick="printManifestShipment()">Print<i class="ico-print">&nbsp;</i></a>
+                    <a class="manifest-download-btn" id="manifest-ship-download-btn" title="Download PDF" onclick="printManifestShipment()" download>Download Pdf<i class="ico-download">&nbsp;</i></a>
+                </footer>
+            </div>
+        </div>
+    </div>
+    </div>
+</script>

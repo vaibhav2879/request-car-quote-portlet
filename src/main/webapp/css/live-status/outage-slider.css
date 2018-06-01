@@ -1,0 +1,74 @@
+#wrapper-outage-slider .layout-outage-slides{
+    float:left;
+    width:100%
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner{
+    float:left;
+    width:100%
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner.out_error{
+	background-color: #fadfdc;
+    border-bottom:2px solid #c92d0c
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner.out_warn{
+	background-color: #fcf5e3;
+    border-bottom:2px solid #eca115
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner .outage-container{
+    /*width:83.40%;
+    margin:0 auto;
+    padding:0 26px*/
+    width: 100%;
+    padding: 0 26px;
+    text-align: left
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner .outage-slide-item{
+    float:left;
+    width:100%;
+    position:relative;
+    padding-right:30px;
+    box-sizing:border-box
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner .outage-slide-item .outage-slide-ind{
+    display:table;
+    width:100%;
+    padding:0;
+    min-height:80px
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner .outage-slide-item .outage-slide-ind .outage-slide-icon{
+    display:table-cell;
+    vertical-align:middle;
+    width:55px
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner .outage-slide-item .outage-slide-ind .outage-slide-icon i{
+    font-size:40px;
+    line-height:40px
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner .outage-slide-item .outage-slide-ind .outage-slide-icon i.ico-alert{
+    color:#c92d0c
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner .outage-slide-item .outage-slide-ind .outage-slide-icon i.ico-warning{
+    color:#eca115
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner .outage-slide-item .outage-slide-ind .outage-slide-text{
+    display:table-cell;
+    vertical-align:middle
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner .outage-slide-item .outage-slide-ind .outage-slide-text p{
+    color:#222;
+    margin-top:10px
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner .outage-slide-item .cust-control-prev,#wrapper-outage-slider .layout-outage-slides .outage-slides-inner .outage-slide-item .cust-control-next{
+    position:absolute;
+    width:25px;
+    right:0;
+    text-align:center;
+    cursor:pointer
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner .outage-slide-item .cust-control-prev{
+    top:15px
+}
+#wrapper-outage-slider .layout-outage-slides .outage-slides-inner .outage-slide-item .cust-control-next{
+    bottom:12px
+}
+ 
