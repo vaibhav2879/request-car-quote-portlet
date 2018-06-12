@@ -22,19 +22,17 @@
     </div>
 			   
    <%-- <table id="watchlistTableId" style="table-layout: fixed;"> --%>
-   <table id="watchlistTableId" class="dashboard-list">
-	  <thead class="hidden-xs">
+   <table id="watchlistTableId" class="">
 			 <tr>
-				<td>Renew DIP Policy</th>
-				<td class="senderRef">Renew Other Insurance Company Policy</td>
-				<td class="milestone">Brand New Car Policy</td>
+				<td>Renew DIP Policy</td>
+				<td>Renew Other Insurance Company Policy</td>
+				<td>Brand New Car Policy</td>
 			</tr>
 			<tr>
-				<td><input type="radio" /> </td>
-				<td class="senderRef"><input type="radio" /></td>
-				<td class="milestone"><input type="radio" /></td>
+				<td><input type="radio" id="policyReqType" name="policyReqType" value="1" /></td>
+				<td><input type="radio" id="policyReqType" name="policyReqType" value="2" /></td>
+				<td><input type="radio" id="policyReqType" name="policyReqType" value="3" /></td>
 			</tr>
-		</thead>
 		<tbody id="watchlistDataTbody">
 			
 		</tbody>

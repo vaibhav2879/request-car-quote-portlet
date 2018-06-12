@@ -117,17 +117,17 @@
 	} 
 
     //charDataEllips();
-	showPageLoader();
-	if(pageNum == 1 && (searchParam == null || searchParam == "")){
+	//showPageLoader();
+	/* if(pageNum == 1 && (searchParam == null || searchParam == "")){
 		$("#"+tableListId).hide();
 		$("#"+searchDiv).hide();
 		$("#"+downloadDiv).hide();
 		$("#"+viewMoreButton).hide();
 		$("#watchlistHasMoreDiv").hide();
-	}
+	} */
 	//$("#"+noDataContentDiv).show();
 	//$("#"+noDataContentDiv).css('visibility', 'visible');
-    $.ajax({
+    /* $.ajax({
     	type: 'GET',
     	url: resourceUrl,
     	data : {                
@@ -137,32 +137,22 @@
     	success : function(data) {
     		hidePageLoader();
         
-    		//Display_Load();
     		 $("#"+pageNumDiv).remove();
     		 $("#"+viewMoreFlagDiv).remove();
     		 $("#"+searchParamDiv).remove();
     		 $("#"+dataAvailableFlag).remove();
     		 $("#"+noDataMsg).remove();
-    	    /* console.log(data); */
     	    var div = document.getElementById(tabDataBody);
-    	    /* console.log("tabDataBody : "+tabDataBody +"  : div "+ div); */
     	    if(pageNum == 1){
-    	    	//$("#"+tabDataBody).html(data);
     	    	div.innerHTML = data;
     	    }else{
     	    	div.innerHTML += data;
     	    }
-    	    //setPagination();
-    	    //Hide_Load();
-    	    //renderManifest();
-    	    //var div1 = document.getElementById(dataAvailableFlag);
-    	    //alert(div1.innerHTML);
+    	   
     	    var isDataAvailable=$("#"+dataAvailableFlag).html();
-    	    //alert(isDataAvailable);
     	    var searchParamData = $("#"+searchParamDiv).html();
     	    if(isDataAvailable != "true"){
     	    	if (searchParamData != null && searchParamData != ""){
-    	    		//alert("search data");
     	    		$("#"+searchDiv).show();
     	    		$("#"+noDataMsgDiv).html($("#"+noDataMsg).html());
     	    	}
@@ -208,13 +198,17 @@
 	    	$("#"+noDataContentDiv).css('visibility', 'visible');
 	    	
 		 }
-    	});
+    	}); */
   }
-    var dashboardWcm = <c:out value="${MYTOLL_WCM_DASHBOARD}" escapeXml="false"/>;
+    /* var dashboardWcm = <c:out value="${MYTOLL_WCM_DASHBOARD}" escapeXml="false"/>; */
 	var getDraftShipmentURL = '<%=getDraftShipmentURL.toString()%>';
 	var getSaveSearchList = '<%=getSaveSearchList.toString()%>';
 	var deleteSearchFilter = '<%=deleteSearchFilter.toString()%>';
 	var advancesearch = '<%=advancesearch.toString()%>';
+	var carsMasterData = <c:out value="${carMasterData}" escapeXml="false"/>;
+	debugger;
+	console.log(carsMasterData);
+	
 <%-- 	var downloadAdavanceSearchResults = '<%=downloadAdavanceSearchResults.toString()%>';  --%>
 
 
@@ -238,7 +232,75 @@ function viewMore(tab, pageNum, searchParam) {
 	loadSelectedList(tab, pageNum, searchObj);
 }
 
-function setUpCounterForDashboardList() {
+function loadCarMake(){
+	let dropdown = $('#carMake');
+	dropdown.empty();
+	dropdown.append('<option selected="true">Choose Car Make</option>');
+	dropdown.prop('selectedIndex', 0);
+	for ( var i = 0; i < carsMasterData.brands.length; i++) {
+		var obj = carsMasterData.brands[i];
+		var brandId = obj.brandId;
+		var brandName = obj.brandName;
+		dropdown.append($('<option></option>').attr('value', brandId).text(brandName));
+	}
+}
+
+function loadCarModel(carMakeObj){
+	showPageLoader();
+	let dropdown = $('#carModel');
+	var carId = carMakeObj.value;
+	dropdown.empty();
+	dropdown.append('<option selected="true">Choose Car Model</option>');
+	dropdown.prop('selectedIndex', 0);
+	for ( var i = 0; i < carsMasterData.brands.length; i++) {
+		var obj = carsMasterData.brands[i];
+		var brandId = obj.brandId;
+		if(brandId == carId){
+			for ( var j = 0; j < obj.model.length; j++) {
+				var modelObj = obj.model[j];
+				var modelId = modelObj.modelId;
+				var modelName = modelObj.modelName;
+				
+				dropdown.append($('<option></option>').attr('value', modelId).text(modelName));
+			}
+		}
+	}
+	hidePageLoader();
+}
+
+function loadCarVariant(carModelObj){
+	showPageLoader();
+	let dropdown = $('#carVariant');
+	var carModelId = carModelObj.value;
+	alert(carModelId);
+	dropdown.empty();
+	dropdown.append('<option selected="true">Choose Car Variant</option>');
+	dropdown.prop('selectedIndex', 0);
+	for ( var i = 0; i < carsMasterData.brands.length; i++) {
+		var obj = carsMasterData.brands[i];
+		//var brandId = obj.brandId;
+		//if(brandId == carId){
+			for ( var j = 0; j < obj.model.length; j++) {
+				var modelObj = obj.model[j];
+				var modelId = modelObj.modelId;
+				if(modelId == carModelId){
+					alert(modelId);
+					for ( var k = 0; k < modelObj.variants.length; k++) {	
+						var variantObj = modelObj.variants[k];
+						var fuelType = variantObj.fuelType;
+						var variantId = variantObj.variantId;
+						var variantName = variantObj.variantName;
+						
+						dropdown.append($('<option></option>').attr('value', variantId).text(variantName+" - "+fuelType));
+					}
+				}
+			}
+		}
+	//}
+	hidePageLoader();
+}
+
+/* function setUpCounterForDashboardList() {
 	try {
 	if(!$("#mywatchListCount").text() == "") {
 		console.log("watchList: "+ $("#mywatchListCount").text());
@@ -269,7 +331,7 @@ function setUpCounterForDashboardList() {
 	} catch(e) {
 		console.log("exception occured: "+e);
 	}
-}
+} */
 
 /* $("#searchManifestTable").click(function(){
     var searchObj = {};
@@ -294,6 +356,8 @@ $( document ).ready(function() {
     } else {
     	loadSelectedList("watchlistTabAnchor", "1");
     }
+    
+    loadCarMake();
 });
 
 var partialsPath ='<%=request.getContextPath()%>/partials/';

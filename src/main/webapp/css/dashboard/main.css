@@ -438,8 +438,8 @@ li#pickupLi > i{
 }
 .track-shipment-dashboard #dashboard-features-info .tab-content .manifest-table-search-filter .ico-search,
 .track-shipment-dashboard #dashboard-features-info .tab-content .pickup-table-search-filter .ico-search{
-    background-color: #0c4473;
-    color: #FFF;
+    
+    
     font-size: 22px;
     padding: 6px 10px;
     display: inline-block;
@@ -494,7 +494,7 @@ li#pickupLi > i{
     width: 100%
 }
 .track-shipment-dashboard #dashboard-features-info .tab-content table tbody tr {
-    border-top: 1px solid #dedede;
+    /* border-top: 1px solid #dedede; */
     cursor: pointer;
     position: relative;
 }
@@ -508,8 +508,8 @@ li#pickupLi > i{
 }
 .track-shipment-dashboard #dashboard-features-info .tab-content table tr:hover td {
 /* .track-shipment-dashboard #dashboard-features-info .tab-content table tr:hover td i{ */
-    background-color: #0c4473;
-    color: #FFF
+    
+    color: #0c0c0c;
 }
 .track-shipment-dashboard #dashboard-features-info .tab-content table tr:hover td i{
     color:white !important;
@@ -534,7 +534,7 @@ li#pickupLi > i{
     word-wrap: break-word;
 }
 .track-shipment-dashboard #dashboard-features-info .tab-content table td:last-child {
-    padding-right: 35px;
+    /* padding-right: 35px; */
 }
 .track-shipment-dashboard #dashboard-features-info .tab-content tbody tr td:first-child{
     font-weight: 600;

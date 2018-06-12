@@ -38,52 +38,31 @@
 			 </tr>
 			 <tr>
 				<td>Your Car(Make) <br/>
-					<select>
-						<option>select</option>
-						<option>Maruti Suzuki</option>
-						<option>Hyundai</option>
-						<option>Honda</option>
-						<option>Toyota</option>
-						<option>Nissan</option>
+					<select id="carMake" name="carMake" onchange="loadCarModel(this);">
+						
 					</select> 
 				</td>
 				<td>Your Car(Model) <br/>
-					<select>
-						<option>select</option>
-						<option>Wagon-R</option>
-						<option>Alto</option>
-						<option>Ciaz</option>
-						<option>Swift</option>
-						<option>Dizire</option>
+					<select id="carModel" name="carModel" onchange="loadCarVariant(this);">
+						<option selected="true" disabled>Choose Car Model</option>
 					</select> 
 				</td>
 				<td>Your Car(Variant) <br/>
-					<select>
-						<option>select</option>
-						<option>LX</option>
-						<option>Lxi</option>
-						<option>Vxi</option>
-						<option>Zxi</option>
-						<option>Vdi</option>
+					<select id="carVariant" name="carVariant">
+						<option selected="true" disabled>Choose Car Variant</option>
 					</select> 
 				</td>
 			 </tr>
 			 <tr>
-				<td>Car Fuel Type <br/>
-					<select>
-						<option>select</option>
-						<option>Petrol</option>
-						<option>Diesel</option>
-						<option>CNG</option>
-						<option>LPG</option>
-					</select> 
+				<td>State Of Registration <br/>
+					<input type="text" id="regState" name="regState"/> 
 				</td>
 				<td>City Of Registration <br/>
-					<input type="text" />
+					<input type="text" id="regCity" name="regCity"/>
 				</td>
 				<td>
 					Car Manufactured Year <br/>
-					<select>
+					<select id="manufactureYear" name="manufactureYear">
 						<option>select</option>
 						<option>2018</option>
 						<option>2017</option>
@@ -94,7 +73,7 @@
 			 </tr>
 			 <tr>
 				<td>Your Car's Estimated Value(IDV) <br/>
-					<input type="text" /> 
+					<input type="text" id="idv" name="idv"/> 
 				</td>
 				<td>Email Id <br/>
 					<input type="text" />

@@ -23,4 +23,6 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
+	<import resource="classpath:com/dip/portletfoundation-context.xml"/>
+	
 </beans>

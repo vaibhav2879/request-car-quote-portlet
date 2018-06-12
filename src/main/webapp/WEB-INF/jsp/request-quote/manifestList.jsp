@@ -72,13 +72,17 @@ var searchNamespace = '<portlet:namespace/>';
    <table id="manifestTableId" style="table-layout: fixed;" class="dashboard-list">
 	  <thead class="hidden-xs">	 
 		 <tr>
-			<td>Your Vehicle Registration Number <br/><input type="text"> </td>
-			<td>Policy Expiry Date <br/><input type="date"> </td>
+			<td>Your Vehicle Registration Number <br/>
+				<input type="text" id="carRegNo" name="carRegNo"> </td>
+			<td>Policy Expiry Date <br/><input type="date" id="expiryDate" name="expiryDate"> </td>
 		 </tr>
 		 <tr>
-			<td>Claim In Previous Policy? <br/><input type="text"></td>
+			<td>Claim In Previous Policy? <br/>
+				Yes&nbsp;<input type="radio" id="prevClaim" name="prevClaim" value="Yes" />&nbsp;&nbsp;
+				No&nbsp;<input type="radio" id="prevClaim" name="prevClaim" value="No" />
+			</td>
 			<td>Previous No Claim Bonus(NCB %)? <br/>
-				<select>
+				<select id="prevNCB" name="prevNCB">
 					<option>0</option>
 					<option>20</option>
 					<option>25</option>
@@ -91,8 +95,8 @@ var searchNamespace = '<portlet:namespace/>';
 			</td>
 		 </tr>
 		 <tr>
-			<td>Email Id <br/><input type="email" name="email"></td>
-			<td>Mobile No <br/><input type="tel" /> </td>
+			<td>Email Id <br/><input type="email" id="emailId" name="emailId"></td>
+			<td>Mobile No <br/><input type="tel" id="phoneNo" name="phoneNo"/> </td>
 		 </tr>
 	  </thead>
 	  <tbody id="manifestDataTbody">	 

@@ -265,7 +265,7 @@ function getFromAndToDate(fromDate, toDate, isFutureDateAllowed){
 
 
 // setting ellips on table data
-function charDataEllips(){
+/*function charDataEllips(){
     $("table tbody td").each(function(){
         var charLength = $(this).text();
         var ellips = "...";
@@ -278,7 +278,7 @@ function charDataEllips(){
         }
     });
 };
-charDataEllips();
+charDataEllips();*/
 
 //select multiple value from select option
 $(".select-tollcarrier").chosen().change(function(){
