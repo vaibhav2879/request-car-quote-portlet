@@ -99,7 +99,7 @@ public class RequestCarInsuranceQuoteController {
 			
 		}
 		model.addAttribute("carMasterData", toJson(this.cars));
-		return "view";
+		return "view2";
 	}
 	
 	/*@ResourceMapping(value = "shipmentsCreatedInTime")
