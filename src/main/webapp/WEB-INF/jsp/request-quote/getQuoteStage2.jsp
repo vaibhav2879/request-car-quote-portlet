@@ -2,7 +2,7 @@
 <portlet:defineObjects />
 <div class="panel panel-primary setup-content" id="step-2">
      <div class="panel-heading">
-          <h3 class="panel-title">Request a Quote - Level 2</h3>
+          <h3 class="panel-title">Request a Quote - Step 2</h3>
      </div>
      <div class="panel-body">
          <div>
@@ -41,8 +41,8 @@
              	<input maxlength="200" id="mobileNo" name="mobileNo" type="text" required="required" class="form-control" placeholder="Mobile No" />
          	</div>
          	<div class="col-xs-4">
-             	<label class="control-label">Phone No</label>
-             	<input maxlength="200" id="phoneNo" name="phoneNo" type="text" required="required" class="form-control" placeholder="Phone No" />
+             	<label class="control-label">Policy Expiry Date</label>
+             	<input id="policyExpDate" name="policyExpDate" type="date" required="required" class="form-control" placeholder="Policy Expiry Date" />
          	</div>
          </div>
          <div style="clear:both;align:left">&nbsp;</div>

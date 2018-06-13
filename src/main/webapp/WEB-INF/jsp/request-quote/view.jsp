@@ -349,14 +349,7 @@ function loadCarVariant(carModelObj){
 }); */
 
 $( document ).ready(function() {
-   // var params = (new URL(document.location)).searchParams;
-   var params = window.location.search.split("=")[1];
-    if(params && params == "draftshipment") {
-                    $('#draftshipmentAnchor').trigger('click');
-    } else {
-    	loadSelectedList("watchlistTabAnchor", "1");
-    }
-    
+
     loadCarMake();
 });
 

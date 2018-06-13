@@ -22,7 +22,7 @@
 
 <div class="panel panel-primary setup-content" id="step-1">
      <div class="panel-heading">
-          <h3 class="panel-title">Request a Quote - Level 1</h3>
+          <h3 class="panel-title">Request a Quote - Step 1</h3>
      </div>
      <div class="panel-body">
          <div>
